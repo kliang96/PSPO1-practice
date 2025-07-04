@@ -1,0 +1,412 @@
+{
+  "topic": "sprint-execution",
+  "metadata": {
+    "totalQuestions": 23,
+    "difficulty": {
+      "easy": 5,
+      "medium": 13,
+      "hard": 5
+    }
+  },
+  "questions": [
+    {
+      "id": 101,
+      "topic": "sprint-execution",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is the typical duration of a Sprint?",
+      "options": [
+        "Exactly 2 weeks",
+        "1 to 4 weeks",
+        "1 month or less",
+        "As long as needed to complete the work"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Sprints have a consistent duration of one month or less. The length is chosen by the team and remains consistent throughout the project.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 102,
+      "topic": "sprint-execution",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "Who is responsible for tracking progress during the Sprint?",
+      "options": [
+        "The Scrum Master",
+        "The Product Owner",
+        "The Developers",
+        "The project manager"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Developers are responsible for tracking their own progress during the Sprint. They manage their work and monitor progress toward the Sprint Goal.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 103,
+      "topic": "sprint-execution",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What happens to incomplete work at the end of a Sprint?",
+      "options": [
+        "It is automatically moved to the next Sprint",
+        "It is discarded and restarted",
+        "It is returned to the Product Backlog",
+        "The Sprint is extended to complete it"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Incomplete work at the end of a Sprint is returned to the Product Backlog. The Product Owner decides whether to include it in future Sprints based on its priority.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 104,
+      "topic": "sprint-execution",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is the main benefit of having a Sprint Goal?",
+      "options": [
+        "It ensures all Sprint Backlog items are completed",
+        "It provides focus and flexibility for the Developers",
+        "It guarantees stakeholder satisfaction",
+        "It eliminates the need for Sprint Planning"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Sprint Goal provides focus and flexibility for the Developers. It guides their work and allows them to negotiate scope while maintaining the objective.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 105,
+      "topic": "sprint-execution",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "During Sprint execution, who decides how the work gets done?",
+      "options": [
+        "The Product Owner",
+        "The Scrum Master",
+        "The Developers",
+        "The stakeholders"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Developers decide how the work gets done during Sprint execution. They are self-managing and organize their work to achieve the Sprint Goal.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 106,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "What topics are addressed during Sprint Planning? (Choose all that apply)",
+      "options": [
+        "Why is this Sprint valuable?",
+        "What can be Done this Sprint?",
+        "How will the chosen work get done?",
+        "Who will do each task?"
+      ],
+      "correctAnswer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Sprint Planning addresses three topics: Why (Sprint Goal), What (Product Backlog items), and How (plan for delivery). Task assignment is handled by the Developers during Sprint execution.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 107,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "During a Sprint, who can change the Sprint Backlog?",
+      "options": [
+        "Only the Product Owner",
+        "Only the Scrum Master",
+        "Only the Developers",
+        "Anyone on the Scrum Team"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Sprint Backlog is owned by the Developers. They can modify it throughout the Sprint as more is learned about the work needed to achieve the Sprint Goal.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 108,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is the Sprint Goal?",
+      "options": [
+        "A list of all Product Backlog items in the Sprint",
+        "An objective that will be met within the Sprint through implementation of Product Backlog",
+        "The Definition of Done for the Sprint",
+        "A commitment by the Developers to complete all Sprint Backlog items"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Sprint Goal is an objective that will be met within the Sprint through the implementation of Product Backlog. It provides guidance and flexibility to the Developers.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 109,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What should the Developers do if they discover they have more capacity than expected during the Sprint?",
+      "options": [
+        "Take additional items from the Product Backlog",
+        "Collaborate with the Product Owner to select additional work that supports the Sprint Goal",
+        "Use the extra time for training and skill development",
+        "Finish the Sprint early"
+      ],
+      "correctAnswer": 1,
+      "explanation": "If Developers have more capacity, they should collaborate with the Product Owner to select additional work that supports the Sprint Goal. This ensures value delivery while maintaining focus.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 110,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "How should the Developers handle impediments that arise during the Sprint?",
+      "options": [
+        "Wait for the Scrum Master to resolve them",
+        "Escalate to management immediately",
+        "Try to resolve them themselves first, then seek help if needed",
+        "Ignore them and work around them"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Developers should first try to resolve impediments themselves. If they cannot resolve them, they should seek help from the Scrum Master or others as needed.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 111,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What should happen if the Developers realize the Sprint Goal is not achievable?",
+      "options": [
+        "Continue working and do their best",
+        "Cancel the Sprint immediately",
+        "Discuss with the Product Owner about modifying the Sprint Goal",
+        "Extend the Sprint duration"
+      ],
+      "correctAnswer": 2,
+      "explanation": "If the Sprint Goal becomes unachievable, the Developers should discuss with the Product Owner. They may need to modify the scope or, in extreme cases, cancel the Sprint.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 112,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is the purpose of the Definition of Done during Sprint execution?",
+      "options": [
+        "To provide a checklist for completing Sprint Backlog items",
+        "To ensure quality and transparency of work",
+        "To define when the Sprint is complete",
+        "To guide the estimation process"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Definition of Done ensures quality and transparency by defining the shared understanding of what it means for work to be complete. It applies to all work done during the Sprint.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 113,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "How should the Developers handle changes to requirements that emerge during the Sprint?",
+      "options": [
+        "Reject all changes until the next Sprint",
+        "Implement all changes immediately",
+        "Evaluate changes with the Product Owner in the context of the Sprint Goal",
+        "Document changes for future consideration"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Changes should be evaluated with the Product Owner in the context of the Sprint Goal. Some changes may be accommodated if they support the Sprint Goal, while others may be deferred.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 114,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is the relationship between the Sprint Goal and the Sprint Backlog?",
+      "options": [
+        "The Sprint Backlog must contain all items needed to achieve the Sprint Goal",
+        "The Sprint Goal is created from the Sprint Backlog",
+        "The Sprint Goal guides the selection and refinement of Sprint Backlog items",
+        "They are independent of each other"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Sprint Goal guides the selection and refinement of Sprint Backlog items. It provides direction and allows flexibility in how the objective is achieved.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 115,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What should the Developers do if they discover technical debt during the Sprint?",
+      "options": [
+        "Ignore it and continue with planned work",
+        "Stop all work to fix the technical debt",
+        "Address critical technical debt and discuss the rest with the Product Owner",
+        "Document it for future Sprints"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Developers should address critical technical debt that affects the Sprint Goal and discuss other technical debt with the Product Owner for future prioritization.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 116,
+      "topic": "sprint-execution",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "The Developers say they cannot complete the Product Owner's proposed Sprint Goal due to technical constraints. What should happen?",
+      "options": [
+        "The Product Owner should insist on the original Sprint Goal",
+        "The Developers should work overtime to meet the Sprint Goal",
+        "The Product Owner and Developers should collaborate to create an achievable Sprint Goal",
+        "The Sprint should be cancelled before it starts"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Sprint Planning should result in a Sprint Goal that the Developers believe they can achieve. The Product Owner and Developers should collaborate to create a realistic and valuable Sprint Goal.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 117,
+      "topic": "sprint-execution",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "What should happen when the Developers realize they cannot complete all Sprint Backlog items?",
+      "options": [
+        "The Sprint should be cancelled immediately",
+        "Work overtime to complete all committed items",
+        "Negotiate with the Product Owner about the scope while maintaining the Sprint Goal",
+        "Extend the Sprint duration to complete the work"
+      ],
+      "correctAnswer": 2,
+      "explanation": "When Developers realize they cannot complete all Sprint Backlog items, they should collaborate with the Product Owner to negotiate scope while maintaining the Sprint Goal. Sprints have fixed durations.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 118,
+      "topic": "sprint-execution",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "Halfway through the Sprint, the Product Owner wants to add a new item to the Sprint Backlog. What should happen?",
+      "options": [
+        "The item should be added immediately since the Product Owner requested it",
+        "The item should be added to the next Sprint's backlog",
+        "The Developers should discuss with the Product Owner whether the item can be added without jeopardizing the Sprint Goal",
+        "The item cannot be added since Sprint Planning is complete"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Developers should discuss with the Product Owner whether the new item can be added without jeopardizing the Sprint Goal. The Sprint Goal should be preserved, but the Sprint Backlog can be modified.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 119,
+      "topic": "sprint-execution",
+      "difficulty": "hard",
+      "type": "multiple",
+      "question": "Which statements about the Sprint Goal are true? (Choose all that apply)",
+      "options": [
+        "It is created during Sprint Planning",
+        "It provides flexibility in terms of the exact work needed to achieve it",
+        "It can be changed during the Sprint if new information emerges",
+        "It is a commitment by the Developers"
+      ],
+      "correctAnswer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "The Sprint Goal is created during Sprint Planning, provides flexibility in implementation, and is a commitment by the Developers. It should not be changed during the Sprint as it provides focus and coherence.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 120,
+      "topic": "sprint-execution",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "The Developers have completed all Sprint Backlog items but realize the Sprint Goal is not achieved. What should they do?",
+      "options": [
+        "End the Sprint since all items are complete",
+        "Work with the Product Owner to identify additional work that achieves the Sprint Goal",
+        "Update the Sprint Goal to match what was delivered",
+        "Cancel the Sprint as it was not successful"
+      ],
+      "correctAnswer": 1,
+      "explanation": "If the Sprint Goal is not achieved despite completing all items, the Developers should work with the Product Owner to identify additional work that achieves the Sprint Goal. The Sprint Goal takes precedence.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 121,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "During the Sprint, the Product Owner discovers that a competitor has released a similar feature to what the team is building. Stakeholders are pressuring to pivot immediately to a different feature. What should the Product Owner do?",
+      "options": [
+        "Immediately change the Sprint Goal to work on the different feature",
+        "Continue with the current Sprint Goal and address the change in Sprint Planning",
+        "Cancel the Sprint to replan with the new priority",
+        "Ask the Development Team to work on both features simultaneously"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Product Owner should continue with the current Sprint Goal and address the change in the next Sprint Planning. Changing direction mid-Sprint disrupts the team's focus and should only be done if the Sprint Goal becomes completely obsolete.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 122,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A Product Owner has been unavailable for the past three days of a two-week Sprint. The Developers have questions about acceptance criteria and are blocked on key Product Backlog items. What is the primary issue?",
+      "options": [
+        "The Developers should make product decisions independently",
+        "The Product Owner is not fulfilling their accountability to be available",
+        "The Sprint should be cancelled due to lack of Product Owner availability",
+        "The Scrum Master should act as a proxy Product Owner"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Product Owner has a key accountability to be available to the Development Team during the Sprint. Being unavailable for extended periods prevents the team from making progress and violates the collaborative nature of Scrum. The Product Owner role cannot be delegated.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    },
+    {
+      "id": 123,
+      "topic": "sprint-execution",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Midway through the Sprint, the Product Owner realizes that two of the Sprint Backlog items, when implemented, will not actually deliver the expected business value. What should the Product Owner do?",
+      "options": [
+        "Let the team complete the items since they were committed to in Sprint Planning",
+        "Discuss with the Development Team about removing these items and focusing on the Sprint Goal",
+        "Add new items to the Sprint Backlog to compensate for the low-value items",
+        "Cancel the Sprint and restart with better-defined requirements"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Product Owner should discuss with the Development Team about removing low-value items while maintaining focus on the Sprint Goal. The Sprint Goal provides flexibility in implementation, and it's better to optimize for value rather than just completing committed items.",
+      "originalTopic": "sprint-execution",
+      "sourceFile": "questions/sprint-execution.json"
+    }
+  ]
+}

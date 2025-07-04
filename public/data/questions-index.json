@@ -1,0 +1,112 @@
+{
+	"metadata": {
+		"totalQuestions": 168,
+		"totalTopics": 8,
+		"questionsPerTopic": "Variable (20-23 per topic)",
+		"difficultyDistribution": {
+			"easy": "3-5 per topic",
+			"medium": "10-13 per topic",
+			"hard": "5 per topic"
+		},
+		"version": "2.0.0",
+		"lastUpdated": "2024-01-01"
+	},
+	"topics": [
+		{
+			"id": "scrum-theory",
+			"name": "Scrum Theory and Values",
+			"description": "Understanding the empirical process control, transparency, inspection, and adaptation",
+			"weight": 12,
+			"questionFile": "questions/scrum-theory.json",
+			"questionCount": 20,
+			"idRange": {
+				"start": 1,
+				"end": 20
+			}
+		},
+		{
+			"id": "scrum-team",
+			"name": "Scrum Team Roles",
+			"description": "Product Owner, Scrum Master, and Developers responsibilities and accountabilities",
+			"weight": 18,
+			"questionFile": "questions/scrum-team.json",
+			"questionCount": 20,
+			"idRange": {
+				"start": 21,
+				"end": 40
+			}
+		},
+		{
+			"id": "scrum-events",
+			"name": "Scrum Events",
+			"description": "Sprint, Sprint Planning, Daily Scrum, Sprint Review, and Sprint Retrospective",
+			"weight": 20,
+			"questionFile": "questions/scrum-events.json",
+			"questionCount": 20,
+			"idRange": {
+				"start": 41,
+				"end": 60
+			}
+		},
+		{
+			"id": "scrum-artifacts",
+			"name": "Scrum Artifacts",
+			"description": "Product Backlog, Sprint Backlog, and Increment",
+			"weight": 15,
+			"questionFile": "questions/scrum-artifacts.json",
+			"questionCount": 20,
+			"idRange": {
+				"start": 61,
+				"end": 80
+			}
+		},
+		{
+			"id": "product-backlog-management",
+			"name": "Product Backlog Management",
+			"description": "Backlog refinement, ordering, and management techniques",
+			"weight": 10,
+			"questionFile": "questions/product-backlog-management.json",
+			"questionCount": 23,
+			"idRange": {
+				"start": 81,
+				"end": 103
+			}
+		},
+		{
+			"id": "sprint-execution",
+			"name": "Sprint Planning and Execution",
+			"description": "Sprint goal, capacity planning, and sprint execution",
+			"weight": 8,
+			"questionFile": "questions/sprint-execution.json",
+			"questionCount": 23,
+			"idRange": {
+				"start": 101,
+				"end": 123
+			}
+		},
+		{
+			"id": "evidence-based-management",
+			"name": "Evidence-Based Management (EBM)",
+			"description": "Using empirical evidence to guide product decisions and measure value",
+			"weight": 12,
+			"questionFile": "questions/evidence-based-management.json",
+			"questionCount": 21,
+			"idRange": {
+				"start": 121,
+				"end": 141
+			}
+		},
+		{
+			"id": "stakeholder-management",
+			"name": "Stakeholder Management",
+			"description": "Managing stakeholder relationships and expectations",
+			"weight": 5,
+			"questionFile": "questions/stakeholder-management.json",
+			"questionCount": 21,
+			"idRange": {
+				"start": 141,
+				"end": 161
+			}
+		}
+	]
+}

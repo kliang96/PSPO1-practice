@@ -1,0 +1,353 @@
+{
+  "topic": "scrum-events",
+  "metadata": {
+    "totalQuestions": 20,
+    "difficulty": {
+      "easy": 5,
+      "medium": 10,
+      "hard": 5
+    }
+  },
+  "questions": [
+    {
+      "id": 41,
+      "topic": "scrum-events",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is the maximum duration for a Sprint?",
+      "options": [
+        "Two weeks",
+        "One month",
+        "Six weeks",
+        "Three months"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A Sprint is a time-box of one month or less during which a 'Done', useable, and potentially releasable product Increment is created.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 42,
+      "topic": "scrum-events",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is the time-box for the Daily Scrum?",
+      "options": [
+        "15 minutes",
+        "30 minutes",
+        "45 minutes",
+        "It depends on team size"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The Daily Scrum is always time-boxed to 15 minutes, regardless of team size. It is held every day of the Sprint by the Developers.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 43,
+      "topic": "scrum-events",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is the purpose of the Daily Scrum?",
+      "options": [
+        "To report progress to the Scrum Master",
+        "To plan the work for the next 24 hours",
+        "To identify impediments for the Product Owner",
+        "To review completed work"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Daily Scrum is for the Developers to inspect progress toward the Sprint Goal and adapt the Sprint Backlog as necessary, planning the work for the next 24 hours.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 44,
+      "topic": "scrum-events",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "How often should the Daily Scrum occur?",
+      "options": [
+        "Every day during the Sprint",
+        "Every other day during the Sprint",
+        "Only when there are impediments",
+        "At the discretion of the Scrum Master"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The Daily Scrum is held every day of the Sprint. It is a 15-minute time-boxed event for the Developers to synchronize and plan.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 45,
+      "topic": "scrum-events",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is the main purpose of Sprint Planning?",
+      "options": [
+        "To define the Sprint Goal and create the Sprint Backlog",
+        "To assign tasks to individual team members",
+        "To estimate the effort for Product Backlog items",
+        "To review progress from the previous Sprint"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Sprint Planning creates the Sprint Goal and the Sprint Backlog. The entire Scrum Team collaborates to define what will be delivered and how the work will be achieved.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 46,
+      "topic": "scrum-events",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is the time-box for Sprint Planning in a 2-week Sprint?",
+      "options": [
+        "2 hours",
+        "4 hours",
+        "6 hours",
+        "8 hours"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sprint Planning is time-boxed to a maximum of 8 hours for a one-month Sprint. For shorter Sprints, the event is proportionally shorter. For a 2-week Sprint, it would be 4 hours maximum.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 47,
+      "topic": "scrum-events",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is the main purpose of the Sprint Review?",
+      "options": [
+        "To plan the work for the next Sprint",
+        "To inspect the Increment and adapt the Product Backlog if needed",
+        "To reflect on the team's process and identify improvements",
+        "To demonstrate completed work to management"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Sprint Review is held at the end of the Sprint to inspect the Increment and adapt the Product Backlog if needed. It's a collaborative working session, not just a demonstration.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 48,
+      "topic": "scrum-events",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Who is required to attend the Sprint Review?",
+      "options": [
+        "The entire Scrum Team and all stakeholders",
+        "The Scrum Team and key stakeholders",
+        "The Product Owner and stakeholders only",
+        "The entire Scrum Team; stakeholders are optional"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The Sprint Review is attended by the entire Scrum Team. Stakeholders are invited but their attendance is optional.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 49,
+      "topic": "scrum-events",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is the purpose of the Sprint Retrospective?",
+      "options": [
+        "To inspect the product Increment and gather feedback",
+        "To plan the work for the next Sprint",
+        "To inspect how the last Sprint went and plan improvements",
+        "To review the Product Backlog and refine items"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Sprint Retrospective is for the Scrum Team to inspect how the last Sprint went with regards to individuals, interactions, processes, tools, and their Definition of Done, and to plan improvements.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 50,
+      "topic": "scrum-events",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is the time-box for the Sprint Review in a 2-week Sprint?",
+      "options": [
+        "1 hour",
+        "2 hours",
+        "3 hours",
+        "4 hours"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Sprint Review is time-boxed to a maximum of 4 hours for a one-month Sprint. For shorter Sprints, the event is proportionally shorter. For a 2-week Sprint, it would be 2 hours maximum.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 51,
+      "topic": "scrum-events",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is the time-box for the Sprint Retrospective in a 2-week Sprint?",
+      "options": [
+        "1 hour",
+        "1.5 hours",
+        "2 hours",
+        "3 hours"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Sprint Retrospective is time-boxed to a maximum of 3 hours for a one-month Sprint. For shorter Sprints, the event is proportionally shorter. For a 2-week Sprint, it would be 1.5 hours maximum.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 52,
+      "topic": "scrum-events",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Who facilitates the Sprint Retrospective?",
+      "options": [
+        "The Product Owner",
+        "The Scrum Master",
+        "The most senior Developer",
+        "External facilitator"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Scrum Master facilitates the Sprint Retrospective. The Scrum Master ensures that the event is positive and productive and that the team identifies actionable improvements.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 53,
+      "topic": "scrum-events",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What should happen if the Daily Scrum exceeds its time-box?",
+      "options": [
+        "Continue until all issues are resolved",
+        "Schedule a follow-up meeting",
+        "End the meeting and continue the next day",
+        "Extend the time-box for future Daily Scrums"
+      ],
+      "correctAnswer": 1,
+      "explanation": "If discussions in the Daily Scrum require more time, the Developers should schedule follow-up meetings. The Daily Scrum must remain time-boxed to 15 minutes.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 54,
+      "topic": "scrum-events",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is the primary outcome of Sprint Planning?",
+      "options": [
+        "Individual task assignments",
+        "The Sprint Goal and Sprint Backlog",
+        "An updated Product Backlog",
+        "A detailed project plan"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sprint Planning produces the Sprint Goal and the Sprint Backlog. The Sprint Goal provides guidance to the Developers about why they are building the Increment.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 55,
+      "topic": "scrum-events",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Who should attend the Sprint Retrospective?",
+      "options": [
+        "The entire Scrum Team only",
+        "The Scrum Team and stakeholders",
+        "The Developers only",
+        "The Scrum Master and Product Owner only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The Sprint Retrospective is attended by the entire Scrum Team. It is an internal team event focused on improving the team's process and interactions.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 56,
+      "topic": "scrum-events",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "Under what circumstances can a Sprint be cancelled?",
+      "options": [
+        "When the Developers cannot complete all committed work",
+        "When the Sprint Goal becomes obsolete",
+        "When stakeholders are not satisfied with progress",
+        "When the Scrum Master determines the Sprint is not viable"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A Sprint can be cancelled when the Sprint Goal becomes obsolete. Only the Product Owner has the authority to cancel a Sprint.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 57,
+      "topic": "scrum-events",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "During the Sprint Review, stakeholders provide feedback that would require significant changes to the product direction. What should the Product Owner do?",
+      "options": [
+        "Immediately update the Product Backlog to reflect the feedback",
+        "Consider the feedback and update the Product Backlog if valuable",
+        "Reject the feedback since the Sprint is already complete",
+        "Schedule a separate meeting to discuss the feedback"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Product Owner should consider stakeholder feedback and update the Product Backlog if the feedback would increase product value. The Sprint Review is designed for inspection and adaptation.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 58,
+      "topic": "scrum-events",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "The team consistently struggles to complete Sprint Planning within the time-box. What should the Scrum Master do?",
+      "options": [
+        "Extend the time-box for Sprint Planning",
+        "Help the team improve their planning efficiency",
+        "Reduce the scope of Sprint Planning",
+        "Split Sprint Planning into multiple sessions"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Scrum Master should help the team improve their planning efficiency. This might involve better Product Backlog refinement, improving estimation skills, or addressing team dynamics.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 59,
+      "topic": "scrum-events",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "During the Sprint Review, it becomes clear that the Increment does not meet the Definition of Done. What should happen?",
+      "options": [
+        "Present the Increment anyway and note the deficiencies",
+        "Do not present the Increment; it cannot be released",
+        "Extend the Sprint to complete the work",
+        "Lower the Definition of Done for this Sprint"
+      ],
+      "correctAnswer": 1,
+      "explanation": "If the Increment does not meet the Definition of Done, it cannot be released or presented as 'Done'. The work should be returned to the Product Backlog for future consideration.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    },
+    {
+      "id": 60,
+      "topic": "scrum-events",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "The Product Owner wants to change the Sprint Goal mid-Sprint based on new market information. What should happen?",
+      "options": [
+        "Change the Sprint Goal immediately",
+        "Discuss with the team and potentially cancel the Sprint",
+        "Wait until the next Sprint to implement changes",
+        "The Scrum Master should make the decision"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Changing the Sprint Goal mid-Sprint should be discussed with the team. If the current Sprint Goal becomes obsolete, the Product Owner might cancel the Sprint and start a new one.",
+      "originalTopic": "scrum-events",
+      "sourceFile": "questions/scrum-events.json"
+    }
+  ]
+}

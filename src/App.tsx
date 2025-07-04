@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { AppProvider } from "./context/AppContext";
+import Home from "./components/Home";
+import Quiz from "./components/Quiz";
+import Results from "./components/Results";
+import { useApp } from "./context/AppContext";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const AppContent: React.FC = () => {
+	const { state } = useApp();
+
+	// Determine which component to render based on app state
+	if (state.currentSession && !state.currentSession.endTime) {
+		return <Quiz />;
+	}
+
+	if (state.currentSession && state.currentSession.endTime) {
+		return <Results />;
+	}
+
+	return <Home />;
+};
+
+const App: React.FC = () => {
+	return (
+		<AppProvider>
+			<div className="App">
+				<AppContent />
+			</div>
+		</AppProvider>
+	);
+};
 
 export default App;

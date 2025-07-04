@@ -1,0 +1,358 @@
+{
+  "topic": "scrum-team",
+  "metadata": {
+    "totalQuestions": 20,
+    "difficulty": {
+      "easy": 5,
+      "medium": 10,
+      "hard": 5
+    }
+  },
+  "questions": [
+    {
+      "id": 80,
+      "topic": "scrum-team",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "Who is accountable for maximizing the value of the product?",
+      "options": [
+        "The Scrum Master",
+        "The Product Owner",
+        "The Developers",
+        "The entire Scrum Team"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Product Owner is accountable for maximizing the value of the product resulting from the work of the Scrum Team. They are responsible for managing the Product Backlog and ensuring the team delivers value.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 81,
+      "topic": "scrum-team",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "How many people are typically on a Scrum Team?",
+      "options": [
+        "5 or fewer people",
+        "10 or fewer people",
+        "15 or fewer people",
+        "There is no limit"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Scrum Teams are typically 10 or fewer people. Small teams communicate better and are more productive. If teams become too large, they should consider reorganizing into multiple cohesive Scrum Teams.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 82,
+      "topic": "scrum-team",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "Who is responsible for coaching the team in self-management?",
+      "options": [
+        "The Product Owner",
+        "The Scrum Master",
+        "The Development Team",
+        "The stakeholders"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Scrum Master serves the Scrum Team by coaching the team members in self-management and cross-functionality, helping them focus on creating high-value Increments.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 83,
+      "topic": "scrum-team",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What does it mean for the Scrum Team to be cross-functional?",
+      "options": [
+        "Team members work on multiple projects",
+        "Team members have different job titles",
+        "Team members have all the skills needed to create value",
+        "Team members can replace each other"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Cross-functional teams have all the skills necessary to accomplish the work without depending on others not part of the team. This enables the team to create a product Increment independently.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 84,
+      "topic": "scrum-team",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is the accountability of the Developers in Scrum?",
+      "options": [
+        "Following the Scrum Master's instructions",
+        "Creating a plan for the Sprint and implementing it",
+        "Reporting daily progress to the Product Owner",
+        "Documenting all development activities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Developers are accountable for creating a plan for the Sprint (Sprint Backlog) and instilling quality by adhering to a Definition of Done. They are self-managing and organize their own work.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 85,
+      "topic": "scrum-team",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "Which of the following are accountabilities of the Product Owner? (Choose all that apply)",
+      "options": [
+        "Managing the Product Backlog",
+        "Communicating the Product Goal",
+        "Ensuring the Scrum Team follows the process",
+        "Making Product Backlog items visible and transparent"
+      ],
+      "correctAnswer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "The Product Owner is accountable for managing the Product Backlog, communicating the Product Goal, and ensuring Product Backlog transparency. The Scrum Master is accountable for ensuring the Scrum Team follows the process.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 86,
+      "topic": "scrum-team",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "Which of the following promote effective collaboration between the Product Owner and Developers? (Choose all that apply)",
+      "options": [
+        "The Product Owner being available for questions during the Sprint",
+        "The Product Owner attending the Daily Scrum every day",
+        "The Product Owner participating in Product Backlog refinement",
+        "The Product Owner providing detailed specifications for all work"
+      ],
+      "correctAnswer": [
+        0,
+        2
+      ],
+      "explanation": "Effective collaboration includes the Product Owner being available for questions and participating in refinement. Daily Scrum attendance and detailed specifications are not necessary for collaboration.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 87,
+      "topic": "scrum-team",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What should happen if a Scrum Team member is consistently unavailable?",
+      "options": [
+        "The team should continue without them",
+        "The issue should be addressed to ensure team capacity",
+        "Another team member should cover their work",
+        "The Sprint should be cancelled"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Team capacity and availability issues should be addressed to ensure the team can meet its commitments. This might involve organizational changes or adjusting team composition.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 88,
+      "topic": "scrum-team",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "How should conflicts within the Scrum Team be handled?",
+      "options": [
+        "The Scrum Master should resolve all conflicts",
+        "The Product Owner makes the final decision",
+        "The team should work together to resolve conflicts",
+        "Management should intervene"
+      ],
+      "correctAnswer": 2,
+      "explanation": "As a self-managing team, the Scrum Team should work together to resolve conflicts. The Scrum Master may help facilitate resolution but the team owns the process.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 89,
+      "topic": "scrum-team",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is the best way to handle specialized skills needed for a Product Backlog item?",
+      "options": [
+        "Assign the work to a specialist outside the team",
+        "The team should develop the needed skills",
+        "Skip the item until a specialist is available",
+        "Create a separate team for specialized work"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Cross-functional teams should develop the skills needed to complete work. While specialists can provide guidance, the team should build capability to be self-sufficient.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 90,
+      "topic": "scrum-team",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "How should the Scrum Team handle external dependencies?",
+      "options": [
+        "Wait for dependencies to be resolved",
+        "Work around the dependencies",
+        "Proactively manage and communicate about dependencies",
+        "Escalate to management immediately"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Scrum Team should proactively identify, communicate, and manage dependencies. This includes working with other teams or stakeholders to resolve blockers.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 91,
+      "topic": "scrum-team",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What should the Scrum Team do if they consistently fail to meet their Sprint Goal?",
+      "options": [
+        "Reduce the Sprint Goal scope",
+        "Extend the Sprint length",
+        "Inspect and adapt their processes",
+        "Add more team members"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The team should inspect their processes and adapt to improve their ability to meet Sprint Goals. This might involve changing estimation, improving skills, or addressing impediments.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 92,
+      "topic": "scrum-team",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "How should knowledge be shared within the Scrum Team?",
+      "options": [
+        "Through formal documentation only",
+        "Through continuous collaboration and pairing",
+        "Through weekly knowledge transfer sessions",
+        "Through individual study and training"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Knowledge sharing should happen through continuous collaboration, pairing, and working together. This builds team capability and reduces knowledge silos.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 93,
+      "topic": "scrum-team",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What should happen if the Product Owner and Developers disagree on a technical approach?",
+      "options": [
+        "The Product Owner decides as they are accountable for value",
+        "The Developers decide as they are accountable for implementation",
+        "They should collaborate to find a solution that maximizes value",
+        "The Scrum Master should make the decision"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Product Owner and Developers should collaborate to find solutions that maximize value while considering technical constraints. Both perspectives are important.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 94,
+      "topic": "scrum-team",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "How should the Scrum Team handle urgent requests that come in mid-Sprint?",
+      "options": [
+        "Always accept urgent requests",
+        "Never accept changes during a Sprint",
+        "Evaluate the impact and negotiate with the Product Owner",
+        "Automatically extend the Sprint"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The team should evaluate the impact of urgent requests and work with the Product Owner to determine if changes are necessary and how to handle them while protecting the Sprint Goal.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 95,
+      "topic": "scrum-team",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "The Product Owner is frequently unavailable and the team's progress is blocked. What should be done?",
+      "options": [
+        "Assign a proxy Product Owner to make decisions",
+        "Train the Developers to make product decisions",
+        "The Product Owner must improve their availability",
+        "The Scrum Master should make product decisions temporarily"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Product Owner role is not delegable. The Product Owner must improve their availability to fulfill their accountabilities. The role requires active participation and decision-making.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 96,
+      "topic": "scrum-team",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "The organization wants to assign multiple Product Owners to a single product to increase capacity. What is the issue with this approach?",
+      "options": [
+        "It will create confusion about product direction and accountability",
+        "It will slow down decision-making due to coordination overhead",
+        "It violates the Scrum framework which requires one Product Owner per product",
+        "All of the above"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Multiple Product Owners for a single product creates confusion about direction and accountability, slows decision-making, and violates the Scrum framework. Each product should have one Product Owner.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 97,
+      "topic": "scrum-team",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "The Product Owner is spending 80% of their time with stakeholders and only 20% with the Developers. What is the likely impact?",
+      "options": [
+        "Excellent stakeholder alignment but poor team collaboration",
+        "Good market understanding but unclear product direction",
+        "Strong external relationships but weak internal communication",
+        "All of the above"
+      ],
+      "correctAnswer": 3,
+      "explanation": "While stakeholder engagement is important, the Product Owner needs to balance external relationships with internal collaboration. Poor team collaboration can lead to misaligned development efforts.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "id": 98,
+      "topic": "scrum-team",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "The Scrum Team has been working together for 6 months but still struggles with self-management. What should be the focus?",
+      "options": [
+        "Replace team members who aren't adapting",
+        "Provide more detailed process documentation",
+        "Increase coaching and remove organizational impediments",
+        "Assign a team lead to make decisions"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Self-management takes time to develop. The focus should be on coaching the team and removing organizational impediments that prevent them from being truly self-managing.",
+      "originalTopic": "scrum-team",
+      "sourceFile": "questions/scrum-team.json"
+    },
+    {
+      "difficulty": "hard",
+      "type": "single",
+      "question": "A Development Team consistently delivers all committed Sprint Backlog items but receives feedback that the software quality is declining. The team argues they are meeting their commitments. What should the Scrum Master focus on?",
+      "options": [
+        "Praise the team for meeting commitments",
+        "Help the team understand that quality is part of the Definition of Done",
+        "Suggest the Product Owner reduce the Sprint scope",
+        "Recommend adding more testing time to future Sprints"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Scrum Master should help the team understand that quality is part of the Definition of Done. Meeting commitments without maintaining quality is not sustainable and violates the Scrum value of excellence and the commitment to create a potentially releasable Increment.",
+      "id": 99,
+      "topic": "scrum-team"
+    }
+  ]
+}

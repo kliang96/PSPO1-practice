@@ -1,0 +1,380 @@
+{
+  "topic": "evidence-based-management",
+  "metadata": {
+    "totalQuestions": 21,
+    "difficulty": {
+      "easy": 5,
+      "medium": 11,
+      "hard": 5
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "topic": "evidence-based-management",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is the primary purpose of Evidence-Based Management (EBM)?",
+      "options": [
+        "To predict future project success",
+        "To help organizations continuously improve their ability to deliver value",
+        "To measure team productivity",
+        "To ensure compliance with Scrum guidelines"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Evidence-Based Management helps organizations continuously improve their ability to deliver value by using empirical evidence to guide decisions and measure progress.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 2,
+      "topic": "evidence-based-management",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "How many Key Value Areas (KVAs) are there in EBM?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": 1,
+      "explanation": "EBM has 4 Key Value Areas: Current Value, Unrealized Value, Ability to Innovate, and Time-to-Market.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 3,
+      "topic": "evidence-based-management",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What does the Current Value (CV) Key Value Area measure?",
+      "options": [
+        "The value that could be realized in the future",
+        "The value that the organization delivers today",
+        "The organization's ability to deliver new capabilities",
+        "How fast the organization can deliver new features"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Current Value measures the value that the organization delivers today to customers and stakeholders.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 4,
+      "topic": "evidence-based-management",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is the goal of measuring in EBM?",
+      "options": [
+        "To rank team members by performance",
+        "To predict exact delivery dates",
+        "To improve outcomes and decision-making",
+        "To ensure teams work faster"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The goal of measuring in EBM is to improve outcomes and decision-making by using empirical evidence to guide strategic and tactical decisions.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 5,
+      "topic": "evidence-based-management",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "Which principle is fundamental to Evidence-Based Management?",
+      "options": [
+        "Detailed upfront planning",
+        "Empirical process control",
+        "Resource optimization",
+        "Risk elimination"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Empirical process control is fundamental to EBM, using transparency, inspection, and adaptation to make evidence-based decisions.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 6,
+      "topic": "evidence-based-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What does the Unrealized Value (UV) Key Value Area represent?",
+      "options": [
+        "Value that was lost due to poor decisions",
+        "The potential future value that could be realized",
+        "Value that customers don't recognize",
+        "Historical value that was never measured"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Unrealized Value represents the potential future value that could be realized if the organization's strategic goal or vision were achieved.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 7,
+      "topic": "evidence-based-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What does the Ability to Innovate (A2I) Key Value Area measure?",
+      "options": [
+        "The number of new features delivered",
+        "The organization's ability to deliver new capabilities",
+        "The creativity level of the team",
+        "The speed of feature development"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ability to Innovate measures the organization's ability to deliver new capabilities that might better serve customers.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 8,
+      "topic": "evidence-based-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What does Time-to-Market (T2M) Key Value Area measure?",
+      "options": [
+        "How long it takes to develop any feature",
+        "The organization's ability to quickly deliver new capabilities",
+        "The time spent in Sprint Planning",
+        "The duration of each Sprint"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Time-to-Market measures the organization's ability to quickly deliver new capabilities, services, or products to customers.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 9,
+      "topic": "evidence-based-management",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "Which of the following are Key Value Measures (KVMs) for Current Value? (Choose all that apply)",
+      "options": [
+        "Revenue per employee",
+        "Product cost ratio",
+        "Customer satisfaction",
+        "Employee satisfaction"
+      ],
+      "correctAnswer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All of these are Key Value Measures for Current Value: revenue per employee, product cost ratio, customer satisfaction, and employee satisfaction.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 10,
+      "topic": "evidence-based-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "How often should EBM measurements be reviewed?",
+      "options": [
+        "Only at the end of each quarter",
+        "Monthly during management meetings",
+        "Regularly, with frequency depending on the context",
+        "Once per year during strategic planning"
+      ],
+      "correctAnswer": 2,
+      "explanation": "EBM measurements should be reviewed regularly, with the frequency depending on the context and the organization's needs for decision-making.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 11,
+      "topic": "evidence-based-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is the relationship between EBM and Scrum?",
+      "options": [
+        "EBM replaces Scrum for complex products",
+        "EBM complements Scrum by providing a framework for measuring value",
+        "EBM is only used when Scrum fails",
+        "EBM and Scrum are competing frameworks"
+      ],
+      "correctAnswer": 1,
+      "explanation": "EBM complements Scrum by providing a framework for measuring and improving the value delivered by Scrum Teams and organizations.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 12,
+      "topic": "evidence-based-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Which is an example of a Key Value Measure for Unrealized Value?",
+      "options": [
+        "Customer satisfaction score",
+        "Market share",
+        "Employee engagement",
+        "Release frequency"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Market share is a Key Value Measure for Unrealized Value as it represents the potential value that could be captured from the broader market.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 13,
+      "topic": "evidence-based-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What should organizations do when EBM measurements show declining performance?",
+      "options": [
+        "Increase the frequency of measurements",
+        "Change the measurement criteria",
+        "Investigate the causes and experiment with improvements",
+        "Focus on different Key Value Areas"
+      ],
+      "correctAnswer": 2,
+      "explanation": "When measurements show declining performance, organizations should investigate the causes and experiment with improvements based on empirical evidence.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 14,
+      "topic": "evidence-based-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "How does EBM help with strategic decisions?",
+      "options": [
+        "By providing detailed project plans",
+        "By offering evidence-based insights about value delivery",
+        "By eliminating the need for strategic planning",
+        "By automating decision-making processes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "EBM helps with strategic decisions by providing evidence-based insights about value delivery, enabling informed choices about investments and priorities.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 15,
+      "topic": "evidence-based-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What is a Key Value Measure for Ability to Innovate?",
+      "options": [
+        "Revenue per employee",
+        "Customer satisfaction",
+        "Feature usage index",
+        "Time to market"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Feature usage index is a Key Value Measure for Ability to Innovate as it shows how well new capabilities are being adopted and used.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 16,
+      "topic": "evidence-based-management",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "An organization's Current Value is high, but Unrealized Value is low. What does this indicate?",
+      "options": [
+        "The organization is performing optimally",
+        "The organization may be reaching market saturation",
+        "The organization needs to focus on innovation",
+        "The organization should reduce current offerings"
+      ],
+      "correctAnswer": 1,
+      "explanation": "High Current Value with low Unrealized Value may indicate the organization is reaching market saturation or has limited growth opportunities in its current market.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 17,
+      "topic": "evidence-based-management",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "How should an organization respond when Time-to-Market is slow but Ability to Innovate is high?",
+      "options": [
+        "Reduce innovation efforts to improve speed",
+        "Investigate and remove impediments to faster delivery",
+        "Focus only on Time-to-Market improvements",
+        "Maintain current practices since innovation is good"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When A2I is high but T2M is slow, the organization should investigate and remove impediments to faster delivery while maintaining innovation capabilities.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 18,
+      "topic": "evidence-based-management",
+      "difficulty": "hard",
+      "type": "multiple",
+      "question": "Which factors should influence how an organization sets its strategic goals using EBM? (Choose all that apply)",
+      "options": [
+        "Current Value measurements",
+        "Unrealized Value potential",
+        "Organizational capabilities (A2I)",
+        "Market competition speed (T2M)"
+      ],
+      "correctAnswer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four Key Value Areas should influence strategic goal setting: Current Value shows current performance, Unrealized Value shows potential, A2I shows capability, and T2M shows competitive positioning.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 19,
+      "topic": "evidence-based-management",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "A Product Owner wants to use EBM to prioritize the Product Backlog. What should they focus on?",
+      "options": [
+        "Only Current Value measures to optimize existing features",
+        "Only Unrealized Value to maximize future potential",
+        "A balanced consideration of all Key Value Areas",
+        "Time-to-Market measures to deliver faster"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Product Owner should consider all Key Value Areas when prioritizing the Product Backlog to ensure balanced value delivery across current and future needs.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 20,
+      "topic": "evidence-based-management",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "An organization has low Current Value but high Unrealized Value. What strategic approach should they consider?",
+      "options": [
+        "Abandon current products and focus entirely on new opportunities",
+        "Maintain status quo and wait for market changes",
+        "Invest in capabilities to realize the unrealized value while improving current value",
+        "Focus only on improving current value"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The organization should invest in capabilities to realize the unrealized value while also working to improve current value, creating a balanced approach to value delivery.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    },
+    {
+      "id": 21,
+      "topic": "evidence-based-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A Product Owner notices that while the team delivers features quickly (good T2M), customer satisfaction scores are declining (poor CV). The team has been focused on delivering many small features rather than impactful ones. What should the Product Owner do?",
+      "options": [
+        "Continue the current approach since Time-to-Market is good",
+        "Slow down delivery to focus on fewer, more impactful features",
+        "Measure and optimize for feature usage and customer value rather than just delivery speed",
+        "Increase the team size to deliver more features faster"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Product Owner should focus on measuring and optimizing for feature usage and customer value. Good T2M is only valuable if it delivers current value. The team should prioritize impactful features that improve customer satisfaction over quantity of features.",
+      "originalTopic": "evidence-based-management",
+      "sourceFile": "questions/evidence-based-management.json"
+    }
+  ]
+}

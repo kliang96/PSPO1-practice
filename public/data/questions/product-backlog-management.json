@@ -1,0 +1,308 @@
+{
+  "topic": "product-backlog-management",
+  "metadata": {
+    "totalQuestions": 18,
+    "difficulty": {
+      "easy": 5,
+      "medium": 13,
+      "hard": 5
+    }
+  },
+  "questions": [
+    {
+      "id": 22,
+      "topic": "product-backlog-management",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is the Product Backlog?",
+      "options": [
+        "A detailed project plan with all requirements",
+        "An emergent, ordered list of what is needed to improve the product",
+        "A list of all bugs and technical debt",
+        "A prioritized list of features approved by stakeholders"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Product Backlog is an emergent, ordered list of what is needed to improve the product. It is the single source of work undertaken by the Scrum Team.",
+      "originalTopic": "product-backlog-management",
+      "sourceFile": "questions/product-backlog-management.json"
+    },
+    {
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is Product Backlog refinement?",
+      "options": [
+        "The act of adding detail, estimates, and order to Product Backlog items",
+        "Removing completed items from the Product Backlog",
+        "A formal ceremony held at the end of each Sprint",
+        "The process of approving Product Backlog items"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Product Backlog refinement is the act of adding detail, estimates, and order to Product Backlog items. This is an ongoing process throughout the Sprint.",
+      "id": 23,
+      "topic": "product-backlog-management"
+    },
+    {
+      "difficulty": "easy",
+      "type": "single",
+      "question": "How much of the Sprint should the Development Team spend on Product Backlog refinement?",
+      "options": [
+        "No more than 10% of the Sprint",
+        "At least 20% of the Sprint",
+        "It depends on the team's capacity",
+        "Only during dedicated refinement meetings"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The Development Team usually spends no more than 10% of the capacity of the Development Team on Product Backlog refinement during a Sprint.",
+      "id": 24,
+      "topic": "product-backlog-management"
+    },
+    {
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What does it mean for a Product Backlog item to be 'Ready'?",
+      "options": [
+        "It has been approved by stakeholders",
+        "It is clear and detailed enough for the team to work on it",
+        "It has been assigned to a specific developer",
+        "It has been tested and verified"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A Product Backlog item is 'Ready' when it is clear and detailed enough for the Development Team to work on it during a Sprint.",
+      "id": 25,
+      "topic": "product-backlog-management"
+    },
+    {
+      "difficulty": "easy",
+      "type": "single",
+      "question": "Who participates in Product Backlog refinement?",
+      "options": [
+        "Only the Product Owner",
+        "The Product Owner and Scrum Master",
+        "The entire Scrum Team",
+        "Only the Development Team"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Product Backlog refinement is a collaborative effort involving the entire Scrum Team - Product Owner, Scrum Master, and Development Team.",
+      "id": 26,
+      "topic": "product-backlog-management"
+    },
+    {
+      "id": 27,
+      "topic": "product-backlog-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Who can add items to the Product Backlog?",
+      "options": [
+        "Only the Product Owner",
+        "Anyone, but the Product Owner is accountable for the Product Backlog",
+        "The Scrum Master and Product Owner only",
+        "The Developers and Product Owner only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Anyone can add items to the Product Backlog, but the Product Owner is ultimately accountable for the Product Backlog, including its content, availability, and ordering.",
+      "originalTopic": "product-backlog-management",
+      "sourceFile": "questions/product-backlog-management.json"
+    },
+    {
+      "id": 28,
+      "topic": "product-backlog-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Who is responsible for Product Backlog refinement?",
+      "options": [
+        "The Product Owner exclusively",
+        "The Developers exclusively",
+        "The Product Owner and Developers collaboratively",
+        "The Scrum Master facilitates while others participate"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Product Backlog refinement is a collaborative activity between the Product Owner and Developers. The Product Owner is accountable for the Product Backlog, but refinement is done together.",
+      "originalTopic": "product-backlog-management",
+      "sourceFile": "questions/product-backlog-management.json"
+    },
+    {
+      "id": 29,
+      "topic": "product-backlog-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What happens to Product Backlog items that are not selected for a Sprint?",
+      "options": [
+        "They are automatically moved to the next Sprint",
+        "They remain in the Product Backlog and may be selected for future Sprints",
+        "They are moved to a separate backlog for future consideration",
+        "They are deleted if not selected after 3 Sprints"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Product Backlog items that are not selected remain in the Product Backlog and may be selected for future Sprints, re-ordered, or refined based on new information.",
+      "originalTopic": "product-backlog-management",
+      "sourceFile": "questions/product-backlog-management.json"
+    },
+    {
+      "id": 30,
+      "topic": "product-backlog-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "How detailed should Product Backlog items be?",
+      "options": [
+        "All items should be detailed enough to be developed immediately",
+        "Items at the top should be more detailed than items at the bottom",
+        "All items should have the same level of detail",
+        "Only items for the current Sprint need to be detailed"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Product Backlog items are typically more detailed and refined as they move higher in the ordering. Items at the top are 'ready' for Sprint Planning, while lower items can be less detailed.",
+      "originalTopic": "product-backlog-management",
+      "sourceFile": "questions/product-backlog-management.json"
+    },
+    {
+      "id": 31,
+      "topic": "product-backlog-management",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "What are the characteristics of a well-managed Product Backlog? (Choose all that apply)",
+      "options": [
+        "Items are ordered by value",
+        "Items are detailed appropriately",
+        "Items are estimated",
+        "Items are emergent"
+      ],
+      "correctAnswer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "A well-managed Product Backlog has items that are ordered, detailed appropriately, estimated, and emergent. These characteristics help the team plan and deliver value effectively.",
+      "originalTopic": "product-backlog-management",
+      "sourceFile": "questions/product-backlog-management.json"
+    },
+    {
+      "id": 32,
+      "topic": "product-backlog-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "The Product Owner has been asked to create a detailed project plan with all features and delivery dates. What should they do?",
+      "options": [
+        "Create the detailed plan as requested",
+        "Explain that Product Backlog ordering provides transparency about priorities",
+        "Ask the Scrum Master to create the plan",
+        "Delegate the planning to the Developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Product Owner should explain that the Product Backlog ordering provides transparency about priorities. Detailed long-term planning contradicts the empirical approach of Scrum.",
+      "originalTopic": "product-backlog-management",
+      "sourceFile": "questions/product-backlog-management.json"
+    },
+    {
+      "difficulty": "hard",
+      "type": "single",
+      "question": "A Product Owner has 200 items in the Product Backlog, but the Development Team says they can only look at the top 20-30 items during refinement due to time constraints. Stakeholders are frustrated because their items lower in the backlog never get refined. What should the Product Owner do?",
+      "options": [
+        "Require the team to refine all 200 items",
+        "Re-order the backlog to ensure only the most valuable items are at the top",
+        "Split the Product Backlog into multiple backlogs",
+        "Schedule additional refinement sessions outside of Sprint time"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Product Owner should re-order the backlog to ensure only the most valuable items are at the top. The purpose of ordering is to focus refinement efforts on items most likely to be worked on soon. Items that may never be worked on don't need detailed refinement.",
+      "id": 33,
+      "topic": "product-backlog-management"
+    },
+    {
+      "difficulty": "hard",
+      "type": "single",
+      "question": "During Sprint Planning, the Development Team discovers that several 'Ready' Product Backlog items are actually not well understood and would require significant research. The team cannot commit to delivering them. What is the root cause of this problem?",
+      "options": [
+        "The Definition of Ready is not being followed",
+        "The Product Owner is not available enough for clarification",
+        "The Development Team is not skilled enough",
+        "Sprint Planning is not long enough"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The root cause is that the Definition of Ready is not being followed. Items marked as 'Ready' should be clear enough for the Development Team to understand and commit to delivering them.",
+      "id": 34,
+      "topic": "product-backlog-management"
+    },
+    {
+      "difficulty": "hard",
+      "type": "single",
+      "question": "A Product Owner wants to add a new urgent item to the current Sprint's Product Backlog selection. The Development Team says this would jeopardize the Sprint Goal. What should happen?",
+      "options": [
+        "The item should be added since the Product Owner decides priorities",
+        "The item should wait until the next Sprint",
+        "The Sprint should be cancelled to replan with the new item",
+        "The Product Owner and Development Team should negotiate scope changes"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The Product Owner and Development Team should negotiate scope changes. The Product Owner can work with the Development Team to see if the scope can be adjusted to accommodate the urgent item while still achieving the Sprint Goal.",
+      "id": 35,
+      "topic": "product-backlog-management"
+    },
+    {
+      "difficulty": "hard",
+      "type": "single",
+      "question": "Multiple stakeholders are pressuring the Product Owner to add their features to the Product Backlog and prioritize them highly. The Product Owner is struggling to make decisions about what to prioritize. What is the best approach?",
+      "options": [
+        "Let stakeholders vote on priorities",
+        "Prioritize based on who has the most authority",
+        "Use objective criteria like business value and cost of delay",
+        "Rotate priorities to give everyone a turn"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Product Owner should use objective criteria like business value, cost of delay, risk, and strategic alignment to make prioritization decisions. This provides a rational basis for decisions and helps stakeholders understand the reasoning.",
+      "id": 36,
+      "topic": "product-backlog-management"
+    },
+    {
+      "id": 37,
+      "topic": "product-backlog-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A senior executive approaches the Product Owner demanding that a specific feature be added to the current Sprint, bypassing the Product Backlog process. The executive claims it's 'critical for the business.' What should the Product Owner do?",
+      "options": [
+        "Immediately add the feature to the Sprint Backlog to maintain the executive relationship",
+        "Explain that all work must go through the Product Backlog and offer to prioritize it for the next Sprint",
+        "Ask the Scrum Master to handle the executive's request",
+        "Compromise by implementing part of the feature in the current Sprint"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Product Owner must protect the integrity of the Product Backlog process. All work should go through the Product Backlog to ensure proper prioritization and transparency. The PO can offer to prioritize the item highly for future Sprints after proper evaluation.",
+      "originalTopic": "product-backlog-management",
+      "sourceFile": "questions/product-backlog-management.json"
+    },
+    {
+      "id": 38,
+      "topic": "product-backlog-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "The Product Owner has been creating very detailed user stories with extensive acceptance criteria before adding them to the Product Backlog. The Development Team complains that this is slowing down refinement sessions. What should the Product Owner consider?",
+      "options": [
+        "Continue creating detailed stories to ensure quality",
+        "Start with lightweight stories and refine details collaboratively during refinement",
+        "Ask the Development Team to create their own detailed stories",
+        "Eliminate acceptance criteria to speed up the process"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Product Backlog items should start lightweight and be refined collaboratively. Over-detailed upfront specifications can waste effort and reduce team collaboration. The refinement process should be iterative and involve the whole team.",
+      "originalTopic": "product-backlog-management",
+      "sourceFile": "questions/product-backlog-management.json"
+    },
+    {
+      "id": 39,
+      "topic": "product-backlog-management",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Two different stakeholder groups are pressuring the Product Owner to prioritize their respective features at the top of the Product Backlog. Both claim their features are 'the most important.' How should the Product Owner handle this situation?",
+      "options": [
+        "Alternate between the two groups' features to keep both happy",
+        "Prioritize based on which stakeholder group has more organizational authority",
+        "Use objective criteria like business value, user impact, and cost of delay to make the decision",
+        "Ask the Development Team to choose which features to prioritize"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Product Owner should use objective criteria to make prioritization decisions. This provides a rational, transparent basis for decisions and helps stakeholders understand the reasoning behind priorities, rather than making decisions based on politics or pressure.",
+      "originalTopic": "product-backlog-management",
+      "sourceFile": "questions/product-backlog-management.json"
+    }
+  ]
+}
