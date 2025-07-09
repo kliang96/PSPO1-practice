@@ -1,287 +1,285 @@
 {
-  "topic": "scrum-theory",
-  "metadata": {
-    "totalQuestions": 16,
-    "difficulty": {
-      "easy": 5,
-      "medium": 10,
-      "hard": 5
-    }
-  },
-  "questions": [
-    {
-      "id": 100,
-      "topic": "scrum-theory",
-      "difficulty": "easy",
-      "type": "single",
-      "question": "What are the three pillars of empirical process control in Scrum?",
-      "options": [
-        "Transparency, Inspection, Adaptation",
-        "Inspection, Transparency, Optimization",
-        "Adaptation, Collaboration, Transparency",
-        "Transparency, Inspection, Accountability"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The three pillars of empirical process control are Transparency, Inspection, and Adaptation. These pillars work together to enable empirical process control, which is the foundation of Scrum.",
-      "originalTopic": "scrum-theory",
-      "sourceFile": "questions/scrum-theory.json"
-    },
-    {
-      "id": 101,
-      "topic": "scrum-theory",
-      "difficulty": "easy",
-      "type": "single",
-      "question": "How many core values does Scrum have?",
-      "options": [
-        "3",
-        "4",
-        "5",
-        "6"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Scrum has 5 core values: Commitment, Courage, Focus, Openness, and Respect.",
-      "originalTopic": "scrum-theory",
-      "sourceFile": "questions/scrum-theory.json"
-    },
-    {
-      "id": 102,
-      "topic": "scrum-theory",
-      "difficulty": "easy",
-      "type": "single",
-      "question": "What is the primary purpose of empirical process control in Scrum?",
-      "options": [
-        "To predict project outcomes accurately",
-        "To control team productivity",
-        "To manage uncertainty and complexity",
-        "To ensure all requirements are met"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Empirical process control is used to manage uncertainty and complexity by making decisions based on observation and experience rather than detailed upfront planning.",
-      "originalTopic": "scrum-theory",
-      "sourceFile": "questions/scrum-theory.json"
-    },
-    {
-      "id": 103,
-      "topic": "scrum-theory",
-      "difficulty": "easy",
-      "type": "single",
-      "question": "Which Scrum value emphasizes being honest about work and challenges?",
-      "options": [
-        "Commitment",
-        "Courage",
-        "Focus",
-        "Openness"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Openness means being honest about the work and the challenges in performing the work. Team members are open about their work, progress, and challenges.",
-      "originalTopic": "scrum-theory",
-      "sourceFile": "questions/scrum-theory.json"
-    },
-    {
-      "id": 104,
-      "topic": "scrum-theory",
-      "difficulty": "easy",
-      "type": "single",
-      "question": "What does the Scrum value of Focus primarily emphasize?",
-      "options": [
-        "Working on multiple projects simultaneously",
-        "Focusing on the Sprint work and the Sprint Goal",
-        "Focusing on individual performance",
-        "Focusing on long-term planning"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Focus means focusing on the Sprint work and the Sprint Goal. Everyone focuses on the work of the Sprint and the goals of the Scrum Team.",
-      "originalTopic": "scrum-theory",
-      "sourceFile": "questions/scrum-theory.json"
-    },
-    {
-      "id": 105,
-      "topic": "scrum-theory",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "Which statement best describes the Scrum value of Courage?",
-      "options": [
-        "Team members should always support Product Owner decisions without question",
-        "Team members should have the courage to do the right thing and work on tough problems",
-        "Team members should be willing to work overtime to meet commitments",
-        "Team members should courageously take on tasks outside their expertise"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Courage in Scrum means having the courage to do the right thing and work on tough problems. This includes having difficult conversations, asking for help, and challenging the status quo when necessary.",
-      "originalTopic": "scrum-theory",
-      "sourceFile": "questions/scrum-theory.json"
-    },
-    {
-      "id": 106,
-      "topic": "scrum-theory",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "How does Transparency support empirical process control?",
-      "options": [
-        "It ensures all team members work the same hours",
-        "It makes the process and work visible to those performing and receiving the work",
-        "It eliminates the need for inspection",
-        "It guarantees successful project outcomes"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Transparency ensures that aspects of the process that affect the outcome are visible to those performing and receiving the work. This visibility enables proper inspection and adaptation.",
-      "originalTopic": "scrum-theory",
-      "sourceFile": "questions/scrum-theory.json"
-    },
-    {
-      "id": 107,
-      "topic": "scrum-theory",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "What is the relationship between Inspection and Adaptation in Scrum?",
-      "options": [
-        "They are independent activities",
-        "Inspection must always lead to adaptation",
-        "Inspection enables informed adaptation when needed",
-        "Adaptation replaces the need for inspection"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Inspection enables informed adaptation when needed. If inspection determines that aspects of the process are outside acceptable limits, adjustment must be made as soon as possible.",
-      "originalTopic": "scrum-theory",
-      "sourceFile": "questions/scrum-theory.json"
-    },
-    {
-      "id": 108,
-      "topic": "scrum-theory",
-      "difficulty": "medium",
-      "type": "multiple",
-      "question": "Which of the following support the Scrum value of Respect? (Choose all that apply)",
-      "options": [
-        "Respecting diverse skills and backgrounds",
-        "Respecting the Product Owner's authority",
-        "Respecting team members' opinions and ideas",
-        "Respecting the Definition of Done"
-      ],
-      "correctAnswer": [
-        0,
-        2,
-        3
-      ],
-      "explanation": "Respect includes respecting diverse skills and backgrounds, team members' opinions and ideas, and agreed-upon standards like the Definition of Done. Authority respect is different from value-based respect.",
-      "originalTopic": "scrum-theory",
-      "sourceFile": "questions/scrum-theory.json"
-    },
-    {
-      "id": 109,
-      "topic": "scrum-theory",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "How frequently should inspection occur in Scrum?",
-      "options": [
-        "Only during Sprint Review",
-        "Frequently, but not so much that it gets in the way of work",
-        "Once per Sprint during Sprint Planning",
-        "Continuously throughout the day"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Inspection should occur frequently, but not so much that it gets in the way of work. The frequency is balanced to provide useful feedback without hindering productivity.",
-      "originalTopic": "scrum-theory",
-      "sourceFile": "questions/scrum-theory.json"
-    },
-    {
-      "id": 110,
-      "topic": "scrum-theory",
-      "difficulty": "medium",
-      "type": "multiple",
-      "question": "Which of the following support the empirical pillar of Transparency? (Choose all that apply)",
-      "options": [
-        "Making the Product Backlog visible to stakeholders",
-        "Having a clear Definition of Done",
-        "Sharing Sprint progress during Daily Scrum",
-        "Keeping individual productivity metrics private"
-      ],
-      "correctAnswer": [
-        0,
-        1
-      ],
-      "explanation": "Transparency is supported by making work visible (Product Backlog) and having clear standards (Definition of Done). Daily Scrum is for Developers only, and individual metrics don't promote transparency.",
-      "originalTopic": "scrum-theory",
-      "sourceFile": "questions/scrum-theory.json"
-    },
-    {
-      "difficulty": "hard",
-      "type": "single",
-      "question": "A team is struggling with transparency because stakeholders are not seeing the work progress. The team shows working software in Sprint Review, but stakeholders feel disconnected from the development process. What should the team focus on to improve transparency?",
-      "options": [
-        "Create detailed documentation of all development activities",
-        "Make the Sprint Backlog, progress, and impediments visible to stakeholders",
-        "Schedule daily meetings with stakeholders to report progress",
-        "Provide weekly status reports to stakeholders"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Transparency requires making the Sprint Backlog, progress, and impediments visible to stakeholders. This enables proper inspection and adaptation. Documentation or meetings alone don't provide the continuous visibility needed for transparency.",
-      "id": 111,
-      "topic": "scrum-theory"
-    },
-    {
-      "difficulty": "hard",
-      "type": "single",
-      "question": "During a Sprint Review, the Product Owner discovers that the implemented features don't align with the Sprint Goal, even though individual Product Backlog items were completed correctly. What empirical process control failure occurred?",
-      "options": [
-        "Lack of transparency in the Sprint Backlog",
-        "Insufficient inspection during Sprint execution",
-        "Failure to adapt when the Sprint Goal became unclear",
-        "All of the above"
-      ],
-      "correctAnswer": 3,
-      "explanation": "This scenario demonstrates failures in all three pillars: lack of transparency about how items relate to the Sprint Goal, insufficient inspection during the Sprint to catch the misalignment, and failure to adapt when the Sprint Goal became unclear.",
-      "id": 112,
-      "topic": "scrum-theory"
-    },
-    {
-      "difficulty": "hard",
-      "type": "multiple",
-      "question": "A Scrum Team is working in a highly regulated environment where changes require extensive documentation and approval processes. How can they apply Scrum values while meeting regulatory requirements? (Choose all that apply)",
-      "options": [
-        "Focus on delivering value within regulatory constraints",
-        "Have the courage to challenge unnecessary bureaucracy",
-        "Be transparent about regulatory impacts on delivery",
-        "Respect regulatory requirements while seeking process improvements"
-      ],
-      "correctAnswer": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "explanation": "All options demonstrate proper application of Scrum values in a regulated environment. Focus and commitment drive value delivery, courage enables constructive challenge of processes, transparency ensures visibility of constraints, and respect acknowledges legitimate requirements while seeking improvement.",
-      "id": 113,
-      "topic": "scrum-theory"
-    },
-    {
-      "difficulty": "hard",
-      "type": "single",
-      "question": "Two developers have a fundamental disagreement about the technical approach for a critical Product Backlog item. The disagreement is causing delays and tension in the team. Which Scrum value should guide the resolution?",
-      "options": [
-        "Focus - stick to the original plan to avoid delays",
-        "Commitment - both developers must commit to one approach",
-        "Openness - discuss the disagreement transparently with the team",
-        "Respect - defer to the more senior developer's approach"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Openness requires discussing the disagreement transparently with the team. This enables collective problem-solving and knowledge sharing. The team can then inspect both approaches and adapt to the best solution.",
-      "id": 114,
-      "topic": "scrum-theory"
-    },
-    {
-      "difficulty": "hard",
-      "type": "single",
-      "question": "A Product Owner frequently changes priorities mid-Sprint, justifying it as 'adapting to market changes.' This is causing the team to struggle with Sprint Goals and delivery. What is the core issue with this approach to adaptation?",
-      "options": [
-        "Adaptation should only happen during Sprint Planning",
-        "Adaptation requires inspection first, and inspection needs stable periods",
-        "The Product Owner should not be allowed to change priorities",
-        "Market changes are not a valid reason for adaptation"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Adaptation requires inspection first, and meaningful inspection needs stable periods to assess outcomes. Constant changes prevent the team from inspecting the results of their work and learning from it. The Sprint provides the stable period needed for empirical process control.",
-      "id": 115,
-      "topic": "scrum-theory"
-    }
-  ]
+	"topic": "scrum-theory",
+	"metadata": {
+		"totalQuestions": 16,
+		"difficulty": {
+			"easy": 2,
+			"medium": 8,
+			"hard": 6
+		}
+	},
+	"questions": [
+		{
+			"id": 100,
+			"topic": "scrum-theory",
+			"difficulty": "easy",
+			"type": "single",
+			"question": "A Product Owner needs to make a decision about product priorities but lacks complete information about user needs. How should the three pillars of empirical process control guide their approach?",
+			"options": [
+				"Create detailed specifications first, then inspect and adapt",
+				"Use transparency to share assumptions, inspect through user feedback, and adapt based on learning",
+				"Wait for complete information before making any decisions",
+				"Focus on inspection only to gather all possible data"
+			],
+			"correctAnswer": 1,
+			"explanation": "Empirical process control uses transparency (sharing assumptions), inspection (gathering user feedback), and adaptation (learning-based changes) to manage uncertainty. This approach acknowledges incomplete information and uses empirical methods to make informed decisions.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 101,
+			"topic": "scrum-theory",
+			"difficulty": "easy",
+			"type": "single",
+			"question": "A Product Owner is under pressure to commit to specific delivery dates for all features. How should the five Scrum values guide their response?",
+			"options": [
+				"Commit to all dates to show commitment and focus",
+				"Use openness to explain uncertainty, courage to resist false commitments, and focus on delivering value",
+				"Respect stakeholder demands by providing the requested dates",
+				"Focus solely on the current Sprint and ignore long-term planning"
+			],
+			"correctAnswer": 1,
+			"explanation": "Scrum values guide the Product Owner to be open about uncertainty, show courage in resisting false commitments, and maintain focus on value delivery. Commitment in Scrum is about dedication to goals and team success, not false promises about unpredictable futures.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 102,
+			"topic": "scrum-theory",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner discovers that stakeholders want detailed upfront planning and predictable delivery schedules. How should they explain the purpose of empirical process control in product development?",
+			"options": [
+				"Empirical process control eliminates all uncertainty in product development",
+				"It manages uncertainty and complexity by making decisions based on observation and learning rather than prediction",
+				"It provides more accurate predictions than traditional planning methods",
+				"It allows for better control of team productivity and output"
+			],
+			"correctAnswer": 1,
+			"explanation": "Empirical process control acknowledges that product development involves uncertainty and complexity that can't be fully predicted upfront. It uses observation, learning, and adaptation to make informed decisions rather than relying on detailed predictions.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 103,
+			"topic": "scrum-theory",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner is hesitant to share product performance metrics with stakeholders because some metrics show concerning trends. How should the Scrum value of Openness guide their decision?",
+			"options": [
+				"Share only positive metrics to maintain stakeholder confidence",
+				"Be transparent about both positive and concerning metrics to enable informed decision-making",
+				"Wait until problems are solved before sharing any metrics",
+				"Focus on activity metrics rather than outcome metrics"
+			],
+			"correctAnswer": 1,
+			"explanation": "Openness requires being honest about both successes and challenges. Sharing concerning metrics enables stakeholders to make informed decisions and support necessary changes. Hiding problems prevents the transparency needed for effective empirical process control.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 104,
+			"topic": "scrum-theory",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner is pulled in many directions by competing stakeholder demands and struggles to maintain focus. How should the Scrum value of Focus guide their approach?",
+			"options": [
+				"Try to satisfy all stakeholder demands equally",
+				"Focus on the Product Goal and Sprint Goal while managing stakeholder expectations",
+				"Delegate stakeholder management to avoid distraction",
+				"Focus only on the highest-paid stakeholders"
+			],
+			"correctAnswer": 1,
+			"explanation": "Focus means concentrating on the Product Goal and Sprint Goal while managing stakeholder expectations. This requires prioritizing work that delivers value toward these goals rather than trying to satisfy all demands equally.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 105,
+			"topic": "scrum-theory",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner realizes that a highly requested feature isn't delivering expected value, but stakeholders are resistant to change. How should the Scrum value of Courage guide their response?",
+			"options": [
+				"Continue with the feature to avoid conflict",
+				"Have the courage to present data, challenge assumptions, and advocate for better alternatives",
+				"Escalate the decision to higher management",
+				"Implement the feature but document concerns for later review"
+			],
+			"correctAnswer": 1,
+			"explanation": "Courage means having difficult conversations and challenging assumptions when necessary. The Product Owner should present data about the feature's performance and advocate for alternatives that would deliver better value, even if this creates short-term conflict.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 106,
+			"topic": "scrum-theory",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner wants to improve transparency with stakeholders who complain they don't understand what the team is working on. What approach would best support transparency?",
+			"options": [
+				"Provide detailed documentation of all development activities",
+				"Make the Product Backlog, Sprint Goals, and progress visible and understandable to stakeholders",
+				"Schedule weekly status meetings with detailed reports",
+				"Create a project dashboard with technical metrics"
+			],
+			"correctAnswer": 1,
+			"explanation": "Transparency requires making work visible and understandable to those who need it. Making the Product Backlog, Sprint Goals, and progress visible enables stakeholders to understand what's being worked on and why, supporting better collaboration and decision-making.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 107,
+			"topic": "scrum-theory",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner notices that Sprint Reviews aren't leading to meaningful Product Backlog changes despite stakeholder attendance. What might be wrong with their inspection and adaptation process?",
+			"options": [
+				"Stakeholders aren't providing enough feedback during Sprint Reviews",
+				"The inspection may lack depth or the Product Owner isn't effectively adapting based on insights",
+				"The Sprint Review format needs to be more formal and structured",
+				"The Development Team isn't presenting the Increment properly"
+			],
+			"correctAnswer": 1,
+			"explanation": "If inspection (Sprint Review) isn't leading to adaptation (Product Backlog changes), either the inspection lacks depth or the Product Owner isn't effectively translating insights into backlog changes. Meaningful inspection should reveal opportunities for improvement that drive adaptation.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 108,
+			"topic": "scrum-theory",
+			"difficulty": "hard",
+			"type": "multiple",
+			"question": "A Product Owner works with a diverse team including junior developers, senior architects, and UX designers. How should the Scrum value of Respect guide their interactions? (Choose all that apply)",
+			"options": [
+				"Value everyone's perspectives and contributions regardless of experience level",
+				"Respect the team's technical decisions even when they impact delivery timelines",
+				"Acknowledge different working styles and communication preferences",
+				"Defer all technical decisions to the most senior team member"
+			],
+			"correctAnswer": [0, 1, 2],
+			"explanation": "Respect includes valuing diverse perspectives, respecting technical expertise that impacts delivery, and acknowledging different working styles. However, respect doesn't mean automatically deferring to seniority - it means considering all viewpoints thoughtfully.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 109,
+			"topic": "scrum-theory",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner is tempted to inspect the team's work daily to ensure they're building the right thing. What guidance should they follow about inspection frequency?",
+			"options": [
+				"Inspect as frequently as possible to catch issues early",
+				"Only inspect during formal Scrum events",
+				"Inspect frequently enough to gather useful feedback without hindering the team's work",
+				"Inspect only when stakeholders request updates"
+			],
+			"correctAnswer": 2,
+			"explanation": "Inspection should be frequent enough to provide useful feedback but not so frequent that it becomes counterproductive. The Product Owner should balance the need for visibility with the team's need for focus and autonomy.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 110,
+			"topic": "scrum-theory",
+			"difficulty": "hard",
+			"type": "multiple",
+			"question": "A Product Owner wants to improve transparency with stakeholders who feel disconnected from development. Which approaches would best support transparency? (Choose all that apply)",
+			"options": [
+				"Make the Product Backlog priorities and rationale visible to stakeholders",
+				"Share Sprint Goals and progress toward those goals",
+				"Provide detailed individual developer productivity metrics",
+				"Create clear Definition of Done criteria that stakeholders can understand"
+			],
+			"correctAnswer": [0, 1, 3],
+			"explanation": "Transparency is supported by making priorities and rationale visible, sharing Sprint Goals and progress, and having clear standards. Individual productivity metrics don't enhance transparency about product progress and may undermine team collaboration.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 111,
+			"topic": "scrum-theory",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner's stakeholders complain they can't see development progress between Sprint Reviews. The team delivers working software but stakeholders feel disconnected. How should the Product Owner improve transparency?",
+			"options": [
+				"Create detailed daily status reports for stakeholders",
+				"Make Sprint progress, impediments, and completed work visible to stakeholders throughout the Sprint",
+				"Schedule weekly stakeholder meetings to demonstrate progress",
+				"Provide access to the team's task management system"
+			],
+			"correctAnswer": 1,
+			"explanation": "Transparency requires ongoing visibility, not just periodic reporting. Making Sprint progress, impediments, and completed work visible throughout the Sprint enables stakeholders to understand progress and provide timely feedback.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 112,
+			"topic": "scrum-theory",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "During a Sprint Review, a Product Owner realizes that completed features don't align with the Sprint Goal, despite individual backlog items being done correctly. What empirical process control issue occurred?",
+			"options": [
+				"The Sprint Goal wasn't clearly communicated (transparency failure)",
+				"Progress toward the Sprint Goal wasn't monitored during the Sprint (inspection failure)",
+				"The team didn't adjust their approach when Sprint Goal alignment became unclear (adaptation failure)",
+				"All of the above"
+			],
+			"correctAnswer": 3,
+			"explanation": "This scenario demonstrates failures in all three pillars: lack of transparency about Sprint Goal alignment, insufficient inspection of progress toward the goal during the Sprint, and failure to adapt when alignment became unclear. All three pillars must work together.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 113,
+			"topic": "scrum-theory",
+			"difficulty": "hard",
+			"type": "multiple",
+			"question": "A Product Owner works in a highly regulated industry where compliance requirements seem to conflict with Scrum values. How can they apply Scrum values while meeting regulatory needs? (Choose all that apply)",
+			"options": [
+				"Focus on delivering value within regulatory constraints rather than ignoring them",
+				"Have courage to challenge unnecessary bureaucratic processes while respecting legitimate requirements",
+				"Be transparent about how regulations impact delivery timelines and priorities",
+				"Respect regulatory requirements while continuously seeking process improvements"
+			],
+			"correctAnswer": [0, 1, 2, 3],
+			"explanation": "All options demonstrate proper application of Scrum values in regulated environments. Focus drives value delivery within constraints, courage enables constructive challenge of unnecessary processes, transparency reveals regulatory impacts, and respect acknowledges legitimate requirements while seeking improvement.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 114,
+			"topic": "scrum-theory",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner and Development Team disagree about the priority of technical debt work versus new features. The disagreement is causing tension and delaying decisions. Which Scrum value should guide resolution?",
+			"options": [
+				"Commitment - both sides must commit to a compromise",
+				"Focus - stick to the original Product Backlog priorities",
+				"Openness - discuss the underlying concerns and trade-offs transparently",
+				"Respect - defer to the Development Team's technical expertise"
+			],
+			"correctAnswer": 2,
+			"explanation": "Openness requires discussing underlying concerns and trade-offs transparently. This enables both sides to understand each other's perspectives and find solutions that address both value delivery and technical sustainability.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		},
+		{
+			"id": 115,
+			"topic": "scrum-theory",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner frequently changes priorities mid-Sprint, citing 'market adaptability' as justification. This disrupts Sprint Goals and team focus. What's the fundamental issue with this approach to adaptation?",
+			"options": [
+				"Market changes aren't valid reasons for adaptation in Scrum",
+				"Adaptation requires prior inspection, which needs stable periods to assess results",
+				"Only the Development Team should initiate adaptations during a Sprint",
+				"Sprint Goals should never be changed once committed"
+			],
+			"correctAnswer": 1,
+			"explanation": "Adaptation must be based on inspection of results, which requires stable periods to assess outcomes. Constant changes prevent meaningful inspection and learning. The Sprint provides stability needed for empirical process control - frequent changes undermine this foundation.",
+			"originalTopic": "scrum-theory",
+			"sourceFile": "questions/scrum-theory.json"
+		}
+	]
 }

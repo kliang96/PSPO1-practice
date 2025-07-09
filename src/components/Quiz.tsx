@@ -15,6 +15,14 @@ const Quiz: React.FC = () => {
 	const [selectedAnswer, setSelectedAnswer] = useState<
 		number | number[] | null
 	>(null);
+
+	// Helper function to compare two arrays for equality
+	const arraysEqual = (a: number[], b: number[]): boolean => {
+		if (a.length !== b.length) return false;
+		const sortedA = [...a].sort((x, y) => x - y);
+		const sortedB = [...b].sort((x, y) => x - y);
+		return sortedA.every((val, index) => val === sortedB[index]);
+	};
 	const [showExplanation, setShowExplanation] = useState(false);
 	const [hasSubmitted, setHasSubmitted] = useState(false);
 	const [questionStartTime, setQuestionStartTime] = useState<Date>(new Date());
@@ -108,9 +116,9 @@ const Quiz: React.FC = () => {
 					question?.type === "multiple"
 						? Array.isArray(draft.selectedAnswer) &&
 						  Array.isArray(question.correctAnswer) &&
-						  draft.selectedAnswer.length === question.correctAnswer.length &&
-						  draft.selectedAnswer.every((ans) =>
-								(question.correctAnswer as number[]).includes(ans)
+						  arraysEqual(
+								draft.selectedAnswer,
+								question.correctAnswer as number[]
 						  )
 						: draft.selectedAnswer === question?.correctAnswer;
 
@@ -207,9 +215,9 @@ const Quiz: React.FC = () => {
 				question?.type === "multiple"
 					? Array.isArray(draft.selectedAnswer) &&
 					  Array.isArray(question.correctAnswer) &&
-					  draft.selectedAnswer.length === question.correctAnswer.length &&
-					  draft.selectedAnswer.every((ans) =>
-							(question.correctAnswer as number[]).includes(ans)
+					  arraysEqual(
+							draft.selectedAnswer,
+							question.correctAnswer as number[]
 					  )
 					: draft.selectedAnswer === question?.correctAnswer;
 
@@ -238,7 +246,7 @@ const Quiz: React.FC = () => {
 				newAnswers = currentAnswers.filter((a) => a !== answerIndex);
 			} else {
 				// Add if not selected
-				newAnswers = [...currentAnswers, answerIndex].sort();
+				newAnswers = [...currentAnswers, answerIndex].sort((a, b) => a - b);
 			}
 
 			setSelectedAnswer(newAnswers.length > 0 ? newAnswers : null);
@@ -287,9 +295,9 @@ const Quiz: React.FC = () => {
 			currentQuestion!.type === "multiple"
 				? Array.isArray(selectedAnswer) &&
 				  Array.isArray(currentQuestion!.correctAnswer) &&
-				  selectedAnswer.length === currentQuestion!.correctAnswer.length &&
-				  selectedAnswer.every((ans) =>
-						(currentQuestion!.correctAnswer as number[]).includes(ans)
+				  arraysEqual(
+						selectedAnswer,
+						currentQuestion!.correctAnswer as number[]
 				  )
 				: selectedAnswer === currentQuestion!.correctAnswer;
 

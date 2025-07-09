@@ -1,351 +1,353 @@
 {
-  "topic": "scrum-artifacts",
-  "metadata": {
-    "totalQuestions": 20,
-    "difficulty": {
-      "easy": 5,
-      "medium": 10,
-      "hard": 5
-    }
-  },
-  "questions": [
-    {
-      "difficulty": "easy",
-      "type": "single",
-      "question": "What are the three artifacts in Scrum?",
-      "options": [
-        "Product Backlog, Sprint Backlog, Product Increment",
-        "Product Backlog, Sprint Backlog, Increment",
-        "Product Vision, Sprint Backlog, Increment",
-        "Product Backlog, Sprint Plan, Increment"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The three artifacts in Scrum are Product Backlog, Sprint Backlog, and Increment. These artifacts provide transparency and opportunities for inspection and adaptation.",
-      "id": 40,
-      "topic": "scrum-artifacts"
-    },
-    {
-      "difficulty": "easy",
-      "type": "single",
-      "question": "Who is responsible for the Product Backlog?",
-      "options": [
-        "The Scrum Master",
-        "The Development Team",
-        "The Product Owner",
-        "The entire Scrum Team"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Product Owner is responsible for the Product Backlog, including its content, availability, and ordering.",
-      "id": 41,
-      "topic": "scrum-artifacts"
-    },
-    {
-      "difficulty": "easy",
-      "type": "single",
-      "question": "What is the Sprint Backlog?",
-      "options": [
-        "A list of all features planned for the product",
-        "The Product Backlog items selected for the Sprint plus a plan for delivering them",
-        "A detailed task list created by the Scrum Master",
-        "The Definition of Done for the Sprint"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Sprint Backlog is the set of Product Backlog items selected for the Sprint, plus a plan for delivering the product Increment and realizing the Sprint Goal.",
-      "id": 42,
-      "topic": "scrum-artifacts"
-    },
-    {
-      "difficulty": "easy",
-      "type": "single",
-      "question": "What does the Increment represent?",
-      "options": [
-        "The sum of all Product Backlog items completed during a Sprint",
-        "The work completed by individual developers",
-        "The sum of all Product Backlog items completed during a Sprint and all previous Sprints",
-        "The features delivered to production"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Increment is the sum of all the Product Backlog items completed during a Sprint and the value of the increments of all previous Sprints.",
-      "id": 43,
-      "topic": "scrum-artifacts"
-    },
-    {
-      "difficulty": "easy",
-      "type": "single",
-      "question": "When must the Increment be potentially releasable?",
-      "options": [
-        "Only at the end of the project",
-        "At the end of each Sprint",
-        "When the Product Owner decides",
-        "When all features are complete"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Increment must be potentially releasable at the end of each Sprint, regardless of whether the Product Owner decides to actually release it.",
-      "id": 44,
-      "topic": "scrum-artifacts"
-    },
-    {
-      "id": 45,
-      "topic": "scrum-artifacts",
-      "difficulty": "medium",
-      "type": "multiple",
-      "question": "Which of the following are characteristics of a good Product Backlog item? (Choose all that apply)",
-      "options": [
-        "It is independent and can be worked on separately",
-        "It contains detailed technical specifications",
-        "It is valuable to users or customers",
-        "It is estimable by the Developers"
-      ],
-      "correctAnswer": [
-        0,
-        2,
-        3
-      ],
-      "explanation": "Good Product Backlog items are independent, valuable, and estimable. They should not contain detailed technical specifications initially, as these emerge through refinement and collaboration.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 46,
-      "topic": "scrum-artifacts",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "What is the Definition of Done?",
-      "options": [
-        "A checklist of tasks that must be completed for each Sprint",
-        "A formal description of the state of the Increment when it meets quality measures",
-        "The acceptance criteria for each Product Backlog item",
-        "A document that describes the project requirements"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Definition of Done is a formal description of the state of the Increment when it meets the quality measures required for the product. It creates transparency and shared understanding.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 47,
-      "topic": "scrum-artifacts",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "What makes a Product Backlog item 'ready' for Sprint Planning?",
-      "options": [
-        "It has detailed technical specifications",
-        "It has been estimated by the Developers",
-        "It is refined enough that it can be completed in a Sprint",
-        "It has been approved by all stakeholders"
-      ],
-      "correctAnswer": 2,
-      "explanation": "A Product Backlog item is 'ready' when it has been refined enough that the Developers believe it can be completed within a Sprint. The specific criteria may vary by team.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 48,
-      "topic": "scrum-artifacts",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "When is an Increment created?",
-      "options": [
-        "Only at the end of the Sprint",
-        "When the Definition of Done is met for a Product Backlog item",
-        "When the Product Owner accepts the work",
-        "When all Sprint Backlog items are completed"
-      ],
-      "correctAnswer": 1,
-      "explanation": "An Increment is created the moment a Product Backlog item meets the Definition of Done. Multiple Increments can be created during a Sprint.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 49,
-      "topic": "scrum-artifacts",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "The Product Owner wants to release an Increment mid-Sprint, but the Development Team says it doesn't meet the Definition of Done yet. What should happen?",
-      "options": [
-        "Release the Increment anyway since the Product Owner has the authority",
-        "Wait until the Increment meets the Definition of Done before releasing",
-        "Lower the Definition of Done to allow the release",
-        "Release it but document the technical debt"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Increment must meet the Definition of Done before it can be released. The Definition of Done ensures quality and cannot be compromised. The Product Owner should wait until the work is truly 'done'.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 50,
-      "topic": "scrum-artifacts",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "A Product Owner is frustrated because stakeholders keep asking for detailed project timelines. They want to show a traditional project plan based on the Product Backlog. What should the Product Owner do?",
-      "options": [
-        "Create a detailed project plan with fixed dates for all Product Backlog items",
-        "Explain that the Product Backlog is emergent and provide transparency through Sprint Reviews",
-        "Ask the Development Team to estimate delivery dates for all items",
-        "Create a roadmap with firm commitments for the next 6 months"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Product Owner should explain that the Product Backlog is emergent and provide transparency through Sprint Reviews and other appropriate mechanisms. Creating false certainty with detailed timelines contradicts the empirical nature of Scrum.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 51,
-      "topic": "scrum-artifacts",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "The Development Team tells the Product Owner that they cannot meet the Definition of Done for several Product Backlog items due to missing automated testing infrastructure. What should the Product Owner do?",
-      "options": [
-        "Accept the items without automated tests and add testing later",
-        "Work with the team to add infrastructure work to the Product Backlog",
-        "Hire external contractors to build the testing infrastructure",
-        "Remove testing requirements from the Definition of Done"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Product Owner should work with the team to add infrastructure work to the Product Backlog. The Definition of Done should not be compromised, and the infrastructure work is necessary for long-term value delivery.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 52,
-      "topic": "scrum-artifacts",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "A Product Owner has been adding very large Product Backlog items (epics) directly to Sprint Planning. The Development Team struggles to complete them within a Sprint. What is the root cause?",
-      "options": [
-        "The Development Team lacks the necessary skills",
-        "The Sprint length is too short",
-        "The Product Backlog items are not properly refined",
-        "The Product Owner is not prioritizing correctly"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The root cause is that Product Backlog items are not properly refined. Items should be broken down and detailed enough to be completed within a Sprint before being brought to Sprint Planning. This is part of ongoing Product Backlog refinement.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 53,
-      "topic": "scrum-artifacts",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "The Product Owner wants to track individual Developer productivity by measuring how many Product Backlog items each person completes. What is wrong with this approach?",
-      "options": [
-        "It doesn't account for the different complexity of items",
-        "It undermines team collaboration and self-management",
-        "It focuses on output rather than outcome and value",
-        "All of the above"
-      ],
-      "correctAnswer": 3,
-      "explanation": "All of these issues apply. Individual productivity tracking undermines team collaboration, focuses on output rather than value, and doesn't account for item complexity. The focus should be on team performance and value delivery.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 54,
-      "topic": "scrum-artifacts",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "A Product Owner discovers that the Development Team has been adding technical debt items to the Sprint Backlog without discussing them. The Product Owner is concerned about transparency. What should happen?",
-      "options": [
-        "The Product Owner should forbid adding technical debt items",
-        "Technical debt items should be added to the Product Backlog and prioritized",
-        "The Development Team can continue adding technical debt items autonomously",
-        "Technical debt should be addressed only during separate 'technical Sprints'"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Technical debt items should be added to the Product Backlog and prioritized by the Product Owner. This ensures transparency and allows the Product Owner to make informed decisions about balancing technical work with new features.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 55,
-      "topic": "scrum-artifacts",
-      "difficulty": "hard",
-      "type": "multiple",
-      "question": "Which statements about the Increment are true? (Choose all that apply)",
-      "options": [
-        "It must be in a usable condition regardless of whether the Product Owner releases it",
-        "It includes all Increments created during previous Sprints",
-        "It can only be created at the end of the Sprint",
-        "It must meet the Definition of Done"
-      ],
-      "correctAnswer": [
-        0,
-        1,
-        3
-      ],
-      "explanation": "The Increment must be usable, includes all previous Increments, and must meet the Definition of Done. Increments can be created multiple times during a Sprint.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 56,
-      "topic": "scrum-artifacts",
-      "difficulty": "hard",
-      "type": "single",
-      "question": "The Definition of Done includes deployment to production, but the organization has a separate release approval process. What should the Scrum Team do?",
-      "options": [
-        "Remove deployment from the Definition of Done",
-        "Include the release approval process in the Definition of Done",
-        "Deploy to production but don't release until approved",
-        "Work with the organization to align the Definition of Done with release processes"
-      ],
-      "correctAnswer": 3,
-      "explanation": "The Scrum Team should work with the organization to align the Definition of Done with release processes. The Definition of Done should represent truly 'done' work that could be released.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 57,
-      "topic": "scrum-artifacts",
-      "difficulty": "hard",
-      "type": "single",
-      "question": "A Product Owner is under pressure to release an Increment that contains partially completed features. The features work but have known quality issues that don't meet the Definition of Done. Senior management says 'we can fix quality issues later.' What should the Product Owner do?",
-      "options": [
-        "Release the Increment with known quality issues to meet business demands",
-        "Work with the team to address quality issues before releasing",
-        "Release the Increment but communicate the quality risks clearly",
-        "Ask the Development Team to lower the Definition of Done temporarily"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Product Owner should work with the team to address quality issues before releasing. The Definition of Done ensures quality and cannot be compromised. Technical debt and quality issues compound over time and reduce long-term value delivery.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 58,
-      "topic": "scrum-artifacts",
-      "difficulty": "hard",
-      "type": "single",
-      "question": "The Product Owner wants to create separate Product Backlogs for different stakeholder groups to manage their requests independently. Each group would have their own backlog and priorities. What is the main issue with this approach?",
-      "options": [
-        "It creates more work for the Product Owner",
-        "It fragments product vision and makes it difficult to optimize overall value",
-        "It reduces transparency for stakeholders",
-        "It violates the rule of having one Product Backlog per product"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The main issue is that separate backlogs fragment the product vision and make it difficult to optimize overall value. The Product Owner needs a single view of all work to make effective prioritization decisions that maximize value for the entire product.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    },
-    {
-      "id": 59,
-      "topic": "scrum-artifacts",
-      "difficulty": "hard",
-      "type": "single",
-      "question": "A Product Owner has been creating very detailed specifications for Product Backlog items, including mockups, technical requirements, and test cases before Sprint Planning. The Development Team says this approach is slowing them down and reducing their creativity. What should the Product Owner consider?",
-      "options": [
-        "Continue with detailed specifications to ensure quality",
-        "Move to lighter specifications and collaborate more during development",
-        "Ask the Development Team to create their own specifications",
-        "Create specifications only for high-priority items"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Product Owner should move to lighter specifications and collaborate more during development. Over-specification upfront reduces team creativity, slows down delivery, and may lead to solutions that don't adapt to new learning during development.",
-      "originalTopic": "scrum-artifacts",
-      "sourceFile": "questions/scrum-artifacts.json"
-    }
-  ]
+	"topic": "scrum-artifacts",
+	"metadata": {
+		"totalQuestions": 20,
+		"difficulty": {
+			"easy": 2,
+			"medium": 12,
+			"hard": 6
+		}
+	},
+	"questions": [
+		{
+			"id": 40,
+			"topic": "scrum-artifacts",
+			"difficulty": "easy",
+			"type": "single",
+			"question": "What are the three Scrum artifacts and their primary purposes?",
+			"options": [
+				"Product Backlog (requirements), Sprint Backlog (tasks), Increment (deliverable)",
+				"Product Backlog (transparency of work), Sprint Backlog (transparency of Sprint), Increment (transparency of progress)",
+				"Product Vision (direction), Sprint Plan (execution), Product Release (delivery)",
+				"Requirements Document (scope), Work Breakdown (tasks), Deliverable (output)"
+			],
+			"correctAnswer": 1,
+			"explanation": "The three Scrum artifacts are Product Backlog (transparency of work to be done), Sprint Backlog (transparency of work planned for the Sprint), and Increment (transparency of work completed and progress toward Product Goal).",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 41,
+			"topic": "scrum-artifacts",
+			"difficulty": "easy",
+			"type": "single",
+			"question": "What is the Product Owner's primary accountability regarding Scrum artifacts?",
+			"options": [
+				"Creating all three artifacts and maintaining their quality",
+				"Managing the Product Backlog to maximize product value",
+				"Ensuring the Sprint Backlog aligns with stakeholder expectations",
+				"Approving each Increment before it can be released"
+			],
+			"correctAnswer": 1,
+			"explanation": "The Product Owner is accountable for managing the Product Backlog to maximize the value of the product. While they collaborate on other artifacts, the Product Backlog is their primary artifact responsibility.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 42,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner notices that Sprint Backlogs consistently include work that wasn't in the original Sprint Planning. The Development Team says they're 'discovering necessary tasks.' What should the Product Owner investigate?",
+			"options": [
+				"Whether the Development Team is properly skilled for the work",
+				"Whether Product Backlog items are sufficiently refined before Sprint Planning",
+				"Whether the Sprint length needs to be increased",
+				"Whether the Scrum Master is providing adequate guidance"
+			],
+			"correctAnswer": 1,
+			"explanation": "Consistently discovering unplanned work suggests Product Backlog items aren't sufficiently refined. The Product Owner should investigate whether items are properly understood and detailed before Sprint Planning to reduce surprises.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 43,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner wants to release functionality mid-Sprint that the Development Team says is 'working but not done.' The feature passes user acceptance testing but doesn't meet some Definition of Done criteria. What should the Product Owner do?",
+			"options": [
+				"Release the functionality since it meets user needs",
+				"Wait until the work meets the full Definition of Done",
+				"Create a separate Definition of Done for urgent releases",
+				"Release with documented technical debt to address later"
+			],
+			"correctAnswer": 1,
+			"explanation": "The Definition of Done cannot be compromised. It ensures quality and sustainable development. The Product Owner should wait until work truly meets the Definition of Done before releasing, even if it delays the release.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 44,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner's stakeholders complain that they can't understand product progress from Sprint Reviews. They want detailed documentation of what was accomplished. How should the Product Owner respond?",
+			"options": [
+				"Create comprehensive documentation after each Sprint",
+				"Improve the Sprint Review to better demonstrate the working Increment",
+				"Ask the Development Team to provide detailed progress reports",
+				"Schedule separate stakeholder briefings with documentation"
+			],
+			"correctAnswer": 1,
+			"explanation": "The Increment itself should provide transparency about progress. The Product Owner should improve Sprint Reviews to better demonstrate working functionality rather than relying on documentation, which provides less valuable transparency.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 45,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "multiple",
+			"question": "A Product Owner is refining Product Backlog items for an upcoming Sprint. Which characteristics should they ensure items have? (Choose all that apply)",
+			"options": [
+				"Items are valuable to users or stakeholders",
+				"Items include detailed technical implementation plans",
+				"Items are small enough to be completed within a Sprint",
+				"Items are testable and have clear acceptance criteria"
+			],
+			"correctAnswer": [0, 2, 3],
+			"explanation": "Good Product Backlog items should be valuable, appropriately sized for Sprint completion, and testable with clear acceptance criteria. Technical implementation details should emerge through collaboration, not be specified upfront.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 46,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner discovers that the team's Definition of Done doesn't include performance testing, but customers are complaining about slow response times. What should the Product Owner do?",
+			"options": [
+				"Add performance requirements to individual Product Backlog items",
+				"Work with the team to improve the Definition of Done to include performance standards",
+				"Accept the current situation since the Definition of Done is set",
+				"Create separate performance testing Sprints"
+			],
+			"correctAnswer": 1,
+			"explanation": "The Definition of Done should evolve to ensure quality that meets user needs. The Product Owner should work with the team to improve the Definition of Done to include performance standards, preventing future quality issues.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 47,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "During Sprint Planning, the Development Team says several 'Ready' Product Backlog items actually need significant clarification. This has happened multiple times. What should the Product Owner address?",
+			"options": [
+				"The Definition of Ready needs improvement and consistent application",
+				"Sprint Planning should be longer to accommodate discovery",
+				"The Development Team needs better analysis skills",
+				"Product Backlog items should include more detailed specifications"
+			],
+			"correctAnswer": 0,
+			"explanation": "Recurring issues with 'Ready' items indicate the Definition of Ready needs improvement. The Product Owner should work with the team to clarify and consistently apply readiness criteria to prevent Sprint Planning disruptions.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 48,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner notices that Increments are created throughout the Sprint, but stakeholders only see progress during Sprint Reviews. How can the Product Owner improve transparency?",
+			"options": [
+				"Require stakeholders to attend daily check-ins",
+				"Create detailed progress reports between Sprint Reviews",
+				"Make Increments visible to stakeholders as they're completed",
+				"Wait until Sprint Reviews to show any progress"
+			],
+			"correctAnswer": 2,
+			"explanation": "Transparency is improved by making Increments visible as they're completed, not just at Sprint Reviews. This provides stakeholders with real-time visibility into progress and enables faster feedback.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 49,
+			"topic": "scrum-artifacts",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner faces pressure to release an Increment with known security vulnerabilities because 'customers are waiting.' The vulnerabilities don't meet the Definition of Done, but marketing says the delay will cost sales. What should the Product Owner do?",
+			"options": [
+				"Release with vulnerabilities and fix them in the next release",
+				"Negotiate a partial release of features that meet the Definition of Done",
+				"Maintain the Definition of Done and work with the team to address security issues",
+				"Create a temporary exception to the Definition of Done for this release"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Definition of Done ensures quality and cannot be compromised, especially for security issues. The Product Owner should maintain standards and work with the team to address issues, protecting long-term value over short-term gains.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 50,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "Stakeholders ask the Product Owner for a traditional project plan with delivery dates for all Product Backlog items. How should the Product Owner provide transparency while managing expectations?",
+			"options": [
+				"Create fixed delivery dates for all Product Backlog items",
+				"Provide a prioritized view of the Product Backlog with expected sequencing but explain the empirical nature of delivery",
+				"Refuse to provide any timeline information",
+				"Ask the Development Team to commit to specific delivery dates"
+			],
+			"correctAnswer": 1,
+			"explanation": "The Product Owner should provide transparency about priorities and likely sequencing while educating stakeholders about empirical development. Fixed dates create false certainty that contradicts Scrum's empirical approach.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 51,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Development Team tells the Product Owner they cannot meet the Definition of Done due to missing automated testing infrastructure. What should the Product Owner do?",
+			"options": [
+				"Lower the Definition of Done to match current capabilities",
+				"Add infrastructure work to the Product Backlog and prioritize it appropriately",
+				"Accept partially done work and plan to add testing later",
+				"Outsource the infrastructure work to avoid impacting feature delivery"
+			],
+			"correctAnswer": 1,
+			"explanation": "The Product Owner should add necessary infrastructure work to the Product Backlog and prioritize it appropriately. The Definition of Done should not be compromised, and infrastructure is essential for sustainable delivery.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 52,
+			"topic": "scrum-artifacts",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner consistently brings large, unrefined items to Sprint Planning, causing long planning sessions and incomplete Sprint Backlogs. The team is frustrated. What is the core issue the Product Owner must address?",
+			"options": [
+				"The Sprint Planning timebox is too short for complex items",
+				"The Development Team lacks estimation skills for large items",
+				"Product Backlog refinement is not happening effectively between Sprints",
+				"The Product Owner needs to provide more detailed specifications"
+			],
+			"correctAnswer": 2,
+			"explanation": "The core issue is ineffective Product Backlog refinement. The Product Owner should ensure items are properly refined before Sprint Planning, breaking down large items and clarifying requirements through ongoing refinement activities.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 53,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner wants to measure team productivity by counting completed Product Backlog items per Sprint. What are the problems with this approach?",
+			"options": [
+				"Different items have different complexity and value",
+				"It focuses on output rather than outcomes and value delivery",
+				"It may encourage gaming the system by splitting or combining items artificially",
+				"All of the above"
+			],
+			"correctAnswer": 3,
+			"explanation": "All these issues apply. Counting items ignores complexity differences, focuses on output over value, and may encourage gaming. Product Owners should focus on value delivery and customer outcomes rather than item counts.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 54,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner discovers that the Development Team has been adding technical debt items to Sprint Backlogs without discussion. What should the Product Owner do to improve transparency and decision-making?",
+			"options": [
+				"Forbid the team from working on technical debt",
+				"Add technical debt items to the Product Backlog for proper prioritization",
+				"Allow the team to continue managing technical debt independently",
+				"Create separate technical debt Sprints"
+			],
+			"correctAnswer": 1,
+			"explanation": "Technical debt items should be visible in the Product Backlog and prioritized by the Product Owner. This ensures transparency and allows informed decisions about balancing technical work with new features.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 55,
+			"topic": "scrum-artifacts",
+			"difficulty": "hard",
+			"type": "multiple",
+			"question": "A Product Owner is preparing for a Sprint Review where they'll demonstrate the Increment. Which statements about the Increment are true? (Choose all that apply)",
+			"options": [
+				"It must be in usable condition even if the Product Owner chooses not to release it",
+				"It includes all work completed in the current Sprint plus all previous Increments",
+				"It can only be demonstrated at the end of the Sprint",
+				"It must meet the Definition of Done to be considered complete"
+			],
+			"correctAnswer": [0, 1, 3],
+			"explanation": "The Increment must be usable, includes all previous work, and must meet the Definition of Done. However, Increments can be created and potentially demonstrated multiple times during a Sprint, not just at the end.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 56,
+			"topic": "scrum-artifacts",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "The organization's Definition of Done includes 'deployed to production,' but there's a separate business approval process before features can be released to customers. How should the Product Owner handle this conflict?",
+			"options": [
+				"Remove deployment from the Definition of Done",
+				"Include business approval in the Definition of Done",
+				"Deploy to production but keep features disabled until approved",
+				"Work with the organization to align the Definition of Done with actual release capability"
+			],
+			"correctAnswer": 3,
+			"explanation": "The Product Owner should work to align the Definition of Done with actual release capability. The Definition should represent work that could realistically be released, considering all organizational constraints.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 57,
+			"topic": "scrum-artifacts",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "Senior management pressures a Product Owner to release an Increment with known quality issues, saying 'we can fix problems later.' The issues violate the Definition of Done. What should the Product Owner do?",
+			"options": [
+				"Release the Increment to maintain management support",
+				"Refuse to release and explain the long-term consequences of compromising quality",
+				"Release but clearly document all known issues and risks",
+				"Temporarily lower the Definition of Done for this release"
+			],
+			"correctAnswer": 1,
+			"explanation": "The Product Owner should refuse to compromise the Definition of Done and explain the long-term consequences. Quality debt compounds over time and undermines future value delivery. Maintaining standards protects long-term product success.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 58,
+			"topic": "scrum-artifacts",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner is managing a complex product with multiple stakeholder groups. They're considering creating separate Product Backlogs for each group to manage demands. What is the primary risk of this approach?",
+			"options": [
+				"It increases the Product Owner's workload significantly",
+				"It fragments the product vision and makes value optimization difficult",
+				"It violates Scrum rules about having one Product Backlog",
+				"It reduces stakeholder transparency into each other's requirements"
+			],
+			"correctAnswer": 1,
+			"explanation": "The primary risk is fragmenting the product vision and making it difficult to optimize overall value. The Product Owner needs a single view of all work to make effective trade-off decisions that maximize value for the entire product.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		},
+		{
+			"id": 59,
+			"topic": "scrum-artifacts",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner has been creating detailed specifications, mockups, and test cases for Product Backlog items before refinement. The Development Team says this reduces their engagement and creativity. What should the Product Owner do?",
+			"options": [
+				"Continue with detailed specifications to ensure quality and reduce ambiguity",
+				"Create lighter initial specifications and encourage collaborative refinement",
+				"Eliminate all upfront specifications and rely entirely on conversation",
+				"Ask the Development Team to create their own detailed specifications"
+			],
+			"correctAnswer": 1,
+			"explanation": "The Product Owner should balance initial clarity with collaborative engagement. Over-specification reduces team creativity and buy-in, while under-specification creates confusion. Collaborative refinement often produces better solutions.",
+			"originalTopic": "scrum-artifacts",
+			"sourceFile": "questions/scrum-artifacts.json"
+		}
+	]
 }

@@ -1,373 +1,370 @@
 {
-  "topic": "stakeholder-management",
-  "metadata": {
-    "totalQuestions": 21,
-    "difficulty": {
-      "easy": 5,
-      "medium": 11,
-      "hard": 5
-    }
-  },
-  "questions": [
-    {
-      "id": 139,
-      "topic": "stakeholder-management",
-      "difficulty": "easy",
-      "type": "single",
-      "question": "Who is primarily responsible for stakeholder management in Scrum?",
-      "options": [
-        "The Scrum Master",
-        "The Product Owner",
-        "The entire Scrum Team",
-        "The stakeholders themselves"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Product Owner is primarily responsible for stakeholder management. They interact with stakeholders to gather requirements, provide updates, and manage expectations.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 140,
-      "topic": "stakeholder-management",
-      "difficulty": "easy",
-      "type": "single",
-      "question": "When should stakeholders be invited to participate in Sprint Reviews?",
-      "options": [
-        "Only when they request it",
-        "At every Sprint Review",
-        "Only when there are major changes",
-        "Never, it's an internal team event"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Stakeholders should be invited to participate in every Sprint Review. This is a key opportunity for stakeholders to inspect the Increment and provide feedback.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 141,
-      "topic": "stakeholder-management",
-      "difficulty": "easy",
-      "type": "single",
-      "question": "What is the main purpose of involving stakeholders in the Sprint Review?",
-      "options": [
-        "To get approval for the work done",
-        "To inspect the Increment and provide feedback",
-        "To assign work for the next Sprint",
-        "To review the team's performance"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The main purpose is to inspect the Increment and provide feedback. This helps ensure the product is moving in the right direction and provides valuable input for future development.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 142,
-      "topic": "stakeholder-management",
-      "difficulty": "easy",
-      "type": "single",
-      "question": "How often should the Product Owner communicate with stakeholders?",
-      "options": [
-        "Only during Sprint Reviews",
-        "Once per Sprint",
-        "Regularly throughout the project",
-        "Only when stakeholders request it"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Product Owner should communicate with stakeholders regularly throughout the project to gather feedback, share progress, and manage expectations.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 143,
-      "topic": "stakeholder-management",
-      "difficulty": "easy",
-      "type": "single",
-      "question": "What should the Product Owner do if stakeholders disagree about product priorities?",
-      "options": [
-        "Let stakeholders resolve the disagreement themselves",
-        "Alternate between different stakeholder priorities",
-        "Facilitate discussions to reach alignment",
-        "Ignore the disagreement and proceed with current priorities"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Product Owner should facilitate discussions to reach alignment. Part of their role is to help stakeholders understand priorities and make informed decisions about the product.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 144,
-      "topic": "stakeholder-management",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "When should stakeholders be involved in Product Backlog refinement?",
-      "options": [
-        "Never, it's an internal team activity",
-        "Only when invited by the Scrum Master",
-        "When the Product Owner determines their input would be valuable",
-        "They should always be present for all refinement activities"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Stakeholders may be involved in Product Backlog refinement when the Product Owner determines their input would be valuable. The Product Owner manages stakeholder engagement.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 145,
-      "topic": "stakeholder-management",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "How should the Product Owner handle a stakeholder who consistently provides conflicting requirements?",
-      "options": [
-        "Implement the most recent requirement from the stakeholder",
-        "Alternate between the stakeholder's different requirements",
-        "Work with the stakeholder to understand their underlying needs",
-        "Ignore the stakeholder's requirements due to their inconsistency"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Product Owner should work with the stakeholder to understand their underlying needs and help them prioritize. Conflicting requirements often indicate unclear needs or changing circumstances.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 146,
-      "topic": "stakeholder-management",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "A stakeholder wants to add a new feature mid-Sprint. What should the Product Owner do?",
-      "options": [
-        "Add the feature immediately to the Sprint Backlog",
-        "Evaluate the feature and add it to the Product Backlog for future consideration",
-        "Reject the feature since Sprint Planning is complete",
-        "Ask the Scrum Master to make the decision"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Product Owner should evaluate the feature and add it to the Product Backlog for future consideration. They should not disrupt the current Sprint unless it's critical.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 147,
-      "topic": "stakeholder-management",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "How should the Product Owner handle stakeholder feedback that contradicts user research?",
-      "options": [
-        "Always follow stakeholder feedback",
-        "Always follow user research",
-        "Seek to understand both perspectives and make an informed decision",
-        "Ask the Scrum Team to vote on the decision"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Product Owner should seek to understand both perspectives and make an informed decision based on what delivers the most value to users and the business.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 148,
-      "topic": "stakeholder-management",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "What should the Product Owner do when stakeholders are not available for Sprint Reviews?",
-      "options": [
-        "Cancel the Sprint Review",
-        "Hold the Sprint Review with the team only",
-        "Proactively communicate with stakeholders to ensure attendance",
-        "Reschedule the Sprint Review to accommodate stakeholders"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Product Owner should proactively communicate with stakeholders to ensure attendance. Regular stakeholder engagement is crucial for product success.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 149,
-      "topic": "stakeholder-management",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "How should the Product Owner manage stakeholder expectations about delivery timelines?",
-      "options": [
-        "Promise specific delivery dates",
-        "Communicate transparently about progress and challenges",
-        "Only share positive updates",
-        "Avoid discussions about timelines"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Product Owner should communicate transparently about progress and challenges. This builds trust and helps stakeholders make informed decisions.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 150,
-      "topic": "stakeholder-management",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "What should the Product Owner do if a stakeholder requests direct access to the Development Team?",
-      "options": [
-        "Grant the request immediately",
-        "Deny the request completely",
-        "Facilitate the interaction while maintaining focus on Sprint Goals",
-        "Refer the stakeholder to the Scrum Master"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Product Owner should facilitate the interaction while ensuring it doesn't disrupt the Development Team's focus on Sprint Goals. They should serve as the primary interface but allow appropriate collaboration.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 151,
-      "topic": "stakeholder-management",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "How should the Product Owner handle competing requests from different stakeholder groups?",
-      "options": [
-        "Alternate between different groups' requests",
-        "Prioritize based on organizational hierarchy",
-        "Evaluate requests based on value and alignment with product vision",
-        "Let stakeholders negotiate directly with each other"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Product Owner should evaluate requests based on value and alignment with product vision. They are accountable for maximizing the value of the product.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 152,
-      "topic": "stakeholder-management",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "What should the Product Owner do if stakeholders are not satisfied with the progress shown in a Sprint Review?",
-      "options": [
-        "Apologize and promise faster delivery",
-        "Explain the team's velocity and current challenges",
-        "Listen to concerns and collaborate on solutions",
-        "Blame external factors for the slow progress"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Product Owner should listen to concerns and collaborate on solutions. This demonstrates accountability and commitment to delivering value.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 153,
-      "topic": "stakeholder-management",
-      "difficulty": "medium",
-      "type": "single",
-      "question": "How should the Product Owner communicate product vision to stakeholders?",
-      "options": [
-        "Through detailed technical documentation",
-        "Through clear, compelling, and consistent messaging",
-        "Only through formal presentations",
-        "Through the Scrum Master"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Product Owner should communicate product vision through clear, compelling, and consistent messaging. This helps align stakeholders around common goals.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 154,
-      "topic": "stakeholder-management",
-      "difficulty": "hard",
-      "type": "single",
-      "question": "A key stakeholder wants to attend Sprint Planning to provide input on technical implementation. What should the Product Owner do?",
-      "options": [
-        "Invite the stakeholder to attend the entire Sprint Planning",
-        "Invite the stakeholder to the first part of Sprint Planning only",
-        "Collect the stakeholder's input before Sprint Planning and share it with the team",
-        "Decline the request as stakeholders cannot attend Sprint Planning"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Product Owner should collect stakeholder input before Sprint Planning and share relevant information with the team. Stakeholders are not typically participants in Sprint Planning.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 155,
-      "topic": "stakeholder-management",
-      "difficulty": "hard",
-      "type": "single",
-      "question": "A powerful stakeholder is pressuring the Product Owner to bypass the Product Backlog and implement their request immediately. What should the Product Owner do?",
-      "options": [
-        "Comply with the request to maintain the relationship",
-        "Refuse the request and explain the Product Backlog process",
-        "Escalate to senior management for guidance",
-        "Compromise by partially implementing the request"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Product Owner should refuse the request and explain the Product Backlog process. They must protect the team's focus and maintain the integrity of the Scrum process.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 156,
-      "topic": "stakeholder-management",
-      "difficulty": "hard",
-      "type": "single",
-      "question": "The Product Owner discovers that stakeholders have been providing conflicting information about user needs. How should this be addressed?",
-      "options": [
-        "Trust the most senior stakeholder's input",
-        "Conduct user research to validate stakeholder claims",
-        "Implement all conflicting requirements",
-        "Ignore stakeholder input and rely on team assumptions"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Product Owner should conduct user research to validate stakeholder claims. This provides objective data to resolve conflicts and ensure decisions are based on user needs.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 157,
-      "topic": "stakeholder-management",
-      "difficulty": "hard",
-      "type": "single",
-      "question": "Stakeholders are requesting detailed project timelines and resource allocation reports. How should the Product Owner respond?",
-      "options": [
-        "Provide detailed project plans and timelines",
-        "Explain the empirical nature of Scrum and share appropriate transparency",
-        "Refer them to the Scrum Master for this information",
-        "Create the requested reports to satisfy stakeholders"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Product Owner should explain the empirical nature of Scrum and share appropriate transparency. Traditional project reports may not be suitable for agile development.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 158,
-      "topic": "stakeholder-management",
-      "difficulty": "hard",
-      "type": "single",
-      "question": "A stakeholder group is consistently absent from Sprint Reviews but complains about the product direction. What should the Product Owner do?",
-      "options": [
-        "Continue inviting them and hope they attend",
-        "Stop inviting them since they don't participate",
-        "Proactively engage with them to understand barriers and find solutions",
-        "Escalate the issue to management"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Product Owner should proactively engage with them to understand barriers and find solutions. Stakeholder engagement is crucial for product success.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    },
-    {
-      "id": 159,
-      "topic": "stakeholder-management",
-      "difficulty": "medium",
-      "type": "multiple",
-      "question": "A Product Owner is managing a product with three distinct user groups, each represented by different stakeholder groups. Each group is demanding features that would benefit their users but potentially harm the experience for the other groups. How should the Product Owner approach this situation? (Choose all that apply)",
-      "options": [
-        "Rotate development focus between the three groups equally",
-        "Conduct user research to understand the actual impact of proposed features",
-        "Facilitate collaborative sessions between stakeholder groups to find common ground",
-        "Make decisions based on which user group generates the most revenue"
-      ],
-      "correctAnswer": [
-        1,
-        2
-      ],
-      "explanation": "The Product Owner should conduct user research to understand actual impact and facilitate collaborative sessions to find common ground. Simply rotating focus or making decisions based solely on revenue doesn't optimize for overall product value and user experience.",
-      "originalTopic": "stakeholder-management",
-      "sourceFile": "questions/stakeholder-management.json"
-    }
-  ]
+	"topic": "stakeholder-management",
+	"metadata": {
+		"totalQuestions": 21,
+		"difficulty": {
+			"easy": 2,
+			"medium": 12,
+			"hard": 7
+		}
+	},
+	"questions": [
+		{
+			"id": 139,
+			"topic": "stakeholder-management",
+			"difficulty": "easy",
+			"type": "single",
+			"question": "A Product Owner is establishing stakeholder engagement processes for a new product. Who should be their primary focus for ongoing collaboration?",
+			"options": [
+				"The executive leadership team",
+				"The Development Team and Scrum Master",
+				"Key stakeholders who can provide value insights and feedback",
+				"The project management office"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should focus on key stakeholders who can provide valuable insights and feedback about the product. These are the people who can help maximize product value through their knowledge and influence.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 140,
+			"topic": "stakeholder-management",
+			"difficulty": "easy",
+			"type": "single",
+			"question": "A Product Owner wants to ensure stakeholders understand the value being delivered each Sprint. What's the most effective approach?",
+			"options": [
+				"Send detailed status reports after each Sprint",
+				"Invite stakeholders to actively participate in Sprint Reviews",
+				"Schedule quarterly stakeholder meetings",
+				"Have the Development Team present their work directly"
+			],
+			"correctAnswer": 1,
+			"explanation": "Inviting stakeholders to actively participate in Sprint Reviews is the most effective approach. This provides regular, hands-on engagement with the actual product increment and enables immediate feedback.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 141,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner faces a situation where the marketing team wants flashy features to attract new customers, while existing customers are complaining about basic functionality issues. How should they approach this conflict?",
+			"options": [
+				"Prioritize marketing features to drive business growth",
+				"Focus on existing customer issues to maintain loyalty",
+				"Balance both by alternating Sprint focus between new and existing features",
+				"Analyze the value impact of both approaches and make data-driven prioritization decisions"
+			],
+			"correctAnswer": 3,
+			"explanation": "The Product Owner should analyze the value impact of both approaches and make data-driven prioritization decisions. This might involve considering customer retention value, acquisition costs, and long-term product sustainability.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 142,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner discovers that different stakeholder groups have been receiving conflicting information about product capabilities from various team members. What should they do?",
+			"options": [
+				"Prohibit team members from talking to stakeholders",
+				"Establish themselves as the single point of contact for all product-related communication",
+				"Create clear communication protocols while enabling appropriate collaboration",
+				"Let stakeholders work directly with whoever they prefer"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should create clear communication protocols while enabling appropriate collaboration. This ensures consistent messaging while not becoming a bottleneck for legitimate stakeholder-team interactions.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 143,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A senior executive pressures the Product Owner to commit to a specific feature delivery date for a board presentation. The Development Team has expressed uncertainty about the timeline. How should the Product Owner respond?",
+			"options": [
+				"Commit to the date to support the executive's presentation",
+				"Refuse to provide any timeline estimates",
+				"Provide a forecast based on current knowledge while explaining the uncertainty",
+				"Ask the Development Team to work overtime to meet the date"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should provide a forecast based on current knowledge while explaining the uncertainty. This demonstrates transparency and helps stakeholders understand the empirical nature of product development.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 144,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner learns that stakeholders have been setting up separate meetings with individual developers to discuss requirements. Developers are feeling overwhelmed and confused about priorities. What should the Product Owner do?",
+			"options": [
+				"Tell developers to ignore stakeholder requests",
+				"Schedule a meeting with stakeholders to discuss proper collaboration channels",
+				"Allow the direct communication to continue since it shows engagement",
+				"Escalate to management to stop the stakeholder behavior"
+			],
+			"correctAnswer": 1,
+			"explanation": "The Product Owner should schedule a meeting with stakeholders to discuss proper collaboration channels. This protects the team's focus while educating stakeholders about effective ways to contribute to product development.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 145,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner has three key stakeholder groups with competing priorities: Sales wants quick wins, Operations wants stability, and Innovation wants experimental features. How should they manage these competing interests?",
+			"options": [
+				"Rotate development focus equally among all three groups",
+				"Focus on the group with the highest organizational authority",
+				"Create a product strategy that balances all interests based on overall value",
+				"Let the stakeholder groups negotiate directly with each other"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should create a product strategy that balances all interests based on overall value. This requires understanding each group's underlying needs and finding ways to deliver value that serves the product's long-term success.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 146,
+			"topic": "stakeholder-management",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "During a Sprint Review, a stakeholder publicly criticizes the Development Team's work and demands immediate changes to the approach. The team looks uncomfortable and defensive. How should the Product Owner handle this situation?",
+			"options": [
+				"Support the stakeholder's feedback and agree to the changes",
+				"Defend the team and dismiss the stakeholder's concerns",
+				"Acknowledge the feedback, protect the team's morale, and redirect to constructive discussion",
+				"End the Sprint Review early to avoid further conflict"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should acknowledge the feedback, protect the team's morale, and redirect to constructive discussion. This maintains stakeholder relationships while creating a safe environment for the team to receive feedback.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 147,
+			"topic": "stakeholder-management",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner discovers that a major stakeholder has been communicating contradictory requirements to different team members, causing confusion and rework. When confronted, the stakeholder claims they're 'just exploring options.' How should the Product Owner respond?",
+			"options": [
+				"Accept the explanation and allow the exploration to continue",
+				"Temporarily limit the stakeholder's access to the team",
+				"Work with the stakeholder to establish clear communication protocols and decision-making processes",
+				"Escalate to senior management about the stakeholder's behavior"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should work with the stakeholder to establish clear communication protocols and decision-making processes. This addresses the root cause while maintaining the relationship and ensuring productive collaboration.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 148,
+			"topic": "stakeholder-management",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner learns that two stakeholder groups have been having behind-the-scenes discussions about the product direction, and these discussions conflict with the publicly stated product vision. How should they handle this situation?",
+			"options": [
+				"Ignore the discussions since they weren't included",
+				"Confront the stakeholders about the secretive discussions",
+				"Proactively engage with both groups to understand their concerns and align on vision",
+				"Change the product vision to match the stakeholder discussions"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should proactively engage with both groups to understand their concerns and align on vision. This addresses underlying issues while maintaining transparency and stakeholder trust.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 149,
+			"topic": "stakeholder-management",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner is under pressure from stakeholders to provide detailed project timelines and resource allocation reports similar to traditional project management. The stakeholders say they need this for compliance purposes. How should the Product Owner respond?",
+			"options": [
+				"Create traditional project reports to satisfy stakeholder needs",
+				"Refuse to provide any reports and explain agile principles",
+				"Work with stakeholders to understand compliance needs and provide appropriate transparency",
+				"Delegate report creation to the Scrum Master"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should work with stakeholders to understand compliance needs and provide appropriate transparency. This might involve creating new forms of reporting that satisfy compliance while maintaining agile principles.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 150,
+			"topic": "stakeholder-management",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner faces a situation where a key stakeholder has been consistently unavailable for Sprint Reviews and product feedback sessions, but then criticizes decisions made in their absence. How should this be addressed?",
+			"options": [
+				"Make decisions without involving the stakeholder and inform them afterward",
+				"Delay decisions until the stakeholder becomes available",
+				"Have a direct conversation about the impact of their unavailability on product success",
+				"Find a proxy stakeholder to represent their interests"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should have a direct conversation about the impact of their unavailability on product success. This addresses the accountability issue while maintaining the relationship and clarifying expectations.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 151,
+			"topic": "stakeholder-management",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A Product Owner discovers that stakeholders have been making informal commitments to customers about features and timelines without consulting the development team. When the team can't deliver on these promises, customers blame the Product Owner. How should they handle this?",
+			"options": [
+				"Take responsibility for all commitments made by stakeholders",
+				"Publicly blame the stakeholders for making unauthorized commitments",
+				"Establish clear protocols for customer commitments and stakeholder communication",
+				"Stop including stakeholders in customer-facing activities"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should establish clear protocols for customer commitments and stakeholder communication. This prevents future issues while maintaining stakeholder relationships and protecting the team's credibility.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 152,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner notices that stakeholders consistently request features that would benefit their department but may not align with broader user needs. How should they address this pattern?",
+			"options": [
+				"Implement all stakeholder requests to maintain relationships",
+				"Reject departmental requests and focus only on user needs",
+				"Help stakeholders understand user needs and find solutions that serve both",
+				"Alternate between stakeholder requests and user-focused features"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should help stakeholders understand user needs and find solutions that serve both. This educates stakeholders about value delivery while finding win-win solutions that benefit the overall product.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 153,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner is managing a product where regulatory stakeholders require extensive documentation and approval processes, while business stakeholders want rapid feature delivery. How should they balance these competing demands?",
+			"options": [
+				"Prioritize regulatory requirements over business needs",
+				"Ignore regulatory requirements to maintain development speed",
+				"Create a product strategy that incorporates both regulatory and business needs",
+				"Separate the product into regulated and non-regulated components"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should create a product strategy that incorporates both regulatory and business needs. This might involve building compliance into the development process rather than treating it as an afterthought.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 154,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner learns that stakeholders have been individually approaching developers to ask for status updates and requesting small changes. The developers are spending significant time in these conversations. What should the Product Owner do?",
+			"options": [
+				"Tell developers to stop responding to stakeholder requests",
+				"Create regular communication channels to provide stakeholders with the information they need",
+				"Allow the direct communication to continue since it shows stakeholder engagement",
+				"Ask the Scrum Master to handle all stakeholder communication"
+			],
+			"correctAnswer": 1,
+			"explanation": "The Product Owner should create regular communication channels to provide stakeholders with the information they need. This addresses the underlying need for information while protecting the team's focus.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 155,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner receives conflicting feedback from two equally important stakeholder groups about the same feature. One group loves it, the other wants it completely redesigned. How should they proceed?",
+			"options": [
+				"Implement the feedback from the group that spoke first",
+				"Try to please both groups by compromising on the design",
+				"Gather more specific feedback to understand the root causes of the conflict",
+				"Make the decision based on which group has more organizational influence"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should gather more specific feedback to understand the root causes of the conflict. This deeper understanding often reveals ways to address both groups' underlying needs.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 156,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner is working with stakeholders who are new to agile and keep asking for detailed project plans and guaranteed delivery dates. How should they educate these stakeholders?",
+			"options": [
+				"Provide the traditional project plans they're requesting",
+				"Explain agile principles and demonstrate value through working software",
+				"Tell them they need to adapt to agile ways of working",
+				"Escalate to management to mandate agile training"
+			],
+			"correctAnswer": 1,
+			"explanation": "The Product Owner should explain agile principles and demonstrate value through working software. Practical demonstration of agile benefits is often more effective than theoretical explanations.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 157,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner discovers that stakeholders have been making feature requests based on competitor analysis without understanding their own users' actual needs. How should they address this?",
+			"options": [
+				"Implement competitor features to remain competitive",
+				"Ignore stakeholder requests and focus on user research",
+				"Combine stakeholder insights with user research to make informed decisions",
+				"Ask stakeholders to stop monitoring competitors"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should combine stakeholder insights with user research to make informed decisions. Competitive intelligence is valuable, but it should be balanced with actual user needs and value delivery.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 158,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A Product Owner faces a situation where international stakeholders in different time zones are unable to attend Sprint Reviews, but they're key decision-makers for the product. How should they ensure these stakeholders remain engaged?",
+			"options": [
+				"Reschedule Sprint Reviews to accommodate all time zones",
+				"Exclude international stakeholders from product decisions",
+				"Create alternative engagement mechanisms like recorded demos and asynchronous feedback",
+				"Hold separate Sprint Reviews for each time zone"
+			],
+			"correctAnswer": 2,
+			"explanation": "The Product Owner should create alternative engagement mechanisms like recorded demos and asynchronous feedback. This ensures key stakeholders remain engaged while maintaining the Sprint Review schedule.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		},
+		{
+			"id": 159,
+			"topic": "stakeholder-management",
+			"difficulty": "medium",
+			"type": "multiple",
+			"question": "A Product Owner is managing a product with multiple stakeholder groups: end users, internal customers, compliance officers, and senior executives. Each group has different priorities and communication preferences. What strategies should the Product Owner use? (Choose all that apply)",
+			"options": [
+				"Tailor communication style and content to each stakeholder group's needs",
+				"Ensure all stakeholder groups understand the overall product vision and strategy",
+				"Create regular feedback loops with each group to understand their evolving needs",
+				"Treat all stakeholder groups exactly the same to maintain fairness"
+			],
+			"correctAnswer": [0, 1, 2],
+			"explanation": "The Product Owner should tailor communication to each group's needs, ensure all understand the product vision, and create regular feedback loops. Different stakeholder groups have different needs and treating them all the same is not effective stakeholder management.",
+			"originalTopic": "stakeholder-management",
+			"sourceFile": "questions/stakeholder-management.json"
+		}
+	]
 }
