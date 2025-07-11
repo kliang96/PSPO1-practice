@@ -4,7 +4,7 @@ A comprehensive study application for the **Professional Scrum Product Owner (PS
 
 ## 🎯 About This Project
 
-This React TypeScript application simulates the PSPO exam environment and provides an effective study tool for Scrum Product Owner certification. The app includes 168 carefully crafted questions across 8 key topic areas, following the official PSPO exam format and timing.
+This React TypeScript application simulates the PSPO exam environment and provides an effective study tool for Scrum Product Owner certification. The app includes **181 carefully crafted questions** across **9 key topic areas**, following the official PSPO exam format and timing.
 
 ## ✨ Key Features
 
@@ -24,13 +24,13 @@ This React TypeScript application simulates the PSPO exam environment and provid
 ### 📊 Progress Tracking
 
 - **Performance Analytics**: Track your scores and improvement over time
-- **Topic Mastery**: Monitor your progress across all 8 Scrum topic areas
+- **Topic Mastery**: Monitor your progress across all 9 Scrum topic areas
 - **Weak Area Identification**: Automatic detection of areas needing improvement
 - **Study Streaks**: Track your daily study consistency
 
 ### 🎯 Question Bank
 
-- **168 Total Questions** across 8 comprehensive topic areas
+- **181 Total Questions** across 9 comprehensive topic areas
 - **Difficulty Levels**: Easy, Medium, and Hard questions for progressive learning
 - **Question Types**: Single-choice and multiple-choice questions
 - **Detailed Explanations**: Learn the reasoning behind each answer
@@ -43,6 +43,16 @@ This React TypeScript application simulates the PSPO exam environment and provid
 - **Session History**: Review your past quiz attempts and performance
 
 ## 🚀 Recent Improvements
+
+### Version 2.3.0 - Enhanced Results & UI Improvements
+
+- **🎨 Enhanced**: Comprehensive Results component with detailed question analysis
+- **📊 Improved**: Interactive topic breakdown with expandable question reviews
+- **🔍 Added**: Wrong answers section with detailed explanations
+- **✅ Enhanced**: Visual indicators for correct/incorrect answers
+- **🎯 Improved**: Better question numbering and status tracking
+- **💡 Added**: Learning insights and explanations for all incorrect answers
+- **📱 Enhanced**: Responsive design and improved mobile experience
 
 ### Version 2.2.0 - React Router Integration & Enhanced Navigation
 
@@ -89,7 +99,7 @@ The application now uses clean, bookmarkable URLs:
 
 The application covers all essential PSPO exam topics:
 
-1. **Scrum Theory and Values** (12% weight, 20 questions)
+1. **Scrum Theory and Values** (12% weight, 16 questions)
 
    - Empirical process control, transparency, inspection, and adaptation
 
@@ -105,7 +115,7 @@ The application covers all essential PSPO exam topics:
 
    - Product Backlog, Sprint Backlog, and Increment
 
-5. **Product Backlog Management** (10% weight, 23 questions)
+5. **Product Backlog Management** (10% weight, 18 questions)
 
    - Backlog refinement, ordering, and management techniques
 
@@ -118,7 +128,11 @@ The application covers all essential PSPO exam topics:
    - Using empirical evidence to guide product decisions
 
 8. **Stakeholder Management** (5% weight, 21 questions)
+
    - Managing stakeholder relationships and expectations
+
+9. **Agile Leadership** (15% weight, 22 questions)
+   - Leadership principles and practices for successful Agile transformation
 
 ## 🚀 Getting Started
 
@@ -201,6 +215,7 @@ pspo-study-app/
 ├── src/
 │   ├── components/
 │   │   ├── Home.tsx           # Main landing page with settings
+│   │   ├── Home.test.tsx      # Tests for Home component
 │   │   ├── Quiz.tsx           # Quiz interface and logic
 │   │   └── Results.tsx        # Results display and analysis
 │   ├── context/
