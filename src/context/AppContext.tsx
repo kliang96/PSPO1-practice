@@ -17,6 +17,13 @@ import {
 	defaultStoragePreferences,
 	cleanupCorruptedProgress,
 } from "../utils/storageUtils";
+import {
+	saveSessionToStorage,
+	clearSessionFromStorage,
+	cleanupExpiredSessions,
+	getActiveSessions,
+	optimizeSessionStorage,
+} from "../utils/sessionUtils";
 
 // Utility function to calculate time limit based on PSPO format (80 questions = 60 minutes)
 const calculateTimeLimit = (questionCount: number): number => {
@@ -56,7 +63,10 @@ type AppAction =
 	| { type: "LOAD_PROGRESS"; payload: UserProgress }
 	| { type: "CLEAR_SESSION" }
 	| { type: "UPDATE_STORAGE_PREFERENCES"; payload: Partial<StoragePreferences> }
-	| { type: "SAVE_SESSION_RESULT"; payload: QuizSessionResult };
+	| { type: "SAVE_SESSION_RESULT"; payload: QuizSessionResult }
+	| { type: "LOAD_SESSION_BY_ID"; payload: string }
+	| { type: "RESTORE_SESSION"; payload: QuizSession }
+	| { type: "SAVE_SESSION_TO_STORAGE" };
 
 // Reducer
 function appReducer(state: AppState, action: AppAction): AppState {
@@ -224,7 +234,7 @@ function appReducer(state: AppState, action: AppAction): AppState {
 		case "UPDATE_REMAINING_TIME":
 			return {
 				...state,
-				remainingTime: action.payload,
+				remainingTime: Math.max(0, action.payload),
 			};
 
 		case "LOAD_PROGRESS":
@@ -310,7 +320,28 @@ function appReducer(state: AppState, action: AppAction): AppState {
 				userProgress: updatedProgress,
 			};
 
+		case "RESTORE_SESSION":
+			return {
+				...state,
+				currentSession: action.payload,
+				isPaused: false,
+				remainingTime: state.settings.timeLimit
+					? state.settings.timeLimit * 60 -
+					  Math.floor(
+							(new Date().getTime() - action.payload.startTime.getTime()) / 1000
+					  )
+					: undefined,
+			};
+
+		case "SAVE_SESSION_TO_STORAGE":
+			// This action triggers a side effect in the useEffect
+			return state;
+
 		case "CLEAR_SESSION":
+			// Clear session from storage if it exists
+			if (state.currentSession) {
+				clearSessionFromStorage(state.currentSession.id);
+			}
 			return {
 				...state,
 				currentSession: null,
@@ -395,6 +426,36 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({
 		saveStoragePreferences(state.storagePreferences);
 		progressStorage.updatePreferences(state.storagePreferences);
 	}, [state.storagePreferences]);
+
+	// Save current session to storage when it changes
+	useEffect(() => {
+		if (state.currentSession) {
+			saveSessionToStorage(state.currentSession);
+		}
+	}, [state.currentSession]);
+
+	// Initialize session storage and cleanup expired sessions
+	useEffect(() => {
+		cleanupExpiredSessions();
+		optimizeSessionStorage();
+
+		// Check for any active sessions from previous app usage
+		const activeSessions = getActiveSessions();
+		if (activeSessions.length > 0) {
+			// Log active sessions for debugging
+			console.log(
+				`Found ${activeSessions.length} active sessions:`,
+				activeSessions
+			);
+
+			// If there's no current session but we have active sessions,
+			// we could potentially restore the most recent one
+			if (!state.currentSession && activeSessions.length > 0) {
+				// This is optional - we might want to let the user choose
+				console.log("Active sessions available for recovery:", activeSessions);
+			}
+		}
+	}, [state.currentSession]);
 
 	return (
 		<AppContext.Provider value={{ state, dispatch }}>

@@ -4,6 +4,7 @@ export interface Topic {
 	description: string;
 	weight: number;
 	subtopics: string[];
+	questionCount: number; // Number of questions available for this topic
 }
 
 export interface Question {

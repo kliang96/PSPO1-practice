@@ -107,6 +107,138 @@
 	color: #28a745;
 }
 
+/* Wrong Answers Card */
+.wrong-answers-card {
+	background: white;
+	border-radius: 12px;
+	padding: 0;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	margin-bottom: 2rem;
+	border-left: 4px solid #dc3545;
+	overflow: hidden;
+}
+
+.wrong-answers-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 2rem;
+	background: linear-gradient(to right, #f8d7da, #ffffff);
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.wrong-answers-header:hover {
+	background: linear-gradient(to right, #f5c6cb, #ffffff);
+}
+
+.wrong-answers-info h3 {
+	color: #721c24;
+	margin: 0 0 0.5rem 0;
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+.wrong-answers-count {
+	color: #721c24;
+	font-size: 0.9rem;
+	font-weight: 500;
+	opacity: 0.8;
+}
+
+.wrong-answers-header .expand-icon {
+	font-size: 1.2rem;
+	color: #721c24;
+	font-weight: bold;
+	transition: transform 0.2s ease;
+}
+
+.wrong-answers-content {
+	border-top: 1px solid #e9ecef;
+	background: #ffffff;
+}
+
+.wrong-answer-item {
+	border-bottom: 1px solid #f1f3f4;
+	padding: 1.5rem 2rem;
+	background: linear-gradient(to right, #fdf2f2, #ffffff);
+}
+
+.wrong-answer-item:last-child {
+	border-bottom: none;
+}
+
+.wrong-answer-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.wrong-answer-header .question-number {
+	background: #dc3545;
+	color: white;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.wrong-answer-header .question-topic {
+	background: #e8f4fd;
+	color: #2980b9;
+	padding: 0.25rem 0.5rem;
+	border-radius: 15px;
+	font-size: 0.8rem;
+	font-weight: 500;
+	border: 1px solid #bee5eb;
+}
+
+.wrong-answer-header .question-status.incorrect {
+	background: #f8d7da;
+	color: #721c24;
+	padding: 0.25rem 0.75rem;
+	border-radius: 15px;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.wrong-answer-content {
+	margin-top: 1rem;
+}
+
+.wrong-answer-content .question-text {
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #2c3e50;
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+
+.wrong-answer-content .answer-options {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.wrong-answer-content .explanation {
+	background: #e8f4f8;
+	border-left: 4px solid #17a2b8;
+	padding: 1rem;
+	border-radius: 4px;
+	margin-top: 1rem;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	color: #2c3e50;
+}
+
+.wrong-answer-content .explanation strong {
+	color: #17a2b8;
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
 .topic-breakdown {
 	background: white;
 	border-radius: 12px;

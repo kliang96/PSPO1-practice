@@ -81,7 +81,8 @@
 }
 
 .pause-button,
-.submit-button {
+.submit-button,
+.exit-button {
 	padding: 12px 20px;
 	border: none;
 	border-radius: 8px;
@@ -101,14 +102,29 @@
 	transform: translateY(-1px);
 }
 
-.submit-button {
-	background: #e74c3c;
+.exit-button {
+	background: #dc3545;
 	color: white;
+	border: 2px solid #dc3545;
+}
+
+.exit-button:hover {
+	background: #c82333;
+	border-color: #bd2130;
+	transform: translateY(-1px);
+}
+
+.submit-button {
+	background: #28a745;
+	color: white;
+	border: 2px solid #28a745;
 }
 
 .submit-button:hover {
-	background: #c0392b;
+	background: #218838;
+	border-color: #1e7e34;
 	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
 }
 
 .quiz-content {
@@ -435,6 +451,93 @@
 	font-weight: 600;
 }
 
+/* Time Up Modal Styles */
+.time-up-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1001;
+}
+
+.time-up-modal {
+	background: white;
+	padding: 40px;
+	border-radius: 15px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+	max-width: 450px;
+	width: 90%;
+	text-align: center;
+	border: 3px solid #f39c12;
+}
+
+.time-up-modal h3 {
+	margin: 0 0 20px 0;
+	color: #e67e22;
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+.time-up-modal p {
+	margin: 15px 0;
+	color: #495057;
+	line-height: 1.6;
+	font-size: 1.1rem;
+}
+
+.time-up-modal .warning {
+	color: #e74c3c;
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+/* Exit Confirmation Styles */
+.exit-confirmation-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+
+.exit-confirmation {
+	background: white;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+	max-width: 450px;
+	width: 90%;
+	text-align: center;
+}
+
+.exit-confirmation h3 {
+	margin: 0 0 15px 0;
+	color: #2c3e50;
+	font-size: 1.5rem;
+}
+
+.exit-confirmation p {
+	margin: 10px 0;
+	color: #495057;
+	line-height: 1.5;
+}
+
+.exit-confirmation .warning {
+	color: #e74c3c;
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
 .confirmation-buttons {
 	display: flex;
 	gap: 15px;
@@ -462,12 +565,27 @@
 }
 
 .confirm-button {
-	background: #e74c3c;
+	background: #28a745;
 	color: white;
+	border: 2px solid #28a745;
 }
 
 .confirm-button:hover {
-	background: #c0392b;
+	background: #218838;
+	border-color: #1e7e34;
+	box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Keep exit confirmation red since it's destructive */
+.confirm-button.exit-confirm {
+	background: #dc3545;
+	border-color: #dc3545;
+}
+
+.confirm-button.exit-confirm:hover {
+	background: #c82333;
+	border-color: #bd2130;
+	box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
 }
 
 .pause-overlay {

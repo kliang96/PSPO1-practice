@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { useApp } from "../context/AppContext";
 import { UserAnswer, DraftAnswer } from "../types";
 import {
@@ -8,10 +9,13 @@ import {
 } from "../utils/quizUtils";
 import { loadTopics } from "../utils/quizUtils";
 import { Topic } from "../types";
+import { loadSessionFromStorage } from "../utils/sessionUtils";
 import "./Quiz.css";
 
 const Quiz: React.FC = () => {
 	const { state, dispatch } = useApp();
+	const { sessionId } = useParams<{ sessionId: string }>();
+	const navigate = useNavigate();
 	const [selectedAnswer, setSelectedAnswer] = useState<
 		number | number[] | null
 	>(null);
@@ -29,6 +33,8 @@ const Quiz: React.FC = () => {
 	const [topics, setTopics] = useState<Topic[]>([]);
 	const [isLoading, setIsLoading] = useState(true);
 	const [showSubmitConfirmation, setShowSubmitConfirmation] = useState(false);
+	const [showExitConfirmation, setShowExitConfirmation] = useState(false);
+	const [showTimeUpModal, setShowTimeUpModal] = useState(false);
 
 	const timerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -36,6 +42,30 @@ const Quiz: React.FC = () => {
 	const isExamMode = session?.mode === "exam";
 	const currentQuestionIndex = session?.currentQuestionIndex || 0;
 	const currentQuestion = session?.questions[currentQuestionIndex];
+
+	// Session validation and loading
+	useEffect(() => {
+		const validateAndLoadSession = async () => {
+			if (!sessionId) {
+				navigate("/", { replace: true });
+				return;
+			}
+
+			// If no current session or session ID mismatch, try to load from storage
+			if (!state.currentSession || state.currentSession.id !== sessionId) {
+				const savedSession = loadSessionFromStorage(sessionId);
+				if (savedSession) {
+					dispatch({ type: "RESTORE_SESSION", payload: savedSession });
+				} else {
+					// Session not found, redirect to home
+					navigate("/", { replace: true });
+					return;
+				}
+			}
+		};
+
+		validateAndLoadSession();
+	}, [sessionId, state.currentSession, dispatch, navigate]);
 
 	// Load topics
 	useEffect(() => {
@@ -74,7 +104,7 @@ const Quiz: React.FC = () => {
 	// Auto-resume on interaction
 	useEffect(() => {
 		const handleUserInteraction = (e: Event) => {
-			if (state.isPaused) {
+			if (state.isPaused && !showTimeUpModal) {
 				// Check if click is on UI controls - if so, ignore
 				const target = e.target as HTMLElement;
 				if (
@@ -82,7 +112,10 @@ const Quiz: React.FC = () => {
 					target.closest(".submit-button") ||
 					target.closest(".quiz-controls") ||
 					target.closest(".question-nav-button") ||
-					target.closest(".submit-confirmation-overlay")
+					target.closest(".submit-confirmation-overlay") ||
+					target.closest(".exit-confirmation-overlay") ||
+					target.closest(".time-up-overlay") ||
+					target.closest(".exit-button")
 				) {
 					return; // Don't resume on control clicks
 				}
@@ -99,60 +132,23 @@ const Quiz: React.FC = () => {
 				document.removeEventListener("keydown", handleUserInteraction);
 			};
 		}
-	}, [state.isPaused, dispatch]);
+	}, [state.isPaused, showTimeUpModal, dispatch]);
 
 	// Check for time up
 	useEffect(() => {
-		if (state.remainingTime === 0) {
-			// Time up - auto submit exam
-			if (!session?.draftAnswers) return;
-
-			// Convert draft answers to final answers
-			const finalAnswers: UserAnswer[] = session.draftAnswers.map((draft) => {
-				const question = session.questions.find(
-					(q) => q.id === draft.questionId
-				);
-				const isCorrect =
-					question?.type === "multiple"
-						? Array.isArray(draft.selectedAnswer) &&
-						  Array.isArray(question.correctAnswer) &&
-						  arraysEqual(
-								draft.selectedAnswer,
-								question.correctAnswer as number[]
-						  )
-						: draft.selectedAnswer === question?.correctAnswer;
-
-				return {
-					questionId: draft.questionId,
-					selectedAnswer: draft.selectedAnswer,
-					isCorrect,
-					timeSpent: draft.timeSpent,
-				};
-			});
-
-			dispatch({ type: "SUBMIT_EXAM", payload: finalAnswers });
-
-			// Finish quiz
+		if (state.remainingTime === 0 && !showTimeUpModal) {
+			// Time up - pause quiz and show time up modal
 			if (timerRef.current) {
 				clearInterval(timerRef.current);
 			}
 
-			const totalTime = session?.startTime
-				? Math.round(
-						(new Date().getTime() - session.startTime.getTime()) / 1000
-				  )
-				: 0;
+			// Pause the session
+			dispatch({ type: "PAUSE_SESSION" });
 
-			const correctAnswers =
-				finalAnswers.filter((a) => a.isCorrect).length || 0;
-			const score =
-				session?.questions.length && session.questions.length > 0
-					? (correctAnswers / session.questions.length) * 100
-					: 0;
-
-			dispatch({ type: "END_SESSION", payload: { score, totalTime } });
+			// Show time up modal
+			setShowTimeUpModal(true);
 		}
-	}, [state.remainingTime, session, dispatch]);
+	}, [state.remainingTime, showTimeUpModal, dispatch]);
 
 	// Update question start time when question changes
 	useEffect(() => {
@@ -203,7 +199,10 @@ const Quiz: React.FC = () => {
 				: 0;
 
 		dispatch({ type: "END_SESSION", payload: { score, totalTime } });
-	}, [session, dispatch]);
+		if (sessionId) {
+			navigate(`/results/${sessionId}`);
+		}
+	}, [session, dispatch, sessionId, navigate]);
 
 	const handleSubmitExam = useCallback(() => {
 		if (!session?.draftAnswers) return;
@@ -357,6 +356,28 @@ const Quiz: React.FC = () => {
 		}
 	};
 
+	const handleExitExam = (e: React.MouseEvent) => {
+		e.stopPropagation();
+		setShowExitConfirmation(true);
+	};
+
+	const handleConfirmExit = () => {
+		// Clear timer
+		if (timerRef.current) {
+			clearInterval(timerRef.current);
+		}
+
+		// Clear session completely without saving any progress
+		dispatch({ type: "CLEAR_SESSION" });
+
+		// Navigate to home
+		navigate("/");
+	};
+
+	const handleCancelExit = () => {
+		setShowExitConfirmation(false);
+	};
+
 	const getOptionClass = (index: number) => {
 		if (selectedAnswer === null || !currentQuestion) return "option";
 
@@ -452,12 +473,21 @@ const Quiz: React.FC = () => {
 					</button>
 
 					{isExamMode && (
-						<button
-							className="submit-button"
-							onClick={() => setShowSubmitConfirmation(true)}
-						>
-							Submit Exam
-						</button>
+						<>
+							<button
+								className="exit-button"
+								onClick={handleExitExam}
+								style={{ backgroundColor: "#dc3545", marginRight: "10px" }}
+							>
+								Exit Exam
+							</button>
+							<button
+								className="submit-button"
+								onClick={() => setShowSubmitConfirmation(true)}
+							>
+								Submit Exam
+							</button>
+						</>
 					)}
 				</div>
 			</div>
@@ -598,7 +628,58 @@ const Quiz: React.FC = () => {
 				</div>
 			)}
 
-			{state.isPaused && (
+			{showExitConfirmation && (
+				<div className="exit-confirmation-overlay">
+					<div className="exit-confirmation">
+						<h3>Exit Exam?</h3>
+						<p className="warning">
+							⚠️ Warning: Your exam progress will be lost!
+						</p>
+						<p>
+							Are you sure you want to exit this exam? All your answers and
+							progress will be permanently lost and will not be saved to your
+							study history.
+						</p>
+						<div className="confirmation-buttons">
+							<button className="cancel-button" onClick={handleCancelExit}>
+								Cancel
+							</button>
+							<button
+								className="confirm-button exit-confirm"
+								onClick={handleConfirmExit}
+								style={{ backgroundColor: "#dc3545" }}
+							>
+								Exit Exam
+							</button>
+						</div>
+					</div>
+				</div>
+			)}
+
+			{showTimeUpModal && (
+				<div className="time-up-overlay">
+					<div className="time-up-modal">
+						<h3>⏰ Time's Up!</h3>
+						<p>
+							The exam time has ended. You have answered {answeredCount} out of{" "}
+							{totalQuestions} questions.
+						</p>
+						{answeredCount < totalQuestions && (
+							<p className="warning">
+								You have {totalQuestions - answeredCount} unanswered questions.
+							</p>
+						)}
+						<p>Click Submit to finish your exam.</p>
+						<div className="confirmation-buttons">
+							<button className="confirm-button" onClick={handleSubmitExam}>
+								Submit Exam
+							</button>
+						</div>
+					</div>
+				</div>
+			)}
+
+			{state.isPaused && !showTimeUpModal && (
 				<div className="pause-overlay">
 					<div className="pause-message">
 						<h3>Quiz Paused</h3>

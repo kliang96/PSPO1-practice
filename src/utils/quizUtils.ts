@@ -42,6 +42,8 @@ export const loadTopics = async (): Promise<Topic[]> => {
 			name: topic.name,
 			description: topic.description,
 			weight: topic.weight,
+			questionCount: topic.questionCount, // Include question count for validation
+			subtopics: [], // Empty for now as this structure isn't used
 		}));
 
 		return topics;
@@ -53,44 +55,104 @@ export const loadTopics = async (): Promise<Topic[]> => {
 
 // Normalize question text for similarity comparison
 const normalizeQuestionText = (text: string): string => {
-	return text.trim().toLowerCase().replace(/\s+/g, " ");
+	return text
+		.trim()
+		.toLowerCase()
+		.replace(/\s+/g, " ")
+		.replace(/[^\w\s]/g, ""); // Remove punctuation for better comparison
 };
 
-// Check if two questions are similar by comparing normalized text
+// Improved similarity detection using multiple methods
 const areQuestionsSimilar = (
 	q1: Question,
 	q2: Question,
-	threshold: number = 0.85
+	threshold: number = 0.8
 ): boolean => {
+	// First check: exact ID match (should never happen but safety check)
+	if (q1.id === q2.id) {
+		return true;
+	}
+
 	const text1 = normalizeQuestionText(q1.question);
 	const text2 = normalizeQuestionText(q2.question);
 
-	// If texts are identical, they're duplicates
+	// Second check: exact text match after normalization
 	if (text1 === text2) {
 		return true;
 	}
 
-	// Calculate similarity using simple character-based comparison
+	// Third check: significant text overlap (improved algorithm)
+	const words1 = text1.split(" ").filter((word) => word.length > 3); // Ignore small words
+	const words2 = text2.split(" ").filter((word) => word.length > 3);
+
+	if (words1.length === 0 || words2.length === 0) {
+		return false;
+	}
+
+	// Calculate word-based similarity
+	const commonWords = words1.filter((word) => words2.includes(word));
+	const wordSimilarity =
+		commonWords.length / Math.max(words1.length, words2.length);
+
+	if (wordSimilarity > 0.6) {
+		return true;
+	}
+
+	// Fourth check: character-based similarity (more accurate than original)
 	const minLength = Math.min(text1.length, text2.length);
 	const maxLength = Math.max(text1.length, text2.length);
 
 	// If length difference is too large, they're not similar
-	if (minLength / maxLength < 0.7) {
+	if (minLength / maxLength < 0.6) {
 		return false;
 	}
 
-	// Count matching characters at same positions
-	let matches = 0;
-	const compareLength = Math.min(text1.length, text2.length);
+	// Use Levenshtein distance for more accurate similarity
+	const distance = calculateLevenshteinDistance(text1, text2);
+	const similarity = 1 - distance / maxLength;
 
-	for (let i = 0; i < compareLength; i++) {
-		if (text1[i] === text2[i]) {
-			matches++;
+	return similarity >= threshold;
+};
+
+// Helper function to calculate Levenshtein distance
+const calculateLevenshteinDistance = (str1: string, str2: string): number => {
+	const matrix = [];
+	const len1 = str1.length;
+	const len2 = str2.length;
+
+	for (let i = 0; i <= len2; i++) {
+		matrix[i] = [i];
+	}
+
+	for (let j = 0; j <= len1; j++) {
+		matrix[0][j] = j;
+	}
+
+	for (let i = 1; i <= len2; i++) {
+		for (let j = 1; j <= len1; j++) {
+			if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
+				matrix[i][j] = matrix[i - 1][j - 1];
+			} else {
+				matrix[i][j] = Math.min(
+					matrix[i - 1][j - 1] + 1,
+					matrix[i][j - 1] + 1,
+					matrix[i - 1][j] + 1
+				);
+			}
 		}
 	}
 
-	const similarity = matches / maxLength;
-	return similarity >= threshold;
+	return matrix[len2][len1];
+};
+
+// Proper Fisher-Yates shuffle implementation
+const shuffleArray = <T>(array: T[]): T[] => {
+	const shuffled = [...array];
+	for (let i = shuffled.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+	}
+	return shuffled;
 };
 
 // Generate quiz questions based on settings and user progress
@@ -109,38 +171,57 @@ export const generateQuiz = (
 		);
 	}
 
-	// DUPLICATE PREVENTION: Remove potential duplicates by similarity
+	console.log(
+		`Starting with ${availableQuestions.length} questions after topic filtering`
+	);
+
+	// IMPROVED DUPLICATE PREVENTION: Use question IDs as primary tracking
 	const deduplicatedQuestions: Question[] = [];
+	const usedQuestionIds = new Set<number>();
 	const usedQuestionTexts = new Set<string>();
 
 	for (const question of availableQuestions) {
+		// Primary check: Question ID (should be unique)
+		if (usedQuestionIds.has(question.id)) {
+			console.warn(
+				`Duplicate ID detected: ${question.id} - "${question.question.slice(
+					0,
+					50
+				)}..."`
+			);
+			continue;
+		}
+
+		// Secondary check: Normalized text
 		const normalizedText = normalizeQuestionText(question.question);
-
-		// Check if this question is too similar to any already selected
-		let isDuplicate = false;
-
-		// First check exact text match
 		if (usedQuestionTexts.has(normalizedText)) {
-			isDuplicate = true;
-		} else {
-			// Check similarity with already selected questions
-			for (const selectedQuestion of deduplicatedQuestions) {
-				if (areQuestionsSimilar(question, selectedQuestion)) {
-					isDuplicate = true;
-					console.warn(
-						`Duplicate detected: "${question.question.slice(0, 50)}..." (ID: ${
-							question.id
-						}) similar to "${selectedQuestion.question.slice(0, 50)}..." (ID: ${
-							selectedQuestion.id
-						})`
-					);
-					break;
-				}
+			console.warn(
+				`Duplicate text detected: ID ${
+					question.id
+				} - "${question.question.slice(0, 50)}..."`
+			);
+			continue;
+		}
+
+		// Tertiary check: Similarity with already selected questions
+		let isDuplicate = false;
+		for (const selectedQuestion of deduplicatedQuestions) {
+			if (areQuestionsSimilar(question, selectedQuestion)) {
+				isDuplicate = true;
+				console.warn(
+					`Similar question detected: ID ${
+						question.id
+					} "${question.question.slice(0, 50)}..." similar to ID ${
+						selectedQuestion.id
+					} "${selectedQuestion.question.slice(0, 50)}..."`
+				);
+				break;
 			}
 		}
 
 		if (!isDuplicate) {
 			deduplicatedQuestions.push(question);
+			usedQuestionIds.add(question.id);
 			usedQuestionTexts.add(normalizedText);
 		}
 	}
@@ -149,10 +230,8 @@ export const generateQuiz = (
 	availableQuestions = deduplicatedQuestions;
 
 	console.log(
-		`Deduplication: ${questions.length} -> ${
-			deduplicatedQuestions.length
-		} questions (${
-			questions.length - deduplicatedQuestions.length
+		`After deduplication: ${availableQuestions.length} questions (${
+			questions.length - availableQuestions.length
 		} duplicates removed)`
 	);
 
@@ -185,41 +264,39 @@ export const generateQuiz = (
 		return availableQuestions;
 	}
 
-	// Randomly select questions with final duplicate check
+	// IMPROVED SELECTION: Use proper Fisher-Yates shuffle and deterministic selection
+	const shuffledQuestions = shuffleArray(availableQuestions);
 	const selectedQuestions: Question[] = [];
-	const usedIndices = new Set<number>();
-	const finalUsedTexts = new Set<string>();
+	const finalUsedIds = new Set<number>();
 
-	while (
-		selectedQuestions.length < settings.questionCount &&
-		usedIndices.size < availableQuestions.length
-	) {
-		const randomIndex = Math.floor(Math.random() * availableQuestions.length);
-
-		if (!usedIndices.has(randomIndex)) {
-			const candidateQuestion = availableQuestions[randomIndex];
-			const normalizedText = normalizeQuestionText(candidateQuestion.question);
-
-			// Final duplicate check - ensure we don't select similar questions
-			let isAcceptable = !finalUsedTexts.has(normalizedText);
-
-			if (isAcceptable) {
-				// Check for similarity with already selected questions
-				for (const selectedQuestion of selectedQuestions) {
-					if (areQuestionsSimilar(candidateQuestion, selectedQuestion)) {
-						isAcceptable = false;
-						break;
-					}
-				}
-			}
-
-			usedIndices.add(randomIndex);
-
-			if (isAcceptable) {
-				selectedQuestions.push(candidateQuestion);
-				finalUsedTexts.add(normalizedText);
-			}
+	// Select questions ensuring absolute uniqueness
+	for (const question of shuffledQuestions) {
+		if (selectedQuestions.length >= settings.questionCount) {
+			break;
 		}
+
+		// Double-check for ID uniqueness (should never be needed but safety first)
+		if (!finalUsedIds.has(question.id)) {
+			selectedQuestions.push(question);
+			finalUsedIds.add(question.id);
+		}
+	}
+
+	console.log(
+		`Quiz generated: ${selectedQuestions.length} unique questions selected`
+	);
+
+	// Final verification: Check for any duplicates in the selected questions
+	const finalIds = selectedQuestions.map((q) => q.id);
+	const uniqueIds = new Set(finalIds);
+
+	if (finalIds.length !== uniqueIds.size) {
+		console.error("CRITICAL: Duplicate questions detected in final selection!");
+		// Remove duplicates as final safety measure
+		const uniqueQuestions = selectedQuestions.filter((question, index) => {
+			return finalIds.indexOf(question.id) === index;
+		});
+		return uniqueQuestions;
 	}
 
 	return selectedQuestions;

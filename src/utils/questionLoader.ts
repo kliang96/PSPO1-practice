@@ -1,5 +1,32 @@
 import { Question } from "../types";
 
+// Proper Fisher-Yates shuffle implementation
+const shuffleArray = <T>(array: T[]): T[] => {
+	const shuffled = [...array];
+	for (let i = shuffled.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+	}
+	return shuffled;
+};
+
+// Remove duplicate questions by ID
+const removeDuplicateQuestions = (questions: Question[]): Question[] => {
+	const seen = new Set<number>();
+	return questions.filter((question) => {
+		if (seen.has(question.id)) {
+			console.warn(
+				`Duplicate question ID ${
+					question.id
+				} removed: "${question.question.slice(0, 50)}..."`
+			);
+			return false;
+		}
+		seen.add(question.id);
+		return true;
+	});
+};
+
 // Load the questions index to get topic metadata
 export const loadQuestionsIndex = async () => {
 	const response = await fetch("/data/questions-index.json");
@@ -62,8 +89,9 @@ export const loadRandomQuestions = async (
 		allQuestions.push(...topicData.questions);
 	}
 
-	// Shuffle and take random sample
-	const shuffled = allQuestions.sort(() => 0.5 - Math.random());
+	// Remove duplicates and shuffle properly
+	const uniqueQuestions = removeDuplicateQuestions(allQuestions);
+	const shuffled = shuffleArray(uniqueQuestions);
 	return shuffled.slice(0, count);
 };
 
@@ -88,10 +116,10 @@ export const loadPracticeQuiz = async (
 			(q: Question) => q.difficulty === "hard"
 		);
 
-		// Shuffle each difficulty level
-		const shuffledEasy = easyQuestions.sort(() => 0.5 - Math.random());
-		const shuffledMedium = mediumQuestions.sort(() => 0.5 - Math.random());
-		const shuffledHard = hardQuestions.sort(() => 0.5 - Math.random());
+		// Shuffle each difficulty level properly
+		const shuffledEasy = shuffleArray(easyQuestions);
+		const shuffledMedium = shuffleArray(mediumQuestions);
+		const shuffledHard = shuffleArray(hardQuestions);
 
 		// Take balanced sample
 		const topicQuestions = [
@@ -103,8 +131,9 @@ export const loadPracticeQuiz = async (
 		quizQuestions.push(...topicQuestions);
 	}
 
-	// Shuffle final quiz questions
-	return quizQuestions.sort(() => 0.5 - Math.random());
+	// Remove duplicates and shuffle final quiz questions properly
+	const uniqueQuestions = removeDuplicateQuestions(quizQuestions);
+	return shuffleArray(uniqueQuestions);
 };
 
 // Get available topics

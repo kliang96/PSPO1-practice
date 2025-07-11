@@ -181,9 +181,198 @@
 	font-weight: 500;
 }
 
+.topic-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 0.2rem;
+	margin-left: 0.5rem;
+}
+
 .topic-weight {
 	color: #6c757d;
 	font-size: 0.9rem;
+}
+
+.topic-question-count {
+	color: #495057;
+	font-size: 0.8rem;
+	font-weight: 500;
+}
+
+/* Validation error message styling */
+.validation-error {
+	background-color: #fff3cd;
+	border: 1px solid #ffeaa7;
+	border-radius: 8px;
+	padding: 1rem;
+	margin-bottom: 1.5rem;
+	color: #856404;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	max-width: 600px;
+}
+
+.validation-error p {
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	white-space: pre-line;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.validation-error-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.validation-error-header {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.25rem;
+}
+
+.validation-error-icon {
+	font-size: 1.2rem;
+}
+
+.validation-error-header h4 {
+	margin: 0;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #856404;
+}
+
+.validation-error-stats {
+	background-color: #fef8e7;
+	border-radius: 6px;
+	padding: 0.75rem;
+	border: 1px solid #f0e68c;
+}
+
+.error-stat {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.4rem;
+}
+
+.error-stat:last-child {
+	margin-bottom: 0;
+}
+
+.error-stat-label {
+	font-weight: 500;
+	color: #6f5a00;
+	font-size: 0.9rem;
+}
+
+.error-stat-value {
+	font-weight: 600;
+	font-size: 0.95rem;
+}
+
+.error-stat-available {
+	color: #d69e2e;
+}
+
+.error-stat-requested {
+	color: #c05621;
+}
+
+.error-stat-shortfall {
+	color: #c53030;
+	font-weight: 700;
+}
+
+.validation-error-actions {
+	background-color: #f7fafc;
+	border-radius: 6px;
+	padding: 0.75rem;
+	border: 1px solid #cbd5e0;
+}
+
+.error-action-header {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.error-action-icon {
+	font-size: 1.1rem;
+}
+
+.error-action-header strong {
+	color: #2d3748;
+	font-weight: 600;
+	font-size: 0.95rem;
+}
+
+.error-action-list {
+	margin: 0;
+	padding-left: 1.25rem;
+	color: #4a5568;
+}
+
+.error-action-list li {
+	margin-bottom: 0.35rem;
+	line-height: 1.4;
+	font-size: 0.9rem;
+}
+
+.error-action-list li:last-child {
+	margin-bottom: 0;
+}
+
+.error-action-list strong {
+	color: #2d3748;
+	font-weight: 600;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+	.validation-error {
+		max-width: 100%;
+		padding: 0.75rem;
+	}
+
+	.validation-error-stats,
+	.validation-error-actions {
+		padding: 0.6rem;
+	}
+
+	.error-stat {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.2rem;
+	}
+
+	.error-stat-label {
+		font-size: 0.85rem;
+	}
+
+	.error-stat-value {
+		font-size: 0.95rem;
+		font-weight: 700;
+	}
+}
+
+.validation-error strong {
+	font-weight: 600;
+	color: #6f4e37;
+}
+
+/* Make numbers more prominent */
+.validation-error p::before {
+	content: "";
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.validation-error p:first-child::before {
+	display: none;
 }
 
 .start-button {
@@ -208,6 +397,7 @@
 	background: #6c757d;
 	cursor: not-allowed;
 	transform: none;
+	opacity: 0.7;
 }
 
 .loading {
@@ -215,6 +405,181 @@
 	font-size: 1.2rem;
 	color: #6c757d;
 	padding: 3rem;
+}
+
+/* Quiz Generation Loading Overlay */
+.quiz-generation-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+	backdrop-filter: blur(5px);
+}
+
+.quiz-generation-content {
+	background: white;
+	padding: 3rem;
+	border-radius: 20px;
+	max-width: 500px;
+	width: 90%;
+	text-align: center;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.loading-spinner {
+	width: 60px;
+	height: 60px;
+	border: 4px solid #f3f3f3;
+	border-top: 4px solid #667eea;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	margin: 0 auto 2rem;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.quiz-generation-content h2 {
+	color: #2c3e50;
+	margin: 0 0 1rem 0;
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.quiz-generation-content p {
+	color: #6c757d;
+	margin: 0 0 2rem 0;
+	font-size: 1.1rem;
+	line-height: 1.6;
+}
+
+.loading-steps {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 2rem;
+	text-align: left;
+}
+
+.loading-step {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.75rem 1rem;
+	background: #f8f9fa;
+	border-radius: 10px;
+	border-left: 4px solid #667eea;
+	animation: pulse 2s ease-in-out infinite;
+}
+
+.loading-step:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.loading-step:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+.loading-step:nth-child(3) {
+	animation-delay: 0.4s;
+}
+
+.loading-step:nth-child(4) {
+	animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: 0.7;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.02);
+	}
+}
+
+.step-icon {
+	font-size: 1.5rem;
+	min-width: 1.5rem;
+	text-align: center;
+}
+
+.loading-step span {
+	color: #495057;
+	font-weight: 500;
+	font-size: 0.95rem;
+}
+
+.loading-tip {
+	background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+	padding: 1rem;
+	border-radius: 10px;
+	border: 1px solid #bbdefb;
+	color: #1565c0;
+	font-size: 0.9rem;
+	line-height: 1.4;
+}
+
+.loading-tip strong {
+	color: #0d47a1;
+}
+
+/* Responsive design for quiz generation overlay */
+@media (max-width: 768px) {
+	.quiz-generation-content {
+		padding: 2rem;
+		margin: 1rem;
+	}
+
+	.quiz-generation-content h2 {
+		font-size: 1.5rem;
+	}
+
+	.quiz-generation-content p {
+		font-size: 1rem;
+	}
+
+	.loading-steps {
+		gap: 0.75rem;
+	}
+
+	.loading-step {
+		padding: 0.5rem 0.75rem;
+	}
+
+	.step-icon {
+		font-size: 1.2rem;
+	}
+
+	.loading-step span {
+		font-size: 0.9rem;
+	}
 }
 
 .time-display {
@@ -409,9 +774,16 @@
 	transition: all 0.2s;
 }
 
-.recommended-button:hover {
+.recommended-button:hover:not(:disabled) {
 	background: #d97706;
 	transform: translateY(-2px);
+}
+
+.recommended-button:disabled {
+	background: #6c757d;
+	cursor: not-allowed;
+	transform: none;
+	opacity: 0.7;
 }
 
 /* Recent Sessions */

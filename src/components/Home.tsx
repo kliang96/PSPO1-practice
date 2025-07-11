@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { useApp } from "../context/AppContext";
 import {
 	loadTopics,
@@ -11,13 +12,16 @@ import {
 	progressStorage,
 	isFileSystemAccessSupported,
 } from "../utils/storageUtils";
+import { generateSessionId } from "../utils/sessionUtils";
 import "./Home.css";
 
 const Home: React.FC = () => {
 	const { state, dispatch } = useApp();
+	const navigate = useNavigate();
 	const [topics, setTopics] = useState<Topic[]>([]);
 	const [questions, setQuestions] = useState<Question[]>([]);
 	const [loading, setLoading] = useState(true);
+	const [generatingQuiz, setGeneratingQuiz] = useState(false);
 	const [selectedMode, setSelectedMode] = useState<"study" | "exam">("study");
 	const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
 	const [questionCount, setQuestionCount] = useState(
@@ -27,6 +31,7 @@ const Home: React.FC = () => {
 		state.settings.focusWeakAreas
 	);
 	const [showStorageSettings, setShowStorageSettings] = useState(false);
+	const [validationError, setValidationError] = useState<string | null>(null);
 
 	// Calculate time limit based on PSPO format (80 questions = 60 minutes)
 	const calculateTimeLimit = (count: number): number => {
@@ -37,6 +42,57 @@ const Home: React.FC = () => {
 	const secondsPerQuestion = Math.round(
 		(currentTimeLimit * 60) / questionCount
 	);
+
+	// Validation function to check if selected topics have enough questions
+	const validateTopicQuestions = useCallback((): {
+		isValid: boolean;
+		availableQuestions: number;
+		errorMessage: string | null;
+	} => {
+		if (selectedTopics.length === 0) {
+			return {
+				isValid: false,
+				availableQuestions: 0,
+				errorMessage: "Please select at least one topic to study.",
+			};
+		}
+
+		// Calculate total available questions from selected topics
+		const availableQuestions = selectedTopics.reduce((total, topicId) => {
+			const topic = topics.find((t) => t.id === topicId);
+			// Note: We need to access questionCount from the topic data
+			// This will be available once we load the topics with question counts
+			return total + (topic?.questionCount || 0);
+		}, 0);
+
+		if (availableQuestions < questionCount) {
+			const shortfall = questionCount - availableQuestions;
+			const selectedTopicNames = selectedTopics
+				.map((topicId) => {
+					const topic = topics.find((t) => t.id === topicId);
+					return topic?.name || topicId;
+				})
+				.join(", ");
+
+			return {
+				isValid: false,
+				availableQuestions,
+				errorMessage: `insufficient-questions|${availableQuestions}|${questionCount}|${shortfall}|${selectedTopicNames}`,
+			};
+		}
+
+		return {
+			isValid: true,
+			availableQuestions,
+			errorMessage: null,
+		};
+	}, [selectedTopics, questionCount, topics]);
+
+	// Effect to validate whenever topics or question count changes
+	useEffect(() => {
+		const validation = validateTopicQuestions();
+		setValidationError(validation.errorMessage);
+	}, [validateTopicQuestions]);
 
 	useEffect(() => {
 		const loadData = async () => {
@@ -58,46 +114,62 @@ const Home: React.FC = () => {
 		loadData();
 	}, []);
 
-	const handleStartQuiz = () => {
+	const handleStartQuiz = async () => {
 		if (questions.length === 0 || topics.length === 0) return;
 
-		// Update settings
-		dispatch({
-			type: "UPDATE_SETTINGS",
-			payload: {
-				questionCount,
-				timeLimit: currentTimeLimit,
-				includeExplanations: selectedMode === "study",
-				focusWeakAreas,
-				topics: selectedTopics,
-			},
-		});
+		setGeneratingQuiz(true);
 
-		// Generate quiz questions
-		const quizQuestions = generateQuiz(
-			questions,
-			topics,
-			{
-				questionCount,
-				timeLimit: currentTimeLimit,
-				includeExplanations: selectedMode === "study",
-				focusWeakAreas,
-				topics: selectedTopics,
-			},
-			state.userProgress
-		);
+		try {
+			// Update settings
+			dispatch({
+				type: "UPDATE_SETTINGS",
+				payload: {
+					questionCount,
+					timeLimit: currentTimeLimit,
+					includeExplanations: selectedMode === "study",
+					focusWeakAreas,
+					topics: selectedTopics,
+				},
+			});
 
-		// Create new session
-		const newSession: QuizSession = {
-			id: Date.now().toString(),
-			mode: selectedMode,
-			startTime: new Date(),
-			questions: quizQuestions,
-			answers: [],
-			topicScores: {},
-		};
+			// Generate quiz questions (this may take time due to duplicate prevention)
+			const quizQuestions = await new Promise<Question[]>((resolve) => {
+				// Use setTimeout to allow UI to update before heavy processing
+				setTimeout(() => {
+					const result = generateQuiz(
+						questions,
+						topics,
+						{
+							questionCount,
+							timeLimit: currentTimeLimit,
+							includeExplanations: selectedMode === "study",
+							focusWeakAreas,
+							topics: selectedTopics,
+						},
+						state.userProgress
+					);
+					resolve(result);
+				}, 100);
+			});
 
-		dispatch({ type: "START_SESSION", payload: newSession });
+			// Create new session
+			const sessionId = generateSessionId();
+			const newSession: QuizSession = {
+				id: sessionId,
+				mode: selectedMode,
+				startTime: new Date(),
+				questions: quizQuestions,
+				answers: [],
+				topicScores: {},
+			};
+
+			dispatch({ type: "START_SESSION", payload: newSession });
+			navigate(`/quiz/${sessionId}`);
+		} catch (error) {
+			console.error("Error generating quiz:", error);
+		} finally {
+			setGeneratingQuiz(false);
+		}
 	};
 
 	const handleTopicToggle = (topicId: string) => {
@@ -108,61 +180,77 @@ const Home: React.FC = () => {
 		);
 	};
 
-	const handleRecommendedQuiz = () => {
+	const handleRecommendedQuiz = async () => {
 		if (!state.userProgress || state.userProgress.weakAreas.length === 0) {
 			return;
 		}
 
 		if (questions.length === 0 || topics.length === 0) return;
 
-		// Configure recommended quiz settings
-		const recommendedTopics = [...state.userProgress.weakAreas];
-		const weakAreasCount = state.userProgress.weakAreas.length;
-		const suggestedCount = Math.min(weakAreasCount * 5, 40);
-		const recommendedTimeLimit = calculateTimeLimit(suggestedCount);
+		setGeneratingQuiz(true);
 
-		// Update UI state for future reference
-		setSelectedTopics(recommendedTopics);
-		setFocusWeakAreas(true);
-		setQuestionCount(suggestedCount);
+		try {
+			// Configure recommended quiz settings
+			const recommendedTopics = [...state.userProgress.weakAreas];
+			const weakAreasCount = state.userProgress.weakAreas.length;
+			const suggestedCount = Math.min(weakAreasCount * 5, 40);
+			const recommendedTimeLimit = calculateTimeLimit(suggestedCount);
 
-		// Update settings in context
-		dispatch({
-			type: "UPDATE_SETTINGS",
-			payload: {
-				questionCount: suggestedCount,
-				timeLimit: recommendedTimeLimit,
-				includeExplanations: selectedMode === "study",
-				focusWeakAreas: true,
-				topics: recommendedTopics,
-			},
-		});
+			// Update UI state for future reference
+			setSelectedTopics(recommendedTopics);
+			setFocusWeakAreas(true);
+			setQuestionCount(suggestedCount);
 
-		// Generate quiz questions with recommended settings
-		const quizQuestions = generateQuiz(
-			questions,
-			topics,
-			{
-				questionCount: suggestedCount,
-				timeLimit: recommendedTimeLimit,
-				includeExplanations: selectedMode === "study",
-				focusWeakAreas: true,
-				topics: recommendedTopics,
-			},
-			state.userProgress
-		);
+			// Update settings in context
+			dispatch({
+				type: "UPDATE_SETTINGS",
+				payload: {
+					questionCount: suggestedCount,
+					timeLimit: recommendedTimeLimit,
+					includeExplanations: selectedMode === "study",
+					focusWeakAreas: true,
+					topics: recommendedTopics,
+				},
+			});
 
-		// Create new session and start quiz
-		const newSession: QuizSession = {
-			id: Date.now().toString(),
-			mode: selectedMode,
-			startTime: new Date(),
-			questions: quizQuestions,
-			answers: [],
-			topicScores: {},
-		};
+			// Generate quiz questions with recommended settings
+			const quizQuestions = await new Promise<Question[]>((resolve) => {
+				// Use setTimeout to allow UI to update before heavy processing
+				setTimeout(() => {
+					const result = generateQuiz(
+						questions,
+						topics,
+						{
+							questionCount: suggestedCount,
+							timeLimit: recommendedTimeLimit,
+							includeExplanations: selectedMode === "study",
+							focusWeakAreas: true,
+							topics: recommendedTopics,
+						},
+						state.userProgress
+					);
+					resolve(result);
+				}, 100);
+			});
 
-		dispatch({ type: "START_SESSION", payload: newSession });
+			// Create new session and start quiz
+			const sessionId = generateSessionId();
+			const newSession: QuizSession = {
+				id: sessionId,
+				mode: selectedMode,
+				startTime: new Date(),
+				questions: quizQuestions,
+				answers: [],
+				topicScores: {},
+			};
+
+			dispatch({ type: "START_SESSION", payload: newSession });
+			navigate(`/quiz/${sessionId}`);
+		} catch (error) {
+			console.error("Error generating recommended quiz:", error);
+		} finally {
+			setGeneratingQuiz(false);
+		}
 	};
 
 	const handleFileStorageSetup = async () => {
@@ -257,6 +345,44 @@ const Home: React.FC = () => {
 		);
 	}
 
+	if (generatingQuiz) {
+		return (
+			<div className="quiz-generation-overlay">
+				<div className="quiz-generation-content">
+					<div className="loading-spinner"></div>
+					<h2>Generating Your Quiz</h2>
+					<p>
+						We're carefully selecting {questionCount} unique questions and
+						running them through our advanced duplicate prevention algorithms to
+						ensure you get the best study experience.
+					</p>
+					<div className="loading-steps">
+						<div className="loading-step">
+							<div className="step-icon">🔍</div>
+							<span>Filtering questions by topics</span>
+						</div>
+						<div className="loading-step">
+							<div className="step-icon">🚫</div>
+							<span>Removing duplicate questions</span>
+						</div>
+						<div className="loading-step">
+							<div className="step-icon">🔀</div>
+							<span>Randomizing question order</span>
+						</div>
+						<div className="loading-step">
+							<div className="step-icon">✅</div>
+							<span>Finalizing your quiz</span>
+						</div>
+					</div>
+					<div className="loading-tip">
+						<strong>Pro tip:</strong> This process ensures no duplicate
+						questions appear in your {selectedMode} session!
+					</div>
+				</div>
+			</div>
+		);
+	}
+
 	const recentSessions = getRecentSessions();
 	const progressTrend = getProgressTrend();
 
@@ -337,8 +463,11 @@ const Home: React.FC = () => {
 							<button
 								className="recommended-button"
 								onClick={handleRecommendedQuiz}
+								disabled={generatingQuiz}
 							>
-								Start Recommended Quiz
+								{generatingQuiz
+									? "Generating Quiz..."
+									: "Start Recommended Quiz"}
 							</button>
 						</div>
 					)}
@@ -496,7 +625,12 @@ const Home: React.FC = () => {
 										onChange={() => handleTopicToggle(topic.id)}
 									/>
 									<span className="topic-name">{topic.name}</span>
-									<span className="topic-weight">({topic.weight}%)</span>
+									<span className="topic-info">
+										<span className="topic-weight">({topic.weight}%)</span>
+										<span className="topic-question-count">
+											{topic.questionCount} questions
+										</span>
+									</span>
 									{state.userProgress?.topicMastery[topic.id] && (
 										<span
 											className={`topic-mastery ${
@@ -521,12 +655,87 @@ const Home: React.FC = () => {
 					</div>
 				</div>
 
+				{/* Show validation error message */}
+				{validationError && (
+					<div className="validation-error">
+						{validationError.startsWith("insufficient-questions|") ? (
+							(() => {
+								const parts = validationError.split("|");
+								const availableQuestions = parts[1];
+								const requestedQuestions = parts[2];
+								const shortfall = parts[3];
+								const selectedTopics = parts[4];
+
+								return (
+									<div className="validation-error-content">
+										<div className="validation-error-header">
+											<span className="validation-error-icon">⚠️</span>
+											<h4>Not enough questions available!</h4>
+										</div>
+
+										<div className="validation-error-stats">
+											<div className="error-stat">
+												<span className="error-stat-label">
+													Selected topics:
+												</span>
+												<span className="error-stat-value">
+													{selectedTopics}
+												</span>
+											</div>
+											<div className="error-stat">
+												<span className="error-stat-label">
+													Available questions:
+												</span>
+												<span className="error-stat-value error-stat-available">
+													{availableQuestions}
+												</span>
+											</div>
+											<div className="error-stat">
+												<span className="error-stat-label">
+													Requested questions:
+												</span>
+												<span className="error-stat-value error-stat-requested">
+													{requestedQuestions}
+												</span>
+											</div>
+											<div className="error-stat">
+												<span className="error-stat-label">Shortfall:</span>
+												<span className="error-stat-value error-stat-shortfall">
+													{shortfall} questions
+												</span>
+											</div>
+										</div>
+
+										<div className="validation-error-actions">
+											<div className="error-action-header">
+												<span className="error-action-icon">🔧</span>
+												<strong>To fix this, you can:</strong>
+											</div>
+											<ul className="error-action-list">
+												<li>Select more topics to get additional questions</li>
+												<li>
+													Reduce question count to{" "}
+													<strong>{availableQuestions}</strong> or fewer
+												</li>
+											</ul>
+										</div>
+									</div>
+								);
+							})()
+						) : (
+							<p>{validationError}</p>
+						)}
+					</div>
+				)}
+
 				<button
 					className="start-button"
 					onClick={handleStartQuiz}
-					disabled={selectedTopics.length === 0}
+					disabled={!!validationError || generatingQuiz}
 				>
-					Start {selectedMode === "study" ? "Study" : "Exam"}
+					{generatingQuiz
+						? "Generating Quiz..."
+						: `Start ${selectedMode === "study" ? "Study" : "Exam"}`}
 				</button>
 			</div>
 		</div>

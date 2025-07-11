@@ -14,6 +14,13 @@ This React TypeScript application simulates the PSPO exam environment and provid
 - **Exam Mode**: Timed simulation of the actual PSPO exam experience
 - **Adaptive Learning**: Focus on weak areas with personalized question recommendations
 
+### 🔒 Enhanced Question Selection
+
+- **Duplicate Prevention**: Advanced algorithms ensure no duplicate questions in the same exam session
+- **Multi-Layer Verification**: Triple-layer safety checks (ID tracking, text normalization, similarity detection)
+- **Improved Randomization**: Fisher-Yates shuffle algorithm for truly random question distribution
+- **Smart Similarity Detection**: Levenshtein distance algorithm catches near-duplicate questions
+
 ### 📊 Progress Tracking
 
 - **Performance Analytics**: Track your scores and improvement over time
@@ -27,12 +34,56 @@ This React TypeScript application simulates the PSPO exam environment and provid
 - **Difficulty Levels**: Easy, Medium, and Hard questions for progressive learning
 - **Question Types**: Single-choice and multiple-choice questions
 - **Detailed Explanations**: Learn the reasoning behind each answer
+- **Quality Assurance**: Rigorous duplicate detection and removal processes
 
 ### 💾 Data Management
 
 - **Local Storage**: Automatic progress saving in your browser
 - **File System Storage**: Export/import your progress data
 - **Session History**: Review your past quiz attempts and performance
+
+## 🚀 Recent Improvements
+
+### Version 2.2.0 - React Router Integration & Enhanced Navigation
+
+- **🔧 Added**: React Router for industry-standard navigation
+- **⚡ Improved**: Page refresh persistence - maintain quiz progress and results
+- **🎯 Enhanced**: Bookmarkable URLs for quiz sessions and results
+- **📊 Added**: URL-based session management with automatic recovery
+- **🛡️ Strengthened**: Session validation and error handling
+- **🔄 Implemented**: Browser history support (back/forward buttons)
+
+### URL Structure
+
+The application now uses clean, bookmarkable URLs:
+
+- `/` - Home page (quiz selection and settings)
+- `/quiz/:sessionId` - Active quiz session
+- `/results/:sessionId` - Quiz results and analysis
+
+### Session Management
+
+- **Automatic Persistence**: Quiz progress is saved automatically and survives page refreshes
+- **Session Recovery**: Interrupted sessions can be resumed from where you left off
+- **Unique Session IDs**: Each quiz session has a unique identifier for tracking
+- **Session Cleanup**: Automatic cleanup of expired sessions (24+ hours old)
+- **Storage Optimization**: Only the 5 most recent sessions are kept in storage
+
+### Version 2.1.0 - Enhanced Question Selection System
+
+- **🔧 Fixed**: Duplicate question prevention with comprehensive ID tracking
+- **⚡ Improved**: Fisher-Yates shuffle algorithm for better randomization
+- **🎯 Enhanced**: Multi-layer similarity detection using Levenshtein distance
+- **📊 Added**: Detailed logging and debugging capabilities
+- **🛡️ Strengthened**: Error handling with automatic cleanup mechanisms
+
+### Technical Enhancements
+
+- **Primary Duplicate Prevention**: Question ID tracking using `Set<number>`
+- **Secondary Text Checking**: Normalized text comparison with punctuation removal
+- **Tertiary Similarity Detection**: Word-based and character-based similarity algorithms
+- **Deterministic Selection**: Predictable, reliable question selection process
+- **Comprehensive Coverage**: All question loading functions updated with duplicate prevention
 
 ## 📋 Topics Covered
 
@@ -154,14 +205,19 @@ pspo-study-app/
 │   │   └── Results.tsx        # Results display and analysis
 │   ├── context/
 │   │   └── AppContext.tsx     # Global state management
+│   ├── router/
+│   │   ├── AppRouter.tsx      # Main routing configuration
+│   │   └── ProtectedRoute.tsx # Session validation and route protection
 │   ├── types/
 │   │   └── index.ts          # TypeScript type definitions
 │   ├── utils/
-│   │   ├── questionLoader.ts  # Question loading utilities
-│   │   ├── quizUtils.ts      # Quiz generation and logic
+│   │   ├── questionLoader.ts  # Question loading utilities (with duplicate prevention)
+│   │   ├── quizUtils.ts      # Quiz generation and logic (enhanced algorithms)
+│   │   ├── sessionUtils.ts   # Session management and persistence
 │   │   └── storageUtils.ts   # Progress storage management
 │   ├── App.tsx               # Main application component
 │   └── index.tsx             # Application entry point
+├── ROUTER_MIGRATION_PLAN.md  # Detailed migration documentation
 ├── package.json
 └── README.md
 ```
@@ -169,13 +225,25 @@ pspo-study-app/
 ## 🛠️ Technologies Used
 
 - **React 19.1.0** - UI framework
+- **React Router 6.30.1** - Client-side routing and navigation
 - **TypeScript 4.9.5** - Type safety and development experience
 - **React Context API** - State management
 - **File System Access API** - Progress data import/export
+- **Browser localStorage** - Session persistence and recovery
 - **Local Storage API** - Automatic progress saving
 - **CSS3** - Styling and responsive design
 
 ## 📈 Features in Detail
+
+### Enhanced Question Selection Algorithm
+
+The app uses advanced algorithms to ensure question quality:
+
+- **Multi-Layer Duplicate Prevention**: ID tracking, text normalization, and similarity detection
+- **Fisher-Yates Shuffle**: Proper randomization algorithm for fair question distribution
+- **Levenshtein Distance**: Accurate similarity measurement to catch near-duplicates
+- **Deterministic Selection**: Predictable, reliable question selection process
+- **Automatic Cleanup**: Error handling with automatic duplicate removal
 
 ### Adaptive Learning Algorithm
 
@@ -192,13 +260,30 @@ The app uses your performance history to:
 - **Question Navigation**: Jump between questions, mark for review
 - **Final Review**: Review all answers before submission
 - **No Immediate Feedback**: Authentic exam experience
+- **Guaranteed Uniqueness**: No duplicate questions in the same exam session
 
 ### Progress Analytics
 
 - **Session History**: Track all past quiz attempts
 - **Topic Mastery**: Visual progress indicators for each topic
 - **Performance Trends**: See your improvement over time
-- **Streak Tracking**: Maintain daily study consistency
+
+## 🔍 Quality Assurance
+
+### Duplicate Prevention System
+
+The application implements a comprehensive three-layer duplicate prevention system:
+
+1. **Primary Layer**: Question ID tracking using Set data structure
+2. **Secondary Layer**: Normalized text comparison with punctuation removal
+3. **Tertiary Layer**: Advanced similarity detection using Levenshtein distance algorithm
+
+### Algorithm Details
+
+- **Fisher-Yates Shuffle**: Ensures truly random question distribution
+- **Levenshtein Distance**: Measures text similarity with 80% threshold
+- **Word-based Similarity**: Checks for common significant words (60% threshold)
+- **Final Verification**: Post-selection duplicate check with automatic cleanup
 
 ## 🤝 Contributing
 

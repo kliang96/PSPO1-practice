@@ -1,51 +1,39 @@
 {
 	"metadata": {
-		"totalQuestions": 168,
-		"totalTopics": 8,
-		"questionsPerTopic": "Variable (20-23 per topic)",
+		"totalQuestions": 181,
+		"totalTopics": 9,
+		"questionsPerTopic": "Variable (16-23 per topic)",
 		"difficultyDistribution": {
-			"easy": "3-5 per topic",
-			"medium": "10-13 per topic",
-			"hard": "5 per topic"
+			"easy": "2-3 per topic",
+			"medium": "11-14 per topic",
+			"hard": "5-7 per topic"
 		},
-		"version": "2.0.0",
+		"version": "2.1.0",
 		"lastUpdated": "2024-01-01"
 	},
 	"topics": [
 		{
-			"id": "scrum-theory",
-			"name": "Scrum Theory and Values",
-			"description": "Understanding the empirical process control, transparency, inspection, and adaptation",
+			"id": "evidence-based-management",
+			"name": "Evidence-Based Management (EBM)",
+			"description": "Using empirical evidence to guide product decisions and measure value",
 			"weight": 12,
-			"questionFile": "questions/scrum-theory.json",
-			"questionCount": 20,
+			"questionFile": "questions/evidence-based-management.json",
+			"questionCount": 21,
 			"idRange": {
 				"start": 1,
-				"end": 20
+				"end": 21
 			}
 		},
 		{
-			"id": "scrum-team",
-			"name": "Scrum Team Roles",
-			"description": "Product Owner, Scrum Master, and Developers responsibilities and accountabilities",
-			"weight": 18,
-			"questionFile": "questions/scrum-team.json",
-			"questionCount": 20,
+			"id": "product-backlog-management",
+			"name": "Product Backlog Management",
+			"description": "Backlog refinement, ordering, and management techniques",
+			"weight": 10,
+			"questionFile": "questions/product-backlog-management.json",
+			"questionCount": 18,
 			"idRange": {
-				"start": 21,
-				"end": 40
-			}
-		},
-		{
-			"id": "scrum-events",
-			"name": "Scrum Events",
-			"description": "Sprint, Sprint Planning, Daily Scrum, Sprint Review, and Sprint Retrospective",
-			"weight": 20,
-			"questionFile": "questions/scrum-events.json",
-			"questionCount": 20,
-			"idRange": {
-				"start": 41,
-				"end": 60
+				"start": 22,
+				"end": 39
 			}
 		},
 		{
@@ -56,20 +44,44 @@
 			"questionFile": "questions/scrum-artifacts.json",
 			"questionCount": 20,
 			"idRange": {
-				"start": 61,
-				"end": 80
+				"start": 40,
+				"end": 59
 			}
 		},
 		{
-			"id": "product-backlog-management",
-			"name": "Product Backlog Management",
-			"description": "Backlog refinement, ordering, and management techniques",
-			"weight": 10,
-			"questionFile": "questions/product-backlog-management.json",
-			"questionCount": 23,
+			"id": "scrum-events",
+			"name": "Scrum Events",
+			"description": "Sprint, Sprint Planning, Daily Scrum, Sprint Review, and Sprint Retrospective",
+			"weight": 20,
+			"questionFile": "questions/scrum-events.json",
+			"questionCount": 20,
 			"idRange": {
-				"start": 81,
-				"end": 103
+				"start": 60,
+				"end": 79
+			}
+		},
+		{
+			"id": "scrum-team",
+			"name": "Scrum Team Roles",
+			"description": "Product Owner, Scrum Master, and Developers responsibilities and accountabilities",
+			"weight": 18,
+			"questionFile": "questions/scrum-team.json",
+			"questionCount": 20,
+			"idRange": {
+				"start": 80,
+				"end": 99
+			}
+		},
+		{
+			"id": "scrum-theory",
+			"name": "Scrum Theory and Values",
+			"description": "Understanding the empirical process control, transparency, inspection, and adaptation",
+			"weight": 12,
+			"questionFile": "questions/scrum-theory.json",
+			"questionCount": 16,
+			"idRange": {
+				"start": 100,
+				"end": 115
 			}
 		},
 		{
@@ -80,20 +92,8 @@
 			"questionFile": "questions/sprint-execution.json",
 			"questionCount": 23,
 			"idRange": {
-				"start": 101,
-				"end": 123
-			}
-		},
-		{
-			"id": "evidence-based-management",
-			"name": "Evidence-Based Management (EBM)",
-			"description": "Using empirical evidence to guide product decisions and measure value",
-			"weight": 12,
-			"questionFile": "questions/evidence-based-management.json",
-			"questionCount": 21,
-			"idRange": {
-				"start": 121,
-				"end": 141
+				"start": 116,
+				"end": 138
 			}
 		},
 		{
@@ -104,8 +104,20 @@
 			"questionFile": "questions/stakeholder-management.json",
 			"questionCount": 21,
 			"idRange": {
-				"start": 141,
-				"end": 161
+				"start": 139,
+				"end": 159
+			}
+		},
+		{
+			"id": "agile-leadership",
+			"name": "Agile Leadership",
+			"description": "Leadership principles and practices for successful Agile transformation",
+			"weight": 15,
+			"questionFile": "questions/agile-leadership.json",
+			"questionCount": 22,
+			"idRange": {
+				"start": 160,
+				"end": 181
 			}
 		}
 	]

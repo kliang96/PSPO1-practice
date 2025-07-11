@@ -1,0 +1,387 @@
+{
+	"topic": "agile-leadership",
+	"metadata": {
+		"totalQuestions": 22,
+		"difficulty": {
+			"easy": 3,
+			"medium": 13,
+			"hard": 6
+		}
+	},
+	"questions": [
+		{
+			"id": 160,
+			"topic": "agile-leadership",
+			"difficulty": "easy",
+			"type": "single",
+			"question": "What is the primary role of a leader in an Agile organization?",
+			"options": [
+				"To make all important decisions for the team",
+				"To serve the team by removing impediments and creating conditions for success",
+				"To monitor and control team activities closely",
+				"To provide detailed instructions on how work should be done"
+			],
+			"correctAnswer": 1,
+			"explanation": "Agile leaders serve as servant leaders, focusing on removing impediments, creating conditions for team success, and empowering teams to make their own decisions rather than controlling or micromanaging.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 161,
+			"topic": "agile-leadership",
+			"difficulty": "easy",
+			"type": "single",
+			"question": "Which characteristic is most important for leaders driving Agile transformation?",
+			"options": [
+				"Technical expertise in Agile frameworks",
+				"Ability to create detailed project plans",
+				"Willingness to embrace change and uncertainty",
+				"Strong command-and-control leadership style"
+			],
+			"correctAnswer": 2,
+			"explanation": "Agile transformation requires leaders who are comfortable with change and uncertainty, as Agile environments are inherently adaptive and empirical rather than predictable and controlled.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 162,
+			"topic": "agile-leadership",
+			"difficulty": "easy",
+			"type": "single",
+			"question": "What does psychological safety mean in an Agile context?",
+			"options": [
+				"Team members feel physically safe in the workplace",
+				"Team members feel secure about their job stability",
+				"Team members feel safe to take risks, make mistakes, and speak up without fear of negative consequences",
+				"Team members are protected from difficult or challenging work"
+			],
+			"correctAnswer": 2,
+			"explanation": "Psychological safety means team members feel safe to take risks, experiment, make mistakes, and speak up without fear of punishment or humiliation. This is crucial for innovation and continuous improvement in Agile environments.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 163,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A leader notices that team members are reluctant to share problems or admit mistakes during retrospectives. What should the leader focus on to address this?",
+			"options": [
+				"Implementing stricter reporting requirements",
+				"Building psychological safety and trust within the team",
+				"Providing more detailed process documentation",
+				"Increasing the frequency of performance reviews"
+			],
+			"correctAnswer": 1,
+			"explanation": "Reluctance to share problems or admit mistakes indicates a lack of psychological safety. Leaders should focus on building trust and creating an environment where team members feel safe to be vulnerable and honest.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 164,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "An Agile leader is facing resistance to change from middle management who feel their authority is being undermined. How should the leader address this?",
+			"options": [
+				"Ignore the resistance and proceed with the transformation",
+				"Engage with middle management to understand their concerns and help them find new ways to add value",
+				"Remove resistant managers from their positions",
+				"Implement change more slowly to avoid confrontation"
+			],
+			"correctAnswer": 1,
+			"explanation": "Effective change leadership involves engaging with resisters to understand their concerns and help them find new ways to contribute value in the transformed organization, rather than ignoring or removing them.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 165,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A leader wants to empower teams to make more decisions. What should they focus on to enable this effectively?",
+			"options": [
+				"Providing detailed guidelines for every possible decision",
+				"Creating clear boundaries and providing the context needed for good decisions",
+				"Removing all oversight and letting teams decide everything",
+				"Making decisions faster so teams don't have to wait"
+			],
+			"correctAnswer": 1,
+			"explanation": "Empowerment requires clear boundaries and context rather than detailed guidelines or complete freedom. Teams need to understand the constraints and objectives within which they can make autonomous decisions.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 166,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A leader observes that teams are following Agile practices but not embracing Agile mindset. What should they focus on to address this?",
+			"options": [
+				"Implementing stricter compliance to Agile ceremonies",
+				"Providing more training on Agile frameworks and tools",
+				"Modeling Agile values and principles in their own leadership behavior",
+				"Hiring external Agile coaches to enforce practices"
+			],
+			"correctAnswer": 2,
+			"explanation": "Mindset change requires leaders to model the values and principles they want to see. Leaders must demonstrate Agile values in their own behavior to inspire authentic adoption rather than just compliance.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 167,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "How should an Agile leader approach failure when it occurs in their organization?",
+			"options": [
+				"Identify who is responsible and ensure accountability",
+				"Analyze what can be learned and how to prevent similar failures",
+				"Implement more controls to prevent future failures",
+				"Minimize the impact and move on quickly"
+			],
+			"correctAnswer": 1,
+			"explanation": "Agile leaders treat failure as a learning opportunity, focusing on what can be learned and how to improve rather than blame or increased controls. This supports a culture of experimentation and continuous improvement.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 168,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "multiple",
+			"question": "An Agile leader wants to build a culture of continuous improvement. Which approaches should they focus on? (Choose all that apply)",
+			"options": [
+				"Encouraging experimentation and learning from results",
+				"Creating safe spaces for teams to reflect and adapt",
+				"Celebrating both successes and intelligent failures",
+				"Implementing fixed processes that cannot be changed"
+			],
+			"correctAnswer": [0, 1, 2],
+			"explanation": "Continuous improvement culture requires encouraging experimentation, creating safe reflection spaces, and celebrating both successes and intelligent failures. Fixed processes that cannot be changed are contrary to continuous improvement.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 169,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "A leader is trying to align multiple teams toward a common vision. What is the most effective approach?",
+			"options": [
+				"Create detailed specifications for each team's work",
+				"Communicate the vision clearly and frequently, and connect daily work to the bigger picture",
+				"Let each team interpret the vision in their own way",
+				"Focus on individual team performance rather than alignment"
+			],
+			"correctAnswer": 1,
+			"explanation": "Effective alignment requires clear and frequent communication of the vision, helping teams understand how their daily work contributes to the bigger picture. This creates purpose and direction without micromanagement.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 170,
+			"topic": "agile-leadership",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A leader is implementing Agile transformation in a traditional, hierarchical organization. Senior executives are concerned about losing control. How should the leader address this?",
+			"options": [
+				"Assure executives that they will maintain the same level of control",
+				"Explain that Agile actually provides better visibility and control through transparency and frequent feedback",
+				"Implement Agile practices only at the team level to avoid executive concerns",
+				"Gradually reduce executive involvement in decision-making"
+			],
+			"correctAnswer": 1,
+			"explanation": "Leaders should help executives understand that Agile provides better control through transparency, frequent feedback, and the ability to adapt quickly to changing conditions, rather than the illusion of control through detailed planning.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 171,
+			"topic": "agile-leadership",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "An Agile leader discovers that different teams are interpreting and implementing Agile practices differently, leading to confusion and reduced collaboration. What should be the leader's approach?",
+			"options": [
+				"Standardize all Agile practices across teams to ensure consistency",
+				"Let teams continue with their own interpretations to maintain autonomy",
+				"Focus on aligning teams around common principles while allowing practice variations",
+				"Hire external consultants to enforce standard practices"
+			],
+			"correctAnswer": 2,
+			"explanation": "Effective Agile leadership focuses on aligning teams around common principles and values while allowing for contextual adaptation of practices. This balances consistency with the need for teams to adapt to their specific circumstances.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 172,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "How should an Agile leader handle a situation where team performance is declining despite following Agile practices?",
+			"options": [
+				"Implement more rigid processes to improve performance",
+				"Investigate root causes and coach the team on improvement",
+				"Replace underperforming team members",
+				"Return to traditional project management methods"
+			],
+			"correctAnswer": 1,
+			"explanation": "Agile leaders should investigate root causes and coach teams toward improvement rather than implementing rigid processes or making personnel changes. This supports learning and continuous improvement.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 173,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "An Agile leader needs to communicate bad news about a project setback to stakeholders. What approach should they take?",
+			"options": [
+				"Delay the communication until there's a solution",
+				"Blame external factors for the setback",
+				"Communicate transparently about the situation and what's being done to address it",
+				"Minimize the impact and focus on positive aspects only"
+			],
+			"correctAnswer": 2,
+			"explanation": "Agile leaders practice radical transparency, communicating honestly about setbacks while focusing on what's being learned and how the situation is being addressed. This builds trust and enables better decision-making.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 174,
+			"topic": "agile-leadership",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A leader is working with a team that has become too comfortable and is no longer pushing boundaries or innovating. How should they address this?",
+			"options": [
+				"Implement stricter deadlines to create urgency",
+				"Introduce new challenges and encourage calculated risk-taking",
+				"Replace team members with more ambitious individuals",
+				"Reduce team autonomy to force different approaches"
+			],
+			"correctAnswer": 1,
+			"explanation": "Leaders should introduce new challenges and encourage calculated risk-taking to push teams out of their comfort zones. This maintains psychological safety while encouraging growth and innovation.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 175,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "How should an Agile leader measure the success of their leadership during an Agile transformation?",
+			"options": [
+				"By the number of Agile practices implemented",
+				"By improvements in team autonomy, engagement, and value delivery",
+				"By the speed of completing the transformation",
+				"By compliance with Agile framework guidelines"
+			],
+			"correctAnswer": 1,
+			"explanation": "Agile leadership success should be measured by improvements in team autonomy, engagement, and value delivery rather than practice adoption or speed of transformation. These outcomes indicate genuine culture change.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 176,
+			"topic": "agile-leadership",
+			"difficulty": "hard",
+			"type": "multiple",
+			"question": "An Agile leader is coaching other leaders in the organization. Which behaviors should they encourage? (Choose all that apply)",
+			"options": [
+				"Asking questions rather than providing answers",
+				"Focusing on outcomes rather than outputs",
+				"Creating dependencies to maintain control",
+				"Encouraging experimentation and learning"
+			],
+			"correctAnswer": [0, 1, 3],
+			"explanation": "Effective Agile leadership involves asking questions to develop others' thinking, focusing on outcomes over outputs, and encouraging experimentation. Creating dependencies contradicts the goal of building autonomous, capable teams.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 177,
+			"topic": "agile-leadership",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A leader discovers that Agile transformation is successful at the team level but organizational systems and policies are still creating impediments. What should be their primary focus?",
+			"options": [
+				"Focus only on team-level improvements since they're working",
+				"Work to align organizational systems and policies with Agile principles",
+				"Implement workarounds for each impediment as they arise",
+				"Slow down team-level transformation to match organizational pace"
+			],
+			"correctAnswer": 1,
+			"explanation": "Sustainable Agile transformation requires aligning organizational systems and policies with Agile principles. Without this alignment, teams will continue to face impediments that limit their effectiveness.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 178,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "An Agile leader is working with a team that struggles with decision-making and often seeks approval for minor decisions. How should they develop the team's decision-making capability?",
+			"options": [
+				"Continue making decisions for the team to maintain efficiency",
+				"Provide clear decision-making frameworks and gradually increase team authority",
+				"Tell the team they must make all decisions independently immediately",
+				"Implement a democratic voting system for all decisions"
+			],
+			"correctAnswer": 1,
+			"explanation": "Developing decision-making capability requires providing frameworks and gradually increasing authority as the team builds confidence and competence. This supports sustainable empowerment.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 179,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "How should an Agile leader approach conflicts between team members?",
+			"options": [
+				"Resolve the conflict by making a decision for the team",
+				"Ignore the conflict and hope it resolves itself",
+				"Facilitate dialogue to help team members resolve the conflict themselves",
+				"Separate the conflicting team members to avoid future issues"
+			],
+			"correctAnswer": 2,
+			"explanation": "Agile leaders should facilitate dialogue to help team members resolve conflicts themselves, building their conflict resolution skills and maintaining team cohesion rather than imposing solutions.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 180,
+			"topic": "agile-leadership",
+			"difficulty": "medium",
+			"type": "single",
+			"question": "An Agile leader notices that teams are delivering working software but stakeholders are not seeing the value they expected. What should the leader focus on?",
+			"options": [
+				"Improving the technical quality of the software",
+				"Increasing the delivery speed to provide more features",
+				"Strengthening the connection between delivered features and business outcomes",
+				"Implementing more detailed requirements documentation"
+			],
+			"correctAnswer": 2,
+			"explanation": "When working software isn't delivering expected value, leaders should focus on strengthening the connection between delivered features and business outcomes, ensuring teams understand and deliver real value.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		},
+		{
+			"id": 181,
+			"topic": "agile-leadership",
+			"difficulty": "hard",
+			"type": "single",
+			"question": "A leader is implementing Agile transformation in an organization with strong regulatory requirements. Regulators are concerned about reduced documentation and control. How should the leader address this?",
+			"options": [
+				"Maintain all traditional documentation and control processes",
+				"Ignore regulatory concerns and implement Agile practices fully",
+				"Work with regulators to understand their underlying concerns and find Agile approaches that meet compliance needs",
+				"Implement Agile only in non-regulated areas of the organization"
+			],
+			"correctAnswer": 2,
+			"explanation": "Effective leaders work with regulators to understand their underlying concerns and find Agile approaches that meet compliance needs. This often involves more frequent inspection and validation rather than upfront documentation.",
+			"originalTopic": "agile-leadership",
+			"sourceFile": "questions/agile-leadership.json"
+		}
+	]
+}

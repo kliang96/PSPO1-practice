@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { useApp } from "../context/AppContext";
 import {
 	calculateSessionResults,
@@ -8,15 +9,19 @@ import {
 } from "../utils/quizUtils";
 import { loadTopics } from "../utils/quizUtils";
 import { Topic, Question, UserAnswer } from "../types";
+import { loadSessionFromStorage } from "../utils/sessionUtils";
 import "./Results.css";
 
 const Results: React.FC = () => {
 	const { state, dispatch } = useApp();
+	const { sessionId } = useParams<{ sessionId: string }>();
+	const navigate = useNavigate();
 	const [topics, setTopics] = useState<Topic[]>([]);
 	const [results, setResults] = useState<any>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [sessionProcessed, setSessionProcessed] = useState(false);
 	const [expandedTopics, setExpandedTopics] = useState<Set<string>>(new Set());
+	const [isWrongAnswersExpanded, setIsWrongAnswersExpanded] = useState(false);
 
 	const session = state.currentSession;
 
@@ -29,6 +34,11 @@ const Results: React.FC = () => {
 			newExpanded.add(topicId);
 		}
 		setExpandedTopics(newExpanded);
+	};
+
+	// Function to toggle wrong answers expansion
+	const toggleWrongAnswers = () => {
+		setIsWrongAnswersExpanded(!isWrongAnswersExpanded);
 	};
 
 	// Function to group questions by topic
@@ -57,6 +67,61 @@ const Results: React.FC = () => {
 
 		return grouped;
 	};
+
+	// Function to get wrong answers
+	const getWrongAnswers = () => {
+		const wrongAnswers: Array<{
+			question: Question;
+			answer: UserAnswer;
+			questionNumber: number;
+		}> = [];
+
+		if (!session) return wrongAnswers;
+
+		session.questions.forEach((question, index) => {
+			const answer = session.answers.find((a) => a.questionId === question.id);
+			if (answer && !answer.isCorrect) {
+				wrongAnswers.push({
+					question,
+					answer,
+					questionNumber: index + 1,
+				});
+			}
+		});
+
+		return wrongAnswers;
+	};
+
+	// Session validation and loading
+	useEffect(() => {
+		const validateAndLoadSession = async () => {
+			if (!sessionId) {
+				navigate("/", { replace: true });
+				return;
+			}
+
+			// If no current session or session ID mismatch, try to load from storage
+			if (!state.currentSession || state.currentSession.id !== sessionId) {
+				const savedSession = loadSessionFromStorage(sessionId);
+				if (savedSession) {
+					dispatch({ type: "RESTORE_SESSION", payload: savedSession });
+				} else {
+					// Session not found, redirect to home
+					navigate("/", { replace: true });
+					return;
+				}
+			}
+
+			// Check if session has ended (required for results page)
+			if (state.currentSession && !state.currentSession.endTime) {
+				// Session hasn't ended yet, redirect to quiz
+				navigate(`/quiz/${sessionId}`, { replace: true });
+				return;
+			}
+		};
+
+		validateAndLoadSession();
+	}, [sessionId, state.currentSession, dispatch, navigate]);
 
 	// Reset sessionProcessed when a new session starts
 	useEffect(() => {
@@ -140,8 +205,9 @@ const Results: React.FC = () => {
 		dispatch,
 	]);
 
-	const handleNewQuiz = () => {
+	const backToHome = () => {
 		dispatch({ type: "CLEAR_SESSION" });
+		navigate("/");
 	};
 
 	const handleReviewAnswers = () => {
@@ -197,6 +263,79 @@ const Results: React.FC = () => {
 					</div>
 				</div>
 			</div>
+
+			{/* Wrong Answers Card */}
+			{getWrongAnswers().length > 0 && (
+				<div className="wrong-answers-card">
+					<div className="wrong-answers-header" onClick={toggleWrongAnswers}>
+						<div className="wrong-answers-info">
+							<h3>Questions You Got Wrong</h3>
+							<span className="wrong-answers-count">
+								{getWrongAnswers().length} of {totalQuestions} questions
+							</span>
+						</div>
+						<div className="expand-icon">
+							{isWrongAnswersExpanded ? "▼" : "▶"}
+						</div>
+					</div>
+
+					{isWrongAnswersExpanded && (
+						<div className="wrong-answers-content">
+							{getWrongAnswers().map(({ question, answer, questionNumber }) => (
+								<div key={question.id} className="wrong-answer-item">
+									<div className="wrong-answer-header">
+										<span className="question-number">Q{questionNumber}</span>
+										<span className="question-topic">
+											{getTopicName(question.topic, topics)}
+										</span>
+										<span className="question-status incorrect">
+											✗ Incorrect
+										</span>
+									</div>
+
+									<div className="wrong-answer-content">
+										<p className="question-text">{question.question}</p>
+
+										<div className="answer-options">
+											{question.options.map((option, optionIndex) => {
+												const isCorrectAnswer = Array.isArray(
+													question.correctAnswer
+												)
+													? question.correctAnswer.includes(optionIndex)
+													: optionIndex === question.correctAnswer;
+												const isSelectedAnswer = Array.isArray(
+													answer.selectedAnswer
+												)
+													? answer.selectedAnswer.includes(optionIndex)
+													: optionIndex === answer.selectedAnswer;
+
+												return (
+													<div
+														key={optionIndex}
+														className={`answer-option ${
+															isCorrectAnswer ? "correct-answer" : ""
+														} ${isSelectedAnswer ? "selected-answer" : ""}`}
+													>
+														<span className="option-letter">
+															{String.fromCharCode(65 + optionIndex)}
+														</span>
+														<span className="option-text">{option}</span>
+													</div>
+												);
+											})}
+										</div>
+
+										<div className="explanation">
+											<strong>💡 Learning Insight:</strong>{" "}
+											{question.explanation}
+										</div>
+									</div>
+								</div>
+							))}
+						</div>
+					)}
+				</div>
+			)}
 
 			<div className="topic-breakdown">
 				<h3>Performance by Topic</h3>
@@ -426,8 +565,8 @@ const Results: React.FC = () => {
 			)}
 
 			<div className="results-actions">
-				<button className="action-button primary" onClick={handleNewQuiz}>
-					Start New Quiz
+				<button className="action-button primary" onClick={backToHome}>
+					Back to Home
 				</button>
 				{session.mode === "study" && (
 					<button
